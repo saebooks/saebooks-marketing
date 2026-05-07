@@ -312,9 +312,9 @@ body_classes: homepage
       <div class="shot">
         <div class="shot-mock shot-mock-audit">
           <div class="sm-entry">
-            <div class="sm-avatar">RS</div>
+            <div class="sm-avatar">AC</div>
             <div class="sm-entry-body">
-              <div class="sm-entry-h"><span class="sm-actor">Richard Sauer</span><span class="sm-stamp">14:32:08</span></div>
+              <div class="sm-entry-h"><span class="sm-actor">ar-clerk@acme</span><span class="sm-stamp">14:32:08</span></div>
               <div class="sm-act">Updated INV-001047 &middot; status: <span class="sm-diff-old">draft</span> <span class="sm-diff-new">approved</span></div>
             </div>
           </div>
