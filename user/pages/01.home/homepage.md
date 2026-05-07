@@ -41,7 +41,7 @@ body_classes: homepage
   <div class="container">
     <div class="hero-grid">
       <div>
-        <h1>Built for the next 20 years.<br>Not the <span class="red">last 20.</span></h1>
+        <h1>Built for the next 20 years. Evolving, not built on legacy.</h1>
         <p class="lead">SAE Books is an API-first accounting ledger you can build a business on. Every screen is a thin layer over a public REST API &mdash; the same one your scripts, integrations, and partner services hit. Self-hosted, double-entry, AGPL.</p>
         <div class="hero-ctas">
           <a href="https://app.saebooks.com.au" class="btn btn-primary btn-lg">Try the demo
@@ -58,29 +58,35 @@ body_classes: homepage
           <span class="pill">REST &middot; OpenAPI &middot; Webhooks</span>
         </div>
       </div>
-      <div class="hero-screenshot" aria-label="BAS report preview">
+      <div class="hero-screenshot" aria-label="API request preview">
         <div class="hs-chrome">
           <span></span><span></span><span></span>
-          <span class="url">app.saebooks.com.au/reports/bas</span>
+          <span class="url">POST api.saebooks.com.au/v1/invoices</span>
         </div>
-        <div class="hs-body">
-          <div class="hs-h">BAS &mdash; July to September 2026 <span class="meta">Sauer Pty Ltd</span></div>
-          <table class="hs-table">
-            <thead><tr><th>Label</th><th>Description</th><th class="num">Amount</th></tr></thead>
-            <tbody>
-              <tr class="section"><td colspan="3">Sales</td></tr>
-              <tr><td>G1</td><td>Total sales</td><td class="num">142,380.00</td></tr>
-              <tr><td>G2</td><td>Export sales</td><td class="num">0.00</td></tr>
-              <tr><td>G3</td><td>GST-free sales</td><td class="num">8,420.00</td></tr>
-              <tr class="section"><td colspan="3">Purchases</td></tr>
-              <tr><td>G10</td><td>Capital purchases</td><td class="num">3,200.00</td></tr>
-              <tr><td>G11</td><td>Non-capital purchases</td><td class="num">48,910.00</td></tr>
-              <tr class="section"><td colspan="3">GST</td></tr>
-              <tr><td>1A</td><td>GST on sales</td><td class="num">12,178.20</td></tr>
-              <tr><td>1B</td><td>GST on purchases</td><td class="num">4,737.27</td></tr>
-              <tr class="hs-total"><td></td><td><strong>Net GST payable</strong></td><td class="num"><strong>7,440.93</strong></td></tr>
-            </tbody>
-          </table>
+        <div class="hs-body hs-code">
+<pre class="hs-req"><span class="hs-c">// Same endpoint your scripts hit. Same one the UI hits.</span>
+<span class="hs-k">POST</span> /api/v1/invoices  <span class="hs-c">// HTTP/2</span>
+<span class="hs-k">Authorization:</span> Bearer sk_live_…
+<span class="hs-k">Idempotency-Key:</span> 0193c8b4-…
+
+{
+  <span class="hs-s">"contact_id"</span>: <span class="hs-s">"4f3a…"</span>,
+  <span class="hs-s">"date"</span>:       <span class="hs-s">"2026-05-08"</span>,
+  <span class="hs-s">"lines"</span>: [
+    { <span class="hs-s">"account"</span>: <span class="hs-s">"4-1000"</span>,
+      <span class="hs-s">"qty"</span>: <span class="hs-n">8</span>, <span class="hs-s">"price"</span>: <span class="hs-n">185.00</span>,
+      <span class="hs-s">"tax_code"</span>: <span class="hs-s">"GST"</span> }
+  ]
+}</pre>
+<pre class="hs-res"><span class="hs-c">// 201 Created &middot; 38 ms</span>
+{
+  <span class="hs-s">"id"</span>:        <span class="hs-s">"INV-001047"</span>,
+  <span class="hs-s">"status"</span>:    <span class="hs-s">"draft"</span>,
+  <span class="hs-s">"total"</span>:     <span class="hs-n">1628.00</span>,
+  <span class="hs-s">"gst"</span>:       <span class="hs-n">148.00</span>,
+  <span class="hs-s">"je_id"</span>:     <span class="hs-s">"j_91f2…"</span>,
+  <span class="hs-s">"webhook"</span>:   <span class="hs-s">"invoice.created"</span>
+}</pre>
         </div>
       </div>
     </div>
@@ -148,24 +154,24 @@ body_classes: homepage
         <p>Multi-currency posting with end-of-period revaluation. ECB and RBA daily rates included.</p>
       </div>
       <div class="tile">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
-        <h4>BAS e-lodgement</h4>
-        <p>Generate the BAS, review the worksheet, lodge it. Settlement journals are automatic.</p>
-      </div>
-      <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h4>STP payroll <span class="badge">Pro</span></h4>
+        <h4>STP payroll <span class="badge">Business</span></h4>
         <p>Single Touch Payroll lodgement, super, payslips. STP Phase 2 ready.</p>
       </div>
       <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
+        <h4>BAS e-lodgement <span class="badge ent">Enterprise</span></h4>
+        <p>Generate the BAS, review the worksheet, lodge it. Settlement journals are automatic. Direct ATO/SBR submission ships with our DSP-accredited Enterprise tier.</p>
+      </div>
+      <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
-        <h4>Bank feeds <span class="badge">Business</span></h4>
-        <p>SISS/ACSISS-backed daily feeds for every major Australian bank. Delivered as a separate relay service.</p>
+        <h4>Bank feeds <span class="badge ent">Enterprise</span></h4>
+        <p>SISS/ACSISS-backed daily feeds for every major Australian bank. Delivered via our relay service while we onboard new tenants under the data-aggregator agreement.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
         <h4>ABR lookup &amp; fixed assets <span class="badge">Business</span></h4>
-        <p>One-field ABN/ACN lookup auto-fills contacts. Fixed asset register with depreciation schedules, disposals, and write-downs.</p>
+        <p>One-field ABN/ACN lookup auto-fills contacts. Fixed asset register with depreciation schedules, disposals, and write-downs &mdash; both wired through the public API.</p>
       </div>
     </div>
   </div>
@@ -210,11 +216,11 @@ body_classes: homepage
           <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free account required. No credit card on sign-up.</p>
           <ul class="tier-feats">
             <li class="group">Everything in Community, plus</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Bank feeds (SISS/ACSISS)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>STP Phase 2 payroll</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>ABR lookup, in-app</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>BAS e-lodgement</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fixed asset register</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Period locks</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Webhooks &amp; idempotent API tokens</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Email support, business hours</li>
           </ul>
           <div class="tier-foot">Up to 3 users. Single company. Cancel anytime.</div>
@@ -232,9 +238,9 @@ body_classes: homepage
           <ul class="tier-feats">
             <li class="group">Everything in Business, plus</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Multi-company / intercompany</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>STP Phase 2 payroll</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>FX revaluation</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Open Journal / Hybrid audit modes</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Higher API rate limits &amp; bulk endpoints</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Signed LTS releases</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Priority email support</li>
           </ul>
@@ -252,6 +258,8 @@ body_classes: homepage
           <a href="https://app.saebooks.com.au/contact?topic=enterprise" class="btn btn-secondary">Talk to us</a>
           <ul class="tier-feats">
             <li class="group">Everything in Pro, plus</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>BAS e-lodgement (early access)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Bank feeds (SISS / ACSISS) &mdash; early access</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom integrations &amp; modules</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Migration from QBO / Xero / MYOB</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated hosted tenant or on-prem</li>
@@ -277,16 +285,16 @@ body_classes: homepage
     </div>
     <div class="shots-row">
       <div class="shot">
-        <div class="shot-img">Screenshot &mdash; Dashboard</div>
-        <div class="shot-cap"><h4>Dashboard</h4><p>The command centre. Outstanding tax, bank feed status, and what&rsquo;s due to lodge this quarter.</p></div>
+        <div class="shot-img">Screenshot &mdash; OpenAPI explorer</div>
+        <div class="shot-cap"><h4>OpenAPI explorer</h4><p>Browse, try, and copy every endpoint at <a href="https://dev.saebooks.com.au">dev.saebooks.com.au</a>. Bearer-token auth, idempotency keys, page cursors.</p></div>
       </div>
       <div class="shot">
-        <div class="shot-img">Screenshot &mdash; BAS summary</div>
-        <div class="shot-cap"><h4>BAS summary</h4><p>Generate, review, and lodge. The settlement journal is created automatically once you confirm.</p></div>
+        <div class="shot-img">Screenshot &mdash; Webhook deliveries</div>
+        <div class="shot-cap"><h4>Webhook deliveries</h4><p>Subscribe to <code>invoice.created</code>, <code>bill.approved</code>, <code>payment.matched</code>. Signed payloads, retries with exponential backoff, full delivery log.</p></div>
       </div>
       <div class="shot">
-        <div class="shot-img">Screenshot &mdash; Fixed asset register</div>
-        <div class="shot-cap"><h4>Fixed asset register</h4><p>Schedules, disposals, impairments. Posts depreciation entries on the period close.</p></div>
+        <div class="shot-img">Screenshot &mdash; Audit ledger</div>
+        <div class="shot-cap"><h4>Audit ledger</h4><p>Every change &mdash; UI or API &mdash; tagged with actor, request id, before/after diff. Period-locked rows are immutable end-to-end.</p></div>
       </div>
     </div>
   </div>
@@ -360,7 +368,7 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Is it actually compliant with AU tax?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>GST/BAS yes &mdash; generation, worksheet, settlement journal. The chart of accounts and tax codes ship from the Odoo AU localisation. STP Phase 2 payroll is included from the Pro tier and up. We&rsquo;re not yet an ATO DSP for direct e-lodgement; for now BAS is &ldquo;generate, review, lodge via the ATO portal&rdquo; &mdash; full e-lodgement is on the roadmap.</p>
+        <p>Yes &mdash; the chart of accounts, tax codes, and BAS labels ship from the Odoo AU localisation. <strong>STP Phase 2 payroll</strong> is included from the Business tier and up. <strong>BAS e-lodgement</strong> and <strong>bank feeds</strong> are gated to Enterprise while we complete ATO DSP accreditation and the data-aggregator agreement; until then BAS is &ldquo;generate, review, lodge via the ATO portal&rdquo;. The accounting core itself is fully AU-compliant on every tier.</p>
       </details>
       <details class="faq">
         <summary>How do upgrades work?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -379,7 +387,7 @@ $ docker compose up -d
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first, self-hosted accounting ledger for Australian small business. AGPLv3, owned by you, with BAS, STP, and bank feeds delivered as services.</p>
+        <p class="blurb">An API-first, self-hosted accounting ledger for Australian small business. AGPLv3, owned by you. STP from Business; BAS e-lodgement and bank feeds from Enterprise as we onboard.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
