@@ -12,6 +12,7 @@ body_classes: homepage
       <img src="/user/data/sae-books-logo.png" alt="SAE Books">
     </a>
     <nav class="primary">
+      <a href="/cashbook">Cashbook</a>
       <a href="#features">Features</a>
       <a href="#editions">Editions</a>
       <a href="#self-host">Self-host</a>
@@ -209,8 +210,8 @@ body_classes: homepage
           <div class="tier-name">Cashbook</div>
           <div class="tier-price"><span class="free">Free</span></div>
           <div class="tier-tagline">Single-entry sole-trader bookkeeping on your device. Free forever. Want more? Move to Community.</div>
-          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get Cashbook free</a>
-          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free forever. Upgrade to a full double-entry tier when you outgrow it.</p>
+          <a href="https://app.saebooks.com.au/signup?plan=cashbook" class="btn btn-primary">Get Cashbook free</a>
+          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free forever. Upgrade to a full double-entry tier when you outgrow it. <a href="/cashbook" style="opacity:0.9;">Learn more &rarr;</a></p>
           <ul class="tier-feats">
             <li class="group">Cash in. Cash out. Done.</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash receipts and payments &mdash; type or paste in</li>
@@ -457,11 +458,12 @@ $ docker compose up -d
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">Modern accounting infrastructure for Australian small business. API-first, on-prem licensed, AGPLv3. Your data, your server, your Postgres database &mdash; no vendor lock-in. STP from Business; BAS e-lodgement and bank feeds from Enterprise.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Cashbook for sole traders, free Community for self-host, paid tiers for double-entry, payroll, and BAS. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
         <ul>
+          <li><a href="https://app.saebooks.com.au/signup?plan=cashbook">Start Cashbook free</a></li>
           <li><a href="https://app.saebooks.com.au">Try the demo</a></li>
           <li><a href="#editions">Pricing &amp; plans</a></li>
           <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
@@ -495,8 +497,8 @@ $ docker compose up -d
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://app.saebooks.com.au" class="btn btn-primary">Try the demo</a>
-  <a href="#editions" class="btn btn-secondary">See pricing</a>
+  <a href="https://app.saebooks.com.au/signup?plan=cashbook" class="btn btn-primary">Start free</a>
+  <a href="https://app.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
 </div>
 
 <script>
