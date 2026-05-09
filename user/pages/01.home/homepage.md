@@ -12,7 +12,6 @@ body_classes: homepage
       <img src="/user/data/sae-books-logo.png" alt="SAE Books">
     </a>
     <nav class="primary">
-      <a href="/cashbook">Cashbook</a>
       <a href="#features">Features</a>
       <a href="#editions">Editions</a>
       <a href="#self-host">Self-host</a>
@@ -33,7 +32,7 @@ body_classes: homepage
           <svg class="lucide" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </div>
-    <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get Cashbook free</a>
+    <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
     </div>
   </div>
 </header>
@@ -45,14 +44,13 @@ body_classes: homepage
         <h1>Your data, your API, your server. Built for the next 20 years, not the last 20.</h1>
         <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Every screen is a thin client over a public REST API &mdash; the same one your scripts, automations, and partner services hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage, no price surprise when they feel like it.</p>
         <div class="hero-ctas">
-          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get Cashbook free (install on your device)
+          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
           <a href="https://app.saebooks.com.au" class="btn btn-secondary btn-lg">Try the demo</a>
           <a href="https://dev.saebooks.com.au" class="btn btn-secondary btn-lg">Read the API docs</a>
         </div>
         <div class="hero-meta">
-          <span class="pill"><span class="dot"></span>Free Cashbook &mdash; on your device</span>
           <span class="pill"><span class="dot"></span>Free Community &mdash; self-host</span>
           <span class="pill">
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -201,28 +199,10 @@ body_classes: homepage
     <div class="sh">
       <span class="eyebrow brand">Pricing</span>
       <h2>One codebase. Pick the licence that fits.</h2>
-      <p>Two ways to start free: Cashbook on your device for sole traders, or self-hosted Community for the full double-entry stack. Same codebase, runtime-flagged for what you need. Paid tiers are self-hosted by default.</p>
+      <p>Start free with the self-hosted Community edition &mdash; the full double-entry stack, no licence key, no nag screens. Same codebase as the paid tiers, runtime-flagged for what you need. Paid tiers are self-hosted by default.</p>
     </div>
     <div class="tiers-wrap">
       <div class="tiers-grid">
-
-        <div class="tier">
-          <div class="tier-name">Cashbook</div>
-          <div class="tier-price"><span class="free">Free</span></div>
-          <div class="tier-tagline">Single-entry sole-trader bookkeeping on your device. Free forever. Want more? Move to Community.</div>
-          <a href="https://app.saebooks.com.au/signup?plan=cashbook" class="btn btn-primary">Get Cashbook free</a>
-          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free forever. Upgrade to a full double-entry tier when you outgrow it. <a href="/cashbook" style="opacity:0.9;">Learn more &rarr;</a></p>
-          <ul class="tier-feats">
-            <li class="group">Cash in. Cash out. Done.</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash receipts and payments &mdash; type or paste in</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Category buckets (income, expenses) &mdash; start from a template</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Auto-generated double-entry behind the scenes</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>End-of-year totals report (PDF / CSV)</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Bank statement import (CSV / OFX)</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One-click upgrade to Community or Business &mdash; your data comes with you</li>
-          </ul>
-          <div class="tier-foot">On your device. Australian-owned, AGPLv3 codebase.</div>
-        </div>
 
         <div class="tier">
           <div class="tier-name">Community</div>
@@ -458,12 +438,12 @@ $ docker compose up -d
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first accounting ledger for Australian small business. Free Cashbook for sole traders, free Community for self-host, paid tiers for double-entry, payroll, and BAS. AGPLv3, owned by you.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host, paid tiers for double-entry, payroll, and BAS. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
         <ul>
-          <li><a href="https://app.saebooks.com.au/signup?plan=cashbook">Start Cashbook free</a></li>
+          <li><a href="https://github.com/saebooks/saebooks">Self-host (Community)</a></li>
           <li><a href="https://app.saebooks.com.au">Try the demo</a></li>
           <li><a href="#editions">Pricing &amp; plans</a></li>
           <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
@@ -497,7 +477,7 @@ $ docker compose up -d
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://app.saebooks.com.au/signup?plan=cashbook" class="btn btn-primary">Start free</a>
+  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
   <a href="https://app.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
 </div>
 
