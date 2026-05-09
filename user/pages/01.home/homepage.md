@@ -18,6 +18,7 @@ body_classes: homepage
       <a href="#faq">FAQ</a>
       <a href="https://dev.saebooks.com.au">Docs</a>
       <a href="https://discourse.saebooks.com.au">Forum</a>
+      <a href="/blog">Build log</a>
     </nav>
     <div class="header-spacer"></div>
     <div class="header-actions">

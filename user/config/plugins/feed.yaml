@@ -1,0 +1,4 @@
+enabled: true
+limit: 10
+description: 'SAE Books build log — development updates, architecture notes, and release announcements.'
+lang: en
