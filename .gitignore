@@ -10,3 +10,4 @@ user/themes/typhoon/templates/*
 !user/themes/typhoon/templates/homepage.html.twig
 !user/themes/typhoon/templates/blog.html.twig
 !user/themes/typhoon/templates/item.html.twig
+!user/themes/typhoon/templates/default.html.twig

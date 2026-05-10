@@ -12,6 +12,7 @@ body_classes: homepage
       <img src="/user/data/sae-books-logo.png" alt="SAE Books">
     </a>
     <nav class="primary">
+      <a href="/cashbook">Cashbook</a>
       <a href="#features">Features</a>
       <a href="#editions">Editions</a>
       <a href="#self-host">Self-host</a>
@@ -204,6 +205,23 @@ body_classes: homepage
     </div>
     <div class="tiers-wrap">
       <div class="tiers-grid">
+
+        <div class="tier cashbook">
+          <div class="tier-name">Cashbook</div>
+          <div class="tier-price"><span class="free">Free</span></div>
+          <div class="tier-tagline">Single-entry bookkeeping for sole traders. Money in, money out, GST tally, done.</div>
+          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
+          <ul class="tier-feats">
+            <li class="group">What you get</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Receipt photos</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST tally</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One-page reports (PDF + CSV)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Single-company, single-user</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Self-host, free for life</li>
+          </ul>
+          <div class="tier-foot">AGPLv3. Forum support. Upgrade in place &mdash; same data, same server.</div>
+        </div>
 
         <div class="tier">
           <div class="tier-name">Community</div>

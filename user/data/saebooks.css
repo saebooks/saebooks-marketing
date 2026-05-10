@@ -199,9 +199,10 @@ nav.primary a:hover { color: var(--brand-navy); text-decoration: none; }
 }
 
 /* ── Pricing tiers ── */
-.tiers-wrap { max-width: 1200px; margin: 0 auto; }
-.tiers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-@media (max-width: 1023px) { .tiers-grid { grid-template-columns: repeat(2, 1fr); } }
+.tiers-wrap { max-width: 1350px; margin: 0 auto; }
+.tiers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 768px)  { .tiers-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .tiers-grid { grid-template-columns: repeat(5, 1fr); } }
 @media (max-width: 599px)  { .tiers-grid { grid-template-columns: 1fr; } }
 .tier {
   background: var(--surface);
@@ -472,3 +473,49 @@ body.docs-page {
 }
 body.homepage { padding-bottom: 72px !important; }
 @media (min-width: 1024px) { body.homepage { padding-bottom: 0 !important; } }
+
+/* ── Cashbook subpage — suppress Typhoon chrome, same as homepage ── */
+body.cashbook-page .header,
+body.cashbook-page > .container.shadow {
+  display: none !important;
+}
+body.cashbook-page {
+  padding: 0 !important;
+  margin: 0;
+  background: var(--page);
+  color: var(--body);
+}
+body.cashbook-page { padding-bottom: 72px !important; }
+@media (min-width: 1024px) { body.cashbook-page { padding-bottom: 0 !important; } }
+
+/* ── Cashbook subpage — cashbook-hero ── */
+.cashbook-hero {
+  padding: 80px 0 72px;
+  background: linear-gradient(135deg, var(--brand-navy) 0%, #1a2f6e 100%);
+  color: #fff;
+}
+.cashbook-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 20px; letter-spacing: -0.02em; }
+.cashbook-hero .lead { font-size: clamp(1rem, 1.5vw, 1.2rem); color: rgba(255,255,255,0.85); max-width: 640px; line-height: 1.6; margin-bottom: 32px; }
+.cashbook-hero .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.cashbook-hero .btn-primary { background: #fff; color: var(--brand-navy); border-color: #fff; font-weight: 700; }
+.cashbook-hero .btn-primary:hover { background: #e8edf8; }
+.cashbook-hero .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
+.cashbook-hero .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.cashbook-hero .hero-meta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+.cashbook-hero .pill { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.2); }
+
+/* ── Cashbook feature tiles ── */
+.cashbook-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (min-width: 768px) { .cashbook-tiles { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 599px) { .cashbook-tiles { grid-template-columns: 1fr; } }
+.cashbook-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.cashbook-tile .icon { width: 36px; height: 36px; margin-bottom: 14px; color: var(--brand-navy); }
+.cashbook-tile h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+.cashbook-tile p { font-size: 14px; color: var(--body); line-height: 1.6; margin: 0; }
+
+/* ── Upgrade arc ── */
+.upgrade-arc { background: var(--brand-navy); color: #fff; border-radius: var(--radius); padding: 48px 40px; margin-top: 0; }
+.upgrade-arc h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+.upgrade-arc p { color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 0; }
+.upgrade-arc .btn { margin-top: 24px; background: #fff; color: var(--brand-navy); border-color: #fff; font-weight: 700; display: inline-flex; }
+.upgrade-arc .btn:hover { background: #e8edf8; }
