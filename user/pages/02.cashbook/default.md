@@ -1,5 +1,5 @@
 ---
-title: 'Cashbook — Free single-entry bookkeeping for sole traders'
+title: 'Cashbook — Free bookkeeping, payroll, and time tracking for sole traders'
 menu: Cashbook
 body_classes: cashbook-page
 autoseo:
@@ -42,8 +42,8 @@ autoseo:
 <section class="cashbook-hero">
   <div class="container">
     <span class="eyebrow" style="color:rgba(255,255,255,0.65);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:12px;">SAE Books &mdash; Cashbook</span>
-    <h1>Single-entry bookkeeping for sole traders.</h1>
-    <p class="lead">Free for life. On your server. No SaaS lock-in, no trial that expires, no credit card required. Just cash in, cash out, GST tally, and a one-page report your accountant can actually read.</p>
+    <h1>Free bookkeeping, payroll, and time tracking for sole traders.</h1>
+    <p class="lead">Free for life. On your server. Cash-basis invoicing, STP Phase 2 payroll, weekly time tracking, employees, and super &mdash; all included in the free tier. No SaaS lock-in, no trial that expires, no credit card required.</p>
     <div class="hero-ctas">
       <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg">Try the demo
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -57,6 +57,7 @@ autoseo:
         AGPLv3 on GitHub
       </span>
       <span class="pill">Australian GST-ready</span>
+      <span class="pill">STP Phase 2 payroll</span>
       <span class="pill">Your data, your server</span>
     </div>
   </div>
@@ -66,8 +67,8 @@ autoseo:
   <div class="container">
     <div class="sh">
       <span class="eyebrow brand">Why Cashbook</span>
-      <h2>Built for tradies, not accountants.</h2>
-      <p>You don&rsquo;t need a chart of accounts. You need to know what came in, what went out, and whether you&rsquo;re putting enough aside for GST. That&rsquo;s it.</p>
+      <h2>Built for sole traders, not accountants.</h2>
+      <p>Cash-basis means you record money when it moves, not when you issue a document. Cashbook handles invoicing, expenses, payroll, time tracking, and GST &mdash; without requiring you to know what a journal entry is.</p>
     </div>
     <div class="three-up">
       <div class="point">
@@ -89,7 +90,7 @@ autoseo:
           <svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
         <h3>Grow when you&rsquo;re ready</h3>
-        <p>Hire your first employee. Open a bank feed. Lodge BAS electronically. When your business needs more, Cashbook upgrades to full SAE Books in place &mdash; same server, same database, no migration. Flip the licence flag and the extra features unlock.</p>
+        <p>When your business needs accrual accounting, bank feeds, or BAS e-lodgement, Cashbook upgrades to full SAE Books in place &mdash; same server, same database, no migration. The payroll engine and time tracking you already have carry over unchanged.</p>
       </div>
     </div>
   </div>
@@ -99,37 +100,51 @@ autoseo:
   <div class="container">
     <div class="sh">
       <span class="eyebrow brand">What&rsquo;s in the box</span>
-      <h2>Four things. That&rsquo;s the whole product.</h2>
-      <p>Single-entry bookkeeping has been working for small businesses for centuries. Cashbook does it cleanly, on your terms.</p>
+      <h2>Everything a sole trader needs. Free.</h2>
+      <p>Cashbook is not a stripped-down demo tier. It is a complete sole-trader stack &mdash; cash-basis bookkeeping, invoicing, payroll, time tracking, employees, and super &mdash; all free, all on your server.</p>
     </div>
     <div class="cashbook-tiles">
       <div class="cashbook-tile">
         <div class="icon">
           <svg class="lucide" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <h4>Cash in / cash out</h4>
-        <p>Record every payment received and every expense paid. Date, amount, description, GST flag. Nothing more complicated than that.</p>
+        <h4>Invoices &amp; expenses (cash-basis)</h4>
+        <p>Issue invoices as documents &mdash; no journal entry until payment arrives. When money lands in the bank, a single Dr Bank / Cr Income / Cr GST entry is posted automatically. Expenses work the same way in reverse. Simple, accurate, zero accounting jargon required.</p>
+      </div>
+      <div class="cashbook-tile">
+        <div class="icon">
+          <svg class="lucide" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Employees, super &amp; STP payroll</h4>
+        <p>Add employees, assign a super fund, run a pay calculation. NAT 1004 PAYG formula engine, SG 12% super, leave accrual (NES annual + personal). STP Phase 2 payload built on every finalised pay run &mdash; ready to lodge once ATO accreditation completes. <em>Payroll engine in beta; verify ATO tax-table coefficients before production use.</em></p>
+      </div>
+      <div class="cashbook-tile">
+        <div class="icon">
+          <svg class="lucide" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+        </div>
+        <h4>Weekly time tracking grid</h4>
+        <p>Log hours by day, project, and contact from the weekly grid. Approval workflow keeps records clean. Bulk-convert billable entries to an invoice line when it&rsquo;s time to bill &mdash; rate locked at entry time, so late price changes don&rsquo;t rewrite history.</p>
+      </div>
+      <div class="cashbook-tile">
+        <div class="icon">
+          <svg class="lucide" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V10l8-8 8 8v10"/><path d="M10 20v-5a2 2 0 0 1 4 0v5"/></svg>
+        </div>
+        <h4>GST tally &amp; BAS summary</h4>
+        <p>Cashbook tracks GST collected and GST paid as you go. When your BAS is due, run the GST summary and hand it to your accountant or fill in the ATO portal yourself. No surprises at quarter end.</p>
       </div>
       <div class="cashbook-tile">
         <div class="icon">
           <svg class="lucide" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><rect x="8" y="13" width="8" height="6" rx="1"/></svg>
         </div>
         <h4>Receipt photos</h4>
-        <p>Snap a photo of the receipt on your phone, attach it to the transaction. Find it later without digging through a shoebox. ATO-compliant digital records.</p>
-      </div>
-      <div class="cashbook-tile">
-        <div class="icon">
-          <svg class="lucide" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V10l8-8 8 8v10"/><path d="M10 20v-5a2 2 0 0 1 4 0v5"/></svg>
-        </div>
-        <h4>GST tally</h4>
-        <p>Cashbook tracks GST collected and GST paid as you go. When your BAS is due, run the GST summary and hand it to your accountant or use it to fill in the ATO portal yourself. No surprises.</p>
+        <p>Attach a receipt photo to any transaction. ATO-compliant digital records, findable in seconds, no shoebox required.</p>
       </div>
       <div class="cashbook-tile">
         <div class="icon">
           <svg class="lucide" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>
         </div>
-        <h4>One-page reports</h4>
-        <p>Export a cash summary as PDF or CSV for any date range. Clean enough for your accountant, simple enough that you actually understand it.</p>
+        <h4>Reports (PDF + CSV)</h4>
+        <p>Export a cash summary for any date range. Clean enough for your accountant, simple enough that you actually understand it.</p>
       </div>
     </div>
   </div>
@@ -143,9 +158,9 @@ autoseo:
       <p>Cashbook runs on the same SAE Books core as the Business, Pro, and Enterprise tiers. Everything is already in the binary &mdash; it&rsquo;s runtime-flagged, not a different product.</p>
     </div>
     <div class="upgrade-arc">
-      <h3>Hired your first employee?</h3>
-      <p>Turn on STP payroll. Your Cashbook data doesn&rsquo;t move &mdash; it&rsquo;s already in the right database schema. The same Docker container gains new screens. Your historical transactions stay exactly as you entered them.</p>
-      <p style="margin-top:14px;">Need bank feeds? BAS lodgement? Multi-company? Each step up &mdash; Community, Business, Pro, Enterprise &mdash; is a licence-key flip on the same running instance. No migration, no export/import, no &ldquo;you&rsquo;ll need to start fresh on the new plan&rdquo;. Your data is your data, on your server, at every tier.</p>
+      <h3>The only thing Cashbook doesn&rsquo;t do: accrual journals.</h3>
+      <p>Payroll, time tracking, invoicing, employees, super &mdash; it&rsquo;s all there. The one difference between Cashbook and the full Community tier is bookkeeping method: Cashbook is cash-basis (journals post when money moves), Community is full accrual double-entry (journals post when the invoice is issued). That&rsquo;s it.</p>
+      <p style="margin-top:14px;">When you need accrual accounting &mdash; because your accountant asks for it, or you start running inventory, or you want proper P&amp;L that doesn&rsquo;t lag your invoicing &mdash; the upgrade is a licence-key flip on the same running instance. SAE Books backfills the A/R journal entries for any open invoices automatically. No migration, no export/import, no starting fresh. Your payroll history, time entries, and cash transactions carry over unchanged.</p>
       <a href="/#editions" class="btn">See all editions
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -162,7 +177,15 @@ autoseo:
     <div class="faq-wrap">
       <details class="faq" open>
         <summary>Is it actually free? What&rsquo;s the catch?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>There is no catch. Cashbook is AGPLv3 open-source software. Download the source, run it on your own server, use it indefinitely at zero cost. We make money when businesses grow and upgrade to paid tiers &mdash; so Cashbook being genuinely useful to you is good for us too. The only thing that costs money is if you want us to host it for you, or if you eventually need payroll, bank feeds, or BAS lodgement.</p>
+        <p>There is no catch. Cashbook is AGPLv3 open-source software. Download the source, run it on your own server, use it indefinitely at zero cost. We make money when businesses grow and upgrade to paid tiers &mdash; so Cashbook being genuinely useful to you is good for us too. The only thing that costs money is if you want us to host it for you, or if you eventually need bank feeds or BAS e-lodgement &mdash; payroll and time tracking are free.</p>
+      </details>
+      <details class="faq">
+        <summary>Can I run payroll on the free Cashbook tier?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Yes. Employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual (NES annual + personal), and STP Phase 2 payload assembly are all available free in Cashbook. A sole trader with one employee can manage the full payroll workflow &mdash; including time tracking, pay calculations, and lodgement records &mdash; without ever paying a subscription. One caveat: the PAYG tax-table coefficients in the current beta are derived placeholders, not yet sourced from the official ATO NAT 1008 spreadsheet. Verify before running production payroll.</p>
+      </details>
+      <details class="faq">
+        <summary>What&rsquo;s the difference between Cashbook and Community?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Both are free and self-hosted. Cashbook is cash-basis: no journal entry is posted until money changes hands. Community is full accrual double-entry: invoices post A/R on issue, bills post A/P on receipt, and your P&amp;L reflects earned income rather than collected cash. If you invoice and collect in the same period, or you just want simplicity, Cashbook is the right choice. If your accountant needs accrual reports, or you run inventory, or you have retention or trade-in lines &mdash; Community is the step up. The upgrade is a one-call operation on the same server.</p>
       </details>
       <details class="faq">
         <summary>Why on-prem? Why not just give me a free SaaS account?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -170,7 +193,7 @@ autoseo:
       </details>
       <details class="faq">
         <summary>When should I upgrade from Cashbook?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Cashbook works well for a sole trader who invoices customers, pays a handful of suppliers, and self-lodges their BAS via the ATO portal. The moment you hire someone and need STP payroll, or you want automatic bank feeds, or your accountant needs double-entry journals &mdash; that&rsquo;s when to upgrade. The upgrade happens on your existing server with your existing data. There&rsquo;s no urgency and no cliff edge.</p>
+        <p>Upgrade when your accountant asks for accrual financials, when you start tracking inventory with COGS postings, or when you want automatic bank feeds or BAS e-lodgement. Payroll, time tracking, and invoicing all stay as they are &mdash; the upgrade only changes the bookkeeping method. There&rsquo;s no data loss and no urgency.</p>
       </details>
     </div>
   </div>

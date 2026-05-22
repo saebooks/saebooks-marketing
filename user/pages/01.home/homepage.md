@@ -44,7 +44,7 @@ body_classes: homepage
     <div class="hero-grid">
       <div>
         <h1>Your data, your API, your server. Built for the next 20 years, not the last 20.</h1>
-        <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Every screen is a thin client over a public REST API &mdash; the same one your scripts, automations, and partner services hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage, no price surprise when they feel like it.</p>
+        <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Invoicing, payroll, time tracking, STP Phase 2 &mdash; all in the same binary, runtime-flagged by tier. Every screen is a thin client over a public REST API, the same one your scripts and automations hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage.</p>
         <div class="hero-ctas">
           <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -160,7 +160,12 @@ body_classes: homepage
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h4>STP payroll <span class="badge">Business</span></h4>
-        <p>Single Touch Payroll lodgement, super, payslips. STP Phase 2 ready.</p>
+        <p>NAT 1004 PAYG formula engine, SG 12% super calc, leave accrual (NES annual + personal), STP Phase 2 payload assembly. Pay-run finalise posts the journal entries and builds the lodgement record automatically. <em>Payroll engine in beta &mdash; verify ATO tax-table coefficients before production use.</em></p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg></div>
+        <h4>Time tracking</h4>
+        <p>Weekly hour grid: log by day, project, and contact. Approval workflow (Draft &rarr; Submitted &rarr; Approved &rarr; Locked). Bulk convert billable entries to a draft invoice line &mdash; rate snapshot preserved at entry time.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
@@ -209,14 +214,23 @@ body_classes: homepage
         <div class="tier cashbook">
           <div class="tier-name">Cashbook</div>
           <div class="tier-price"><span class="free">Free</span></div>
-          <div class="tier-tagline">Single-entry bookkeeping for sole traders. Money in, money out, GST tally, done.</div>
+          <div class="tier-tagline">Cash-basis bookkeeping for sole traders. Not crippleware &mdash; payroll, time tracking, invoices, employees, and super all included. The only difference vs paid tiers is cash-basis instead of accrual.</div>
           <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
           <ul class="tier-feats">
-            <li class="group">What you get</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out</li>
+            <li class="group">Bookkeeping</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out (single-entry)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Invoices &amp; expenses (cash-basis)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Receipt photos</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST tally</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST tally &amp; BAS summary</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One-page reports (PDF + CSV)</li>
+            <li class="group">Payroll &amp; people</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Employees &amp; super funds</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>NAT 1004 PAYG engine (beta)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SG 12% super calc</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>STP Phase 2 payload</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Leave accrual (NES baseline)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Weekly time tracking grid</li>
+            <li class="group">Infrastructure</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Single-company, single-user</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Self-host, free for life</li>
           </ul>
@@ -297,7 +311,7 @@ body_classes: homepage
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>BAS e-lodgement (early access)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Bank feeds (SISS / ACSISS) &mdash; early access</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom integrations &amp; modules</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Migration from QBO / Xero / MYOB</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Migration from Xero / MYOB</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated hosted tenant or on-prem</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SSO with your IdP (SAML/OIDC)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SLA-backed support &amp; named upgrade window</li>
@@ -403,7 +417,7 @@ $ docker compose up -d
           <li>&middot; Hourly snapshot &middot; 30-day retention</li>
           <li>&middot; Cairns, QLD data residency</li>
           <li>&middot; Authentik SSO included</li>
-          <li>&middot; Migration assistance from QBO / Xero / MYOB</li>
+          <li>&middot; Migration assistance from Xero / MYOB</li>
         </ul>
         <a href="#editions" class="btn" style="background:#fff;color:var(--brand-navy);">See hosted plans
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -448,6 +462,18 @@ $ docker compose up -d
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
+      <details class="faq">
+        <summary>Can I run payroll on the free Cashbook tier?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Yes. Employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual, and STP Phase 2 payload assembly are all available in the free Cashbook tier &mdash; a sole trader with one employee can run STP entirely on the free tier. One caveat: the PAYG tax-table coefficients in the current beta are mathematically self-consistent but have not yet been verified against the official ATO tax-tables spreadsheet (NAT 1008). Verify those coefficients before running production payroll.</p>
+      </details>
+      <details class="faq">
+        <summary>What&rsquo;s the difference between Cashbook and Community?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Both are free and AGPLv3. Cashbook is cash-basis: invoices are document-only until payment is received, at which point a single Dr Bank / Cr Income / Cr GST entry is posted. No chart of accounts required, no double-entry journals &mdash; it&rsquo;s designed for a sole trader who thinks in cash, not accruals. Community is full double-entry from day one: invoices post A/R on issue, proper P&amp;L, multi-account journals, bank reconciliation, the works. When your business grows past cash-basis, you upgrade Cashbook to Community in place &mdash; same database, same server, same data &mdash; and the backfill runs automatically for any open invoices.</p>
+      </details>
+      <details class="faq">
+        <summary>Is the payroll engine ATO-verified?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>The formula structure is correct: it implements the NAT 1004 &sect;2 + &sect;6 algorithm (WH = round(a&times;x &minus; b)) and the STP Phase 2 payload fields match the ATO specification. The PAYG tax-scale coefficients seeded in the current release are <strong>derived placeholders</strong> &mdash; mathematically self-consistent but not sourced directly from the ATO&rsquo;s NAT 1008 tax-tables spreadsheet, so LITO and Medicare-levy shading are not yet included. These are a values-only patch once you have the ATO XLS; no formula or structural changes are needed. We will replace them with verified values before the payroll engine leaves beta.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -457,7 +483,7 @@ $ docker compose up -d
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host, paid tiers for double-entry, payroll, and BAS. AGPLv3, owned by you.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Cashbook and Community editions for self-host &mdash; payroll, time tracking, STP Phase 2, and invoicing included in the free tier. Paid tiers add accrual double-entry, bank feeds, and BAS. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
