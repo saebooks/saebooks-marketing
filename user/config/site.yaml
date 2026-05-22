@@ -10,6 +10,11 @@ summary:
   size: 300
   delimiter: '==='
 redirects:
+  '/features': '/#features'
+  '/pricing': '/#editions'
+  '/plans': '/#editions'
+  '/community': 'https://discourse.saebooks.com.au'
+  '/docs': 'https://dev.saebooks.com.au'
 menu:
   -
     text: Home
