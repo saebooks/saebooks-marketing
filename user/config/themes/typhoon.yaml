@@ -32,11 +32,11 @@ footer:
   menu_enabled: true
   menu:
     - label: Features
-      link: /features
+      link: '/#features'
     - label: Pricing
-      link: /pricing
+      link: '/#editions'
     - label: Docs
-      link: /docs
+      link: 'https://dev.saebooks.com.au'
     - label: Community
       link: 'https://discourse.saebooks.com.au'
     - label: Login
