@@ -92,7 +92,7 @@ nav.primary a:hover { color: var(--brand-navy); text-decoration: none; }
 }
 .hero h1 .red {
   color: var(--brand-red);
-  font-family: 'Brush Script MT', 'Bradley Hand', cursive;
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 700;
 }
