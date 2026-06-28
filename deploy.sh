@@ -60,5 +60,6 @@ if [ "$fail" = 1 ]; then
   echo 'ROLLED BACK. Live restored to previous-good; the bad source change was NOT published.' >&2
   exit 1
 fi
-echo '=== 4/4  ok ==='
+echo '=== 4/4  ok; mirror to GitHub ==='
+ -u sauer GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=10' git -C "" push -q origin HEAD:main 2>&1 | tail -1 || echo 'WARN: mirror push failed (deploy still OK)'
 echo 'deployed + verified -> https://saebooks.com.au/'

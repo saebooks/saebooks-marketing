@@ -8,7 +8,6 @@ process:
 body_classes: homepage
 ---
 
-{% ROLLBACK_TEST_LEAK %}
 
 <section class="hero">
   <div class="container">
