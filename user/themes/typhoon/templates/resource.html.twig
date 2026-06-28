@@ -65,7 +65,7 @@
   <script>
     (function () {
       try {
-        var saved = localStorage.getItem('sae-books-theme');
+        var saved = (localStorage.getItem('saebooks-theme')||localStorage.getItem('sae-books-theme'));
         var theme = saved || 'auto';
         var resolved = theme;
         if (theme === 'auto') { resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
@@ -125,5 +125,6 @@
 </main>
 
 {% include 'partials/site-footer.html.twig' ignore missing %}
+{% include 'partials/theme-controls.html.twig' %}
 </body>
 </html>

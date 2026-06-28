@@ -61,7 +61,7 @@
   <script>
     (function () {
       try {
-        var saved = localStorage.getItem('sae-books-theme');
+        var saved = (localStorage.getItem('saebooks-theme')||localStorage.getItem('sae-books-theme'));
         var theme = saved || 'auto';
         var resolved = theme;
         if (theme === 'auto') {
@@ -212,7 +212,7 @@
 <script>
   (function() {
     var root = document.documentElement;
-    var STORAGE_KEY = 'sae-books-theme';
+    var STORAGE_KEY = 'saebooks-theme';
     var mql = window.matchMedia('(prefers-color-scheme: dark)');
     function applyTheme(choice) {
       var resolved = (choice === 'auto') ? (mql.matches ? 'dark' : 'light') : choice;
