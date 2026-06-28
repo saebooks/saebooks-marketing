@@ -3,41 +3,10 @@ title: 'SAE Books — Your data, your API, your server'
 menu: Home
 autoseo:
     enabled: false
+process:
+    twig: true
 body_classes: homepage
 ---
-
-<header class="site-header">
-  <div class="container row">
-    <a href="/" class="wordmark" aria-label="SAE Books home">
-      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
-    </a>
-    <nav class="primary">
-      <a href="/cashbook">Cashbook</a>
-      <a href="#features">Features</a>
-      <a href="#editions">Editions</a>
-      <a href="#self-host">Self-host</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://dev.saebooks.com.au">Docs</a>
-      <a href="https://discourse.saebooks.com.au">Forum</a>
-      <a href="/blog">Build log</a>
-    </nav>
-    <div class="header-spacer"></div>
-    <div class="header-actions">
-      <div class="theme-switch" role="group" aria-label="Theme">
-        <button type="button" data-theme-value="light" aria-pressed="false" aria-label="Light theme" title="Light">
-          <svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <button type="button" data-theme-value="auto" aria-pressed="false" aria-label="Auto theme" title="Auto (matches system)">
-          <svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
-        </button>
-        <button type="button" data-theme-value="dark" aria-pressed="false" aria-label="Dark theme" title="Dark">
-          <svg class="lucide" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
-    <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
-    </div>
-  </div>
-</header>
 
 <section class="hero">
   <div class="container">
@@ -46,11 +15,11 @@ body_classes: homepage
         <h1>Your data, your API, your server. Built for the next 20 years, not the last 20.</h1>
         <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Invoicing, payroll, time tracking, STP Phase 2 &mdash; all in the same binary, runtime-flagged by tier. Every screen is a thin client over a public REST API, the same one your scripts and automations hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage.</p>
         <div class="hero-ctas">
-          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
+          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get started &mdash; self-host free
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="https://app.saebooks.com.au" class="btn btn-secondary btn-lg">Try the demo</a>
-          <a href="https://dev.saebooks.com.au" class="btn btn-secondary btn-lg">Read the API docs</a>
+          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the demo</a>
+          <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Read the API docs</a>
         </div>
         <div class="hero-meta">
           <span class="pill"><span class="dot"></span>Free Community &mdash; self-host</span>
@@ -201,6 +170,28 @@ body_classes: homepage
   </div>
 </section>
 
+<section class="subtle" id="inside">
+  <div class="container">
+    <div class="sh">
+      <span class="eyebrow brand">Inside the app</span>
+      <h2>Not a mockup. The whole ledger.</h2>
+      <p>The full double-entry product &mdash; cashbook, invoicing, time tracking, GST/BAS and a real reports library &mdash; in one app you run. Real screens from the live demo &mdash; shown in your own theme, light or dark:</p>
+    </div>
+    <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;">
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="BAS worksheet"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>GST/BAS, built in</figcaption></figure>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="/product" class="btn btn-primary btn-lg">Take the full tour
+        <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the live demo</a>
+    </div>
+  </div>
+</section>
+
 <section class="band" id="editions">
   <div class="container">
     <div class="sh">
@@ -209,39 +200,39 @@ body_classes: homepage
       <p>Start free with the self-hosted Community edition &mdash; the full double-entry stack, no licence key, no nag screens. Same codebase as the paid tiers, runtime-flagged for what you need. Paid tiers are self-hosted by default.</p>
     </div>
     <div class="tiers-wrap">
-      <div class="tiers-grid">
+      <div class="tiers-grid free-row">
 
         <div class="tier cashbook">
-          <div class="tier-name">Cashbook</div>
+          <div class="tier-name">Cashbook <span class="badge" style="font-size:10px;background:rgba(0,0,0,0.08);color:var(--brand-navy);">Community bundle</span></div>
           <div class="tier-price"><span class="free">Free</span></div>
-          <div class="tier-tagline">Cash-basis bookkeeping for sole traders. Not crippleware &mdash; payroll, time tracking, invoices, employees, and super all included. The only difference vs paid tiers is cash-basis instead of accrual.</div>
+          <div class="tier-tagline">The Community edition pre-configured for sole traders: cash-basis mode, single-user lock, sole-trader chart of accounts. Not a different binary &mdash; same Community codebase, opinionated defaults. Switch to full accrual any time with one config flag.</div>
           <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
           <ul class="tier-feats">
-            <li class="group">Bookkeeping</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out (single-entry)</li>
+            <li class="group">Bookkeeping (cash-basis defaults)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out (single-entry view)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Invoices &amp; expenses (cash-basis)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Receipt photos</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST tally &amp; BAS summary</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One-page reports (PDF + CSV)</li>
-            <li class="group">Payroll &amp; people</li>
+            <li class="group">Payroll &amp; people (Community-tier features)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Employees &amp; super funds</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>NAT 1004 PAYG engine (beta)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SG 12% super calc</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>STP Phase 2 payload</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Leave accrual (NES baseline)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Weekly time tracking grid</li>
-            <li class="group">Infrastructure</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Single-company, single-user</li>
+            <li class="group">Bundle defaults</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Single-company, single-user lock</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Self-host, free for life</li>
           </ul>
-          <div class="tier-foot">AGPLv3. Forum support. Upgrade in place &mdash; same data, same server.</div>
+          <div class="tier-foot">AGPLv3. Forum support. Flip to full Community (accrual) with one config setting &mdash; same data, same server.</div>
         </div>
 
         <div class="tier">
           <div class="tier-name">Community</div>
           <div class="tier-price"><span class="free">Free</span></div>
           <div class="tier-tagline">Single-company self-hosted. No licence key, no nag screens.</div>
-          <a href="https://github.com/saebooks/saebooks" class="btn btn-secondary">Download from GitHub</a>
+          <a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener" class="btn btn-secondary">Download from GitHub</a>
           <ul class="tier-feats">
             <li class="group">Core books</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Chart of accounts, journals, GL</li>
@@ -250,10 +241,14 @@ body_classes: homepage
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST/BAS report generation</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full export (CSV, JSON, OFX, DB dump)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Immutable audit ledger</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Postgres &amp; SQLite</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Postgres 14+</li>
           </ul>
           <div class="tier-foot">AGPLv3. Forum support. Bring-your-own infra.</div>
         </div>
+
+      </div>
+
+      <div class="tiers-grid paid-row">
 
         <div class="tier popular">
           <div class="tier-name">Business</div>
@@ -262,8 +257,8 @@ body_classes: homepage
             <span class="per">/ month, or $490 / year &mdash; AUD</span>
           </div>
           <div class="tier-tagline">For sole traders and small teams who lodge BAS themselves.</div>
-          <a href="https://app.saebooks.com.au/signup?plan=business" class="btn btn-primary">Get started &mdash; Business</a>
-          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free account required. No credit card on sign-up.</p>
+          <a href="/preview-access?interest=business" class="btn btn-primary">Request early access</a>
+          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Hosted editions are in private beta &mdash; access by request. Self-host free today.</p>
           <ul class="tier-feats">
             <li class="group">Everything in Community, plus</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>STP Phase 2 payroll</li>
@@ -283,8 +278,8 @@ body_classes: homepage
             <span class="per">/ month, or $990 / year &mdash; AUD</span>
           </div>
           <div class="tier-tagline">For bookkeepers, growing teams, and anyone running payroll.</div>
-          <a href="https://app.saebooks.com.au/signup?plan=pro" class="btn btn-primary">Get started &mdash; Pro</a>
-          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Free account required. No credit card on sign-up.</p>
+          <a href="/preview-access?interest=pro" class="btn btn-primary">Request early access</a>
+          <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Hosted editions are in private beta &mdash; access by request. Self-host free today.</p>
           <ul class="tier-feats">
             <li class="group">Everything in Business, plus</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Multi-company / intercompany</li>
@@ -305,7 +300,7 @@ body_classes: homepage
             <span class="per">/ month</span>
           </div>
           <div class="tier-tagline">Custom-built solutions. We tailor SAE Books to your operation.</div>
-          <a href="https://app.saebooks.com.au/contact?topic=enterprise" class="btn btn-secondary">Talk to us</a>
+          <a href="/preview-access?interest=enterprise" class="btn btn-secondary">Talk to us</a>
           <ul class="tier-feats">
             <li class="group">Everything in Pro, plus</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>BAS e-lodgement (early access)</li>
@@ -345,7 +340,7 @@ body_classes: homepage
           <div class="sm-row"><span class="sm-method post">POST</span><span class="sm-path">/api/v1/invoices</span></div>
           <div class="sm-row"><span class="sm-method del">DEL</span><span class="sm-path">/api/v1/invoices/{id}</span></div>
         </div>
-        <div class="shot-cap"><h4>OpenAPI explorer</h4><p>Browse, try, and copy every endpoint at <a href="https://dev.saebooks.com.au">dev.saebooks.com.au</a>. Bearer-token auth, idempotency keys, page cursors.</p></div>
+        <div class="shot-cap"><h4>OpenAPI explorer</h4><p>Browse, try, and copy every endpoint at <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">dev.saebooks.com.au</a>. Bearer-token auth, idempotency keys, page cursors.</p></div>
       </div>
       <div class="shot">
         <div class="shot-mock shot-mock-webhooks">
@@ -399,13 +394,14 @@ body_classes: homepage
       <div class="split-card">
         <div class="icon" style="width:32px;height:32px;"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h3>Run it yourself</h3>
-        <p><code>docker compose up</code>. Bring your own Postgres or use the bundled SQLite for one-person setups. Authentik or any OIDC provider for SSO. Ships with a backup runbook.</p>
+        <p><code>docker compose up</code>. Bring your own Postgres 14+ or use the bundled image for one-person setups. Authentik or any OIDC provider for SSO. Ships with a backup runbook.</p>
         <pre>$ docker compose pull
 $ docker compose up -d
-&#10003; saebooks-app started on :8080
+&#10003; saebooks-app started on :8042
+&#10003; saebooks-web started on :8043
 &#10003; postgres healthy
-&#10003; migrations applied (rev 0042)</pre>
-        <a href="https://dev.saebooks.com.au/install" class="btn btn-secondary">Read the install guide
+&#10003; migrations applied (head)</pre>
+        <a href="/self-host" class="btn btn-secondary">Read the install guide
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -436,7 +432,7 @@ $ docker compose up -d
     <div class="faq-wrap">
       <details class="faq" open>
         <summary>What does &ldquo;API-first&rdquo; actually buy me?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Every action in the UI is a documented REST call. Want to push 200 invoices from your job-management system? Hit <code>POST /api/v1/invoices</code>. Want a webhook when a bill is approved? Subscribe. Want to retire the UI entirely and drive it from a script? You can. The accounting ledger is the product; the screens are one of many possible clients. OpenAPI schema lives at <a href="https://dev.saebooks.com.au">dev.saebooks.com.au</a>.</p>
+        <p>Every action in the UI is a documented REST call. Want to push 200 invoices from your job-management system? Hit <code>POST /api/v1/invoices</code>. Want a webhook when a bill is approved? Subscribe. Want to retire the UI entirely and drive it from a script? You can. The accounting ledger is the product; the screens are one of many possible clients. OpenAPI schema lives at <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">dev.saebooks.com.au</a>.</p>
       </details>
       <details class="faq">
         <summary>What does AGPLv3 mean for my business?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -456,19 +452,19 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Why not just use a major cloud accounting product?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a Postgres database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; Xero adapter ships built-in. Nothing is held hostage to keep you subscribed.</p>
+        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a Postgres database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; the <code>saebooks-xero</code> adapter ships as a separate service. Nothing is held hostage to keep you subscribed.</p>
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
       <details class="faq">
-        <summary>Can I run payroll on the free Cashbook tier?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Yes. Employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual, and STP Phase 2 payload assembly are all available in the free Cashbook tier &mdash; a sole trader with one employee can run STP entirely on the free tier. One caveat: the PAYG tax-table coefficients in the current beta are mathematically self-consistent but have not yet been verified against the official ATO tax-tables spreadsheet (NAT 1008). Verify those coefficients before running production payroll.</p>
+        <summary>Can I run payroll on the free Cashbook bundle?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Yes. Cashbook ships the same Community binary, so employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual, and STP Phase 2 payload assembly are all there &mdash; a sole trader with one employee can run STP without paying a cent. One caveat: the PAYG tax-table coefficients in the current beta are mathematically self-consistent but have not yet been verified against the official ATO tax-tables spreadsheet (NAT 1008). Verify those coefficients before running production payroll.</p>
       </details>
       <details class="faq">
         <summary>What&rsquo;s the difference between Cashbook and Community?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Both are free and AGPLv3. Cashbook is cash-basis: invoices are document-only until payment is received, at which point a single Dr Bank / Cr Income / Cr GST entry is posted. No chart of accounts required, no double-entry journals &mdash; it&rsquo;s designed for a sole trader who thinks in cash, not accruals. Community is full double-entry from day one: invoices post A/R on issue, proper P&amp;L, multi-account journals, bank reconciliation, the works. When your business grows past cash-basis, you upgrade Cashbook to Community in place &mdash; same database, same server, same data &mdash; and the backfill runs automatically for any open invoices.</p>
+        <p>Both are the same binary. The Community edition is the free self-hosted SAE Books with no licence key. The Cashbook bundle is that exact same edition, pre-configured for sole traders: cash-basis mode on by default (invoices are document-only until payment hits the bank, then post a single Dr Bank / Cr Income / Cr GST entry), single-user lock, sole-trader chart of accounts. If your accountant later asks for accrual reports, flip one config setting and you have full double-entry on the same data &mdash; no migration, no export/import, the A/R backfill runs automatically for any open invoices.</p>
       </details>
       <details class="faq">
         <summary>Is the payroll engine ATO-verified?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -483,89 +479,49 @@ $ docker compose up -d
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first accounting ledger for Australian small business. Free Cashbook and Community editions for self-host &mdash; payroll, time tracking, STP Phase 2, and invoicing included in the free tier. Paid tiers add accrual double-entry, bank feeds, and BAS. AGPLv3, owned by you.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host &mdash; Cashbook bundle ships the same binary with sole-trader defaults. Payroll, time tracking, STP Phase 2, and invoicing included free. Paid tiers add bank feeds, BAS e-lodgement, and multi-company. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
         <ul>
-          <li><a href="https://github.com/saebooks/saebooks">Self-host (Community)</a></li>
-          <li><a href="https://app.saebooks.com.au">Try the demo</a></li>
+          <li><a href="/cashbook">Cashbook bundle</a></li>
+          <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
+          <li><a href="https://cashbook-demo.saebooks.com.au">Try the demo</a></li>
           <li><a href="#editions">Pricing &amp; plans</a></li>
-          <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/ROADMAP.md">Roadmap</a></li>
+          <li><a href="/preview-access?interest=enterprise">Talk to us (Enterprise)</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
-          <li><a href="https://github.com/saebooks/saebooks">GitHub</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/CHANGELOG.md">Changelog</a></li>
+          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="/blog">Build log</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Company</h5>
         <ul>
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
-          <li><a href="https://app.saebooks.com.au/contact">Contact</a></li>
+          <li><a href="/preview-access">Contact</a></li>
           <li><a href="https://sauer.com.au/privacy">Privacy</a></li>
-          <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Licence (AGPLv3)</a></li>
+          <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">Licence (AGPLv3)</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Sauer Pty Ltd &middot; ABN 87 744 586 592 &middot; ACN 683 275 756 &middot; Cairns, QLD</span>
-      <span>Source available under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.</span>
+      <span>Source available under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">AGPLv3</a>.</span>
     </div>
   </div>
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
-  <a href="https://app.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
+  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-primary">Get started</a>
+  <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
 </div>
 
-<script>
-  (function() {
-    var root = document.documentElement;
-    var STORAGE_KEY = 'sae-books-theme';
-    var mql = window.matchMedia('(prefers-color-scheme: dark)');
+<!-- Theme controls (floating bubble + segmented switch wiring) are injected by
+     the template partial typhoon/templates/partials/theme-controls.html.twig -->
 
-    function applyTheme(choice) {
-      var resolved = (choice === 'auto') ? (mql.matches ? 'dark' : 'light') : choice;
-      if (choice === 'auto') {
-        root.removeAttribute('data-theme');
-      } else {
-        root.setAttribute('data-theme', choice);
-      }
-      root.classList.remove('light', 'dark');
-      root.classList.add(resolved);
-      document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(b) {
-        b.setAttribute('aria-pressed', String(b.dataset.themeValue === choice));
-      });
-    }
-
-    function getStoredChoice() {
-      var v = localStorage.getItem(STORAGE_KEY);
-      return (v === 'light' || v === 'dark') ? v : 'auto';
-    }
-
-    applyTheme(getStoredChoice());
-
-    document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var choice = btn.dataset.themeValue;
-        if (choice === 'auto') localStorage.removeItem(STORAGE_KEY);
-        else localStorage.setItem(STORAGE_KEY, choice);
-        applyTheme(choice);
-      });
-    });
-
-    if (mql.addEventListener) {
-      mql.addEventListener('change', function() {
-        if (getStoredChoice() === 'auto') applyTheme('auto');
-      });
-    }
-  })();
-</script>

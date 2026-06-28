@@ -15,26 +15,34 @@
 
   {# Cache-bust via page mtime so browsers don't serve stale CSS after a deploy #}
   {% set v = page.modified|default('1') %}
-  <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ v }}"/>
-  <link rel="stylesheet" href="/user/data/saebooks.css?v={{ v }}"/>
+  <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ site.assets_version|default(v) }}"/>
+  <link rel="stylesheet" href="/user/data/saebooks.css?v={{ site.assets_version|default(v) }}"/>
 
   <script>
     (function () {
       try {
-        var saved = localStorage.getItem('sae-books-theme');
-        var theme = saved || 'auto';
-        var resolved = theme;
-        if (theme === 'auto') {
-          resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var K = 'saebooks-theme', OLD = 'sae-books-theme';
+        if (!localStorage.getItem(K)) {           /* one-time migration from old key */
+          var o = localStorage.getItem(OLD);
+          if (o === 'light' || o === 'dark') localStorage.setItem(K, o);
         }
-        document.documentElement.classList.remove('light', 'dark');
-        document.documentElement.classList.add(resolved);
-        document.documentElement.setAttribute('data-theme', resolved);
+        var saved = localStorage.getItem(K);
+        var choice = (saved === 'light' || saved === 'dark') ? saved : 'auto';
+        var resolved = choice === 'auto'
+          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : choice;
+        var e = document.documentElement;
+        e.classList.remove('light', 'dark');
+        e.classList.add(resolved);
+        if (choice === 'auto') e.removeAttribute('data-theme');
+        else e.setAttribute('data-theme', choice);
       } catch (e) {}
     })();
   </script>
 </head>
 <body class="{{ header.body_classes|default('page') }}">
+{% include 'partials/site-header.html.twig' with {active: header.header_active|default('')} %}
 {{ page.content|raw }}
+{% include 'partials/theme-controls.html.twig' %}
 </body>
 </html>

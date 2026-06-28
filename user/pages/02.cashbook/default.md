@@ -1,54 +1,24 @@
 ---
+header_active: cashbook
 title: 'Cashbook — Free bookkeeping, payroll, and time tracking for sole traders'
 menu: Cashbook
 body_classes: cashbook-page
 autoseo:
     enabled: false
+process:
+    twig: true
 ---
-
-<header class="site-header">
-  <div class="container row">
-    <a href="/" class="wordmark" aria-label="SAE Books home">
-      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
-    </a>
-    <nav class="primary">
-      <a href="/cashbook" style="color:var(--brand-navy);">Cashbook</a>
-      <a href="/#features">Features</a>
-      <a href="/#editions">Editions</a>
-      <a href="/#self-host">Self-host</a>
-      <a href="/#faq">FAQ</a>
-      <a href="https://dev.saebooks.com.au">Docs</a>
-      <a href="https://discourse.saebooks.com.au">Forum</a>
-      <a href="/blog">Build log</a>
-    </nav>
-    <div class="header-spacer"></div>
-    <div class="header-actions">
-      <div class="theme-switch" role="group" aria-label="Theme">
-        <button type="button" data-theme-value="light" aria-pressed="false" aria-label="Light theme" title="Light">
-          <svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <button type="button" data-theme-value="auto" aria-pressed="false" aria-label="Auto theme" title="Auto (matches system)">
-          <svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
-        </button>
-        <button type="button" data-theme-value="dark" aria-pressed="false" aria-label="Dark theme" title="Dark">
-          <svg class="lucide" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
-      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary">Try the demo</a>
-    </div>
-  </div>
-</header>
 
 <section class="cashbook-hero">
   <div class="container">
-    <span class="eyebrow" style="color:rgba(255,255,255,0.65);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:12px;">SAE Books &mdash; Cashbook</span>
+    <span class="eyebrow" style="color:rgba(255,255,255,0.65);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:12px;">SAE Books &mdash; Cashbook bundle (Community edition)</span>
     <h1>Free bookkeeping, payroll, and time tracking for sole traders.</h1>
-    <p class="lead">Free for life. On your server. Cash-basis invoicing, STP Phase 2 payroll, weekly time tracking, employees, and super &mdash; all included in the free tier. No SaaS lock-in, no trial that expires, no credit card required.</p>
+    <p class="lead">Free for life. On your server. The Community edition pre-configured for sole traders: cash-basis invoicing, STP Phase 2 payroll, weekly time tracking, employees, and super &mdash; all included. No SaaS lock-in, no trial that expires, no credit card required. Switch to full accrual any time without migrating data.</p>
     <div class="hero-ctas">
       <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg">Try the demo
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary btn-lg">Self-host in 5 minutes</a>
+      <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Self-host in 5 minutes</a>
     </div>
     <div class="hero-meta">
       <span class="pill"><span class="dot" style="background:rgba(255,255,255,0.5);"></span>Free for life</span>
@@ -90,7 +60,7 @@ autoseo:
           <svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
         <h3>Grow when you&rsquo;re ready</h3>
-        <p>When your business needs accrual accounting, bank feeds, or BAS e-lodgement, Cashbook upgrades to full SAE Books in place &mdash; same server, same database, no migration. The payroll engine and time tracking you already have carry over unchanged.</p>
+        <p>When your business needs accrual accounting, flip the cash-basis default off &mdash; same binary, same database, no migration. Add bank feeds or BAS e-lodgement later with a paid licence key. The payroll engine and time tracking you already have carry over unchanged.</p>
       </div>
     </div>
   </div>
@@ -154,13 +124,13 @@ autoseo:
   <div class="container">
     <div class="sh">
       <span class="eyebrow brand">Start simple. Grow when you&rsquo;re ready.</span>
-      <h2>Same engine. Licence-flagged features.</h2>
-      <p>Cashbook runs on the same SAE Books core as the Business, Pro, and Enterprise tiers. Everything is already in the binary &mdash; it&rsquo;s runtime-flagged, not a different product.</p>
+      <h2>Same Community binary. Sole-trader defaults.</h2>
+      <p>Cashbook is the Community edition with cash-basis mode and single-user lock turned on by default. Same source, same binary, same database schema as every other tier &mdash; just opinionated configuration for someone who doesn&rsquo;t want to think about journal entries.</p>
     </div>
     <div class="upgrade-arc">
-      <h3>The only thing Cashbook doesn&rsquo;t do: accrual journals.</h3>
-      <p>Payroll, time tracking, invoicing, employees, super &mdash; it&rsquo;s all there. The one difference between Cashbook and the full Community tier is bookkeeping method: Cashbook is cash-basis (journals post when money moves), Community is full accrual double-entry (journals post when the invoice is issued). That&rsquo;s it.</p>
-      <p style="margin-top:14px;">When you need accrual accounting &mdash; because your accountant asks for it, or you start running inventory, or you want proper P&amp;L that doesn&rsquo;t lag your invoicing &mdash; the upgrade is a licence-key flip on the same running instance. SAE Books backfills the A/R journal entries for any open invoices automatically. No migration, no export/import, no starting fresh. Your payroll history, time entries, and cash transactions carry over unchanged.</p>
+      <h3>The cash-basis default is the only thing standing between you and full accrual.</h3>
+      <p>Payroll, time tracking, invoicing, employees, super &mdash; it&rsquo;s all there because it&rsquo;s the Community edition. The Cashbook bundle just sets <code>POSTING_BASIS=cash</code> and locks the user count to one. Flip the basis setting and you get full accrual double-entry on the same running instance.</p>
+      <p style="margin-top:14px;">When you need accrual accounting &mdash; because your accountant asks for it, or you start running inventory, or you want proper P&amp;L that doesn&rsquo;t lag your invoicing &mdash; one config change does it. SAE Books backfills the A/R journal entries for any open invoices automatically. No migration, no export/import, no starting fresh. For multi-company, FX revaluation, bank feeds or BAS e-lodgement, step up to the paid Business / Pro / Enterprise tiers &mdash; same binary, new licence key.</p>
       <a href="/#editions" class="btn">See all editions
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -180,12 +150,12 @@ autoseo:
         <p>There is no catch. Cashbook is AGPLv3 open-source software. Download the source, run it on your own server, use it indefinitely at zero cost. We make money when businesses grow and upgrade to paid tiers &mdash; so Cashbook being genuinely useful to you is good for us too. The only thing that costs money is if you want us to host it for you, or if you eventually need bank feeds or BAS e-lodgement &mdash; payroll and time tracking are free.</p>
       </details>
       <details class="faq">
-        <summary>Can I run payroll on the free Cashbook tier?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Yes. Employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual (NES annual + personal), and STP Phase 2 payload assembly are all available free in Cashbook. A sole trader with one employee can manage the full payroll workflow &mdash; including time tracking, pay calculations, and lodgement records &mdash; without ever paying a subscription. One caveat: the PAYG tax-table coefficients in the current beta are derived placeholders, not yet sourced from the official ATO NAT 1008 spreadsheet. Verify before running production payroll.</p>
+        <summary>Can I run payroll on the free Cashbook bundle?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>Yes. The Cashbook bundle ships the same Community binary, so employees, super funds, NAT 1004 PAYG calculation, SG 12% super, leave accrual (NES annual + personal), and STP Phase 2 payload assembly are all included. A sole trader with one employee can manage the full payroll workflow &mdash; including time tracking, pay calculations, and lodgement records &mdash; without ever paying a subscription. One caveat: the PAYG tax-table coefficients in the current beta are derived placeholders, not yet sourced from the official ATO NAT 1008 spreadsheet. Verify before running production payroll.</p>
       </details>
       <details class="faq">
         <summary>What&rsquo;s the difference between Cashbook and Community?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Both are free and self-hosted. Cashbook is cash-basis: no journal entry is posted until money changes hands. Community is full accrual double-entry: invoices post A/R on issue, bills post A/P on receipt, and your P&amp;L reflects earned income rather than collected cash. If you invoice and collect in the same period, or you just want simplicity, Cashbook is the right choice. If your accountant needs accrual reports, or you run inventory, or you have retention or trade-in lines &mdash; Community is the step up. The upgrade is a one-call operation on the same server.</p>
+        <p>Both are the same Community edition (free, self-hosted, AGPLv3). The Cashbook bundle is that edition pre-configured for sole traders: cash-basis posting by default (no journal entry until money moves), single-user lock, sole-trader chart of accounts. The vanilla Community edition lets you run accrual from day one with multi-user access and whatever chart you want. If you invoice and collect in the same period, or you just want simplicity, install the Cashbook bundle. If your accountant needs accrual reports, install vanilla Community &mdash; or install Cashbook today and flip <code>POSTING_BASIS=accrual</code> tomorrow without losing a transaction.</p>
       </details>
       <details class="faq">
         <summary>Why on-prem? Why not just give me a free SaaS account?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -204,26 +174,24 @@ autoseo:
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community and Cashbook editions for self-host, paid tiers for payroll, bank feeds, and BAS. AGPLv3, owned by you.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host &mdash; Cashbook bundle ships the same binary with sole-trader defaults. Paid tiers add multi-company, bank feeds, and BAS. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
         <ul>
-          <li><a href="/cashbook">Cashbook (free)</a></li>
+          <li><a href="/cashbook">Cashbook bundle (free)</a></li>
           <li><a href="https://cashbook-demo.saebooks.com.au">Try Cashbook demo</a></li>
-          <li><a href="https://github.com/saebooks/saebooks">Self-host (Community)</a></li>
+          <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
           <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/ROADMAP.md">Roadmap</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
-          <li><a href="https://github.com/saebooks/saebooks">GitHub</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/CHANGELOG.md">Changelog</a></li>
+          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="/blog">Build log</a></li>
         </ul>
       </div>
@@ -233,62 +201,22 @@ autoseo:
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
           <li><a href="https://app.saebooks.com.au/contact">Contact</a></li>
           <li><a href="https://sauer.com.au/privacy">Privacy</a></li>
-          <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Licence (AGPLv3)</a></li>
+          <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">Licence (AGPLv3)</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Sauer Pty Ltd &middot; ABN 87 744 586 592 &middot; ACN 683 275 756 &middot; Cairns, QLD</span>
-      <span>Source available under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.</span>
+      <span>Source available under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">AGPLv3</a>.</span>
     </div>
   </div>
 </footer>
 
 <div class="mobile-cta">
   <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary">Try the demo</a>
-  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary">Self-host free</a>
+  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-secondary">Self-host free</a>
 </div>
 
-<script>
-  (function() {
-    var root = document.documentElement;
-    var STORAGE_KEY = 'sae-books-theme';
-    var mql = window.matchMedia('(prefers-color-scheme: dark)');
+<!-- Theme controls (floating bubble + segmented switch wiring) are injected by
+     the template partial typhoon/templates/partials/theme-controls.html.twig -->
 
-    function applyTheme(choice) {
-      var resolved = (choice === 'auto') ? (mql.matches ? 'dark' : 'light') : choice;
-      if (choice === 'auto') {
-        root.removeAttribute('data-theme');
-      } else {
-        root.setAttribute('data-theme', choice);
-      }
-      root.classList.remove('light', 'dark');
-      root.classList.add(resolved);
-      document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(b) {
-        b.setAttribute('aria-pressed', String(b.dataset.themeValue === choice));
-      });
-    }
-
-    function getStoredChoice() {
-      var v = localStorage.getItem(STORAGE_KEY);
-      return (v === 'light' || v === 'dark') ? v : 'auto';
-    }
-
-    applyTheme(getStoredChoice());
-
-    document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var choice = btn.dataset.themeValue;
-        if (choice === 'auto') localStorage.removeItem(STORAGE_KEY);
-        else localStorage.setItem(STORAGE_KEY, choice);
-        applyTheme(choice);
-      });
-    });
-
-    if (mql.addEventListener) {
-      mql.addEventListener('change', function() {
-        if (getStoredChoice() === 'auto') applyTheme('auto');
-      });
-    }
-  })();
-</script>
