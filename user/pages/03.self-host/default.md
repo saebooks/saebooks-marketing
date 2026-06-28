@@ -11,45 +11,6 @@ process:
     twig: true
 ---
 
-<style>
-  .shots-grid { display: grid; gap: 24px; grid-template-columns: 1fr; margin-top: 8px; }
-  @media (min-width: 900px) { .shots-grid { grid-template-columns: 1fr 1fr; } }
-  .shot-frame {
-    border: 1px solid var(--border); border-radius: var(--radius-lg);
-    overflow: hidden; box-shadow: var(--shadow-card); background: var(--surface);
-  }
-  .shot-frame img { display: block; width: 100%; height: auto; }
-  .shot-frame figcaption {
-    font-size: var(--fs-small); color: var(--muted);
-    padding: 12px 16px; border-top: 1px solid var(--border); margin: 0;
-  }
-  .install { max-width: 820px; margin: 0 auto; }
-  .install pre {
-    background: var(--page); color: var(--ink);
-    border: 1px solid var(--border-strong); border-radius: var(--radius);
-    padding: 20px 22px; overflow-x: auto; font-family: var(--font-mono);
-    font-size: 13.5px; line-height: 1.7; margin: 0 0 18px;
-  }
-  .install pre .c { color: var(--muted); }
-  .install ol { counter-reset: step; list-style: none; padding: 0; margin: 0 0 28px; }
-  .install ol > li {
-    position: relative; padding: 0 0 18px 44px; margin: 0;
-    color: var(--body); line-height: 1.6;
-  }
-  .install ol > li::before {
-    counter-increment: step; content: counter(step);
-    position: absolute; left: 0; top: -2px;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: var(--brand-navy-50); color: var(--brand-navy);
-    display: inline-flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 13px; font-family: var(--font-mono);
-  }
-  [data-theme="dark"] .install ol > li::before, html.dark .install ol > li::before { color: #93a5d6; }
-  .install ol > li strong { color: var(--ink); }
-  .install code, .lede code { font-family: var(--font-mono); font-size: 0.88em; background: var(--subtle); padding: 1px 6px; border-radius: 5px; }
-  .self-host-page .hero .lead { max-width: 600px; }
-</style>
-
 <section class="hero">
   <div class="container">
     <div>

@@ -11,30 +11,6 @@ process:
     twig: true
 ---
 
-<style>
-  .tour { max-width: 1080px; margin: 0 auto; }
-  .tour-row { display: grid; gap: 28px; align-items: center; grid-template-columns: 1fr; margin: 0 0 64px; }
-  @media (min-width: 900px) {
-    .tour-row { grid-template-columns: 1fr 1fr; gap: 48px; }
-    .tour-row.flip .tour-text { order: 2; }
-    .tour-row.flip .tour-shot { order: 1; }
-  }
-  .tour-text h2 { font-size: var(--fs-h3); margin: 8px 0 10px; line-height: 1.2; }
-  .tour-text .big { font-size: var(--fs-h2); }
-  .tour-text p { color: var(--body); font-size: 1.02rem; line-height: 1.6; margin: 0 0 10px; }
-  .tour-text .note { font-size: var(--fs-small); color: var(--muted); }
-  .tour-shots-2 { display: grid; gap: 18px; grid-template-columns: 1fr; }
-  .payroll-callout {
-    max-width: 1080px; margin: 0 auto 64px; padding: 22px 26px;
-    border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
-    background: var(--subtle); display: flex; gap: 16px; align-items: flex-start;
-  }
-  .payroll-callout .icon { color: var(--brand-navy); flex-shrink: 0; }
-  [data-theme="dark"] .payroll-callout .icon, html.dark .payroll-callout .icon { color: #93a5d6; }
-  .payroll-callout h3 { margin: 0 0 4px; font-size: 1.05rem; }
-  .payroll-callout p { margin: 0; color: var(--body); font-size: 0.95rem; line-height: 1.55; }
-</style>
-
 <section class="hero">
   <div class="container">
     <div>
