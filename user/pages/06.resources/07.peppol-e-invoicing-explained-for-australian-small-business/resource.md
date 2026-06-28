@@ -42,7 +42,7 @@ Peppol (Pan-European Public Procurement On-Line) is an open, international frame
 
 In Australia, the Australian Taxation Office (ATO) acts as the Peppol Authority — the national body responsible for accrediting service providers and overseeing local compliance. A full list of Peppol Authorities by country is published on the OpenPeppol website.
 
-<figure class="article-diagram"><img src="/user/data/article-visuals/peppol-e-invoicing-explained-for-australian-small-business-flow.svg" alt="Peppol Four-Corner Invoice Flow" loading="lazy"></figure>
+<figure class="article-diagram"><img class="d-light" src="/user/data/article-visuals/peppol-e-invoicing-explained-for-australian-small-business-flow-light.svg" alt="Peppol Four-Corner Invoice Flow" loading="lazy"><img class="d-dark" src="/user/data/article-visuals/peppol-e-invoicing-explained-for-australian-small-business-flow-dark.svg" alt="" aria-hidden="true" loading="lazy"></figure>
 
 ## How the Network Works
 

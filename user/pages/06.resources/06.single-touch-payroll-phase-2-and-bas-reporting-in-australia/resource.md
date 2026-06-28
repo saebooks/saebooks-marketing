@@ -25,7 +25,7 @@ Single Touch Payroll Phase 2 (STP2) expands the original STP framework by requir
 
 SAE Books structures payroll data to meet STP2 field requirements and handles ATO submission directly via its API, so each pay run produces a compliant STP2 payload lodged at the time of payment.
 
-<figure class="article-diagram"><img src="/user/data/article-visuals/single-touch-payroll-phase-2-and-bas-reporting-in-australia-flow.svg" alt="STP2 Pay Event to BAS Reconciliation" loading="lazy"></figure>
+<figure class="article-diagram"><img class="d-light" src="/user/data/article-visuals/single-touch-payroll-phase-2-and-bas-reporting-in-australia-flow-light.svg" alt="STP2 Pay Event to BAS Reconciliation" loading="lazy"><img class="d-dark" src="/user/data/article-visuals/single-touch-payroll-phase-2-and-bas-reporting-in-australia-flow-dark.svg" alt="" aria-hidden="true" loading="lazy"></figure>
 
 ## How STP2 Relates to BAS Obligations
 

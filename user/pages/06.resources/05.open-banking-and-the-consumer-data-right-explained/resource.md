@@ -22,7 +22,7 @@ autoseo:
 
 Open banking in Australia operates under the Consumer Data Right (CDR), a government framework that gives consumers and businesses the right to share their banking data with accredited third parties. Data is exchanged through secure APIs, and sharing only occurs with the account holder's explicit consent. The CDR is administered by the Australian Competition and Consumer Commission (ACCC).
 
-<figure class="article-diagram"><img src="/user/data/article-visuals/open-banking-and-the-consumer-data-right-explained-flow.svg" alt="CDR Bank Feed Data Flow" loading="lazy"></figure>
+<figure class="article-diagram"><img class="d-light" src="/user/data/article-visuals/open-banking-and-the-consumer-data-right-explained-flow-light.svg" alt="CDR Bank Feed Data Flow" loading="lazy"><img class="d-dark" src="/user/data/article-visuals/open-banking-and-the-consumer-data-right-explained-flow-dark.svg" alt="" aria-hidden="true" loading="lazy"></figure>
 
 ## How the CDR Works
 
