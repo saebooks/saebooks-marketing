@@ -1,65 +1,32 @@
-# saebooks-marketing
+# saebooks.com.au — marketing site (Grav) SOURCE
 
-Public marketing site for [saebooks.com.au](https://saebooks.com.au) — Grav CMS with the
-Typhoon theme, custom dark CSS, and direct CTAs into the SAE Books surface area:
+Canonical source for the public marketing site <https://saebooks.com.au>, served by
+the `grav-saebooks` container on bosun. **Edit here — never on the live container.**
 
-- **App**     — `https://app.saebooks.com.au` (FastAPI ledger)
-- **Dev**     — `https://dev.saebooks.com.au` (developer portal / API ref)
-- **Forum**   — `https://discourse.saebooks.com.au` (Discourse community)
-- **Login**   — `https://auth.saebooks.com.au` (Authentik SSO)
+## Workflow
+1. Edit `user/` (content / templates / config) in this repo on bosun (as `sauer`).
+2. `git commit`. That's it — a systemd path-watch auto-runs `./deploy.sh`:
+   **sync → fix ownership (99:100) → clear Grav cache → smoke-test → mirror-push to GitHub.**
+   If a change breaks the site, the smoke test **auto-ROLLS BACK** live to the previous-good
+   state and the deploy is marked failed (`OnFailure` notify). A bad edit cannot silently stay live.
+3. Manual deploy any time: `./deploy.sh` (or `./deploy.sh --no-verify` to skip the gate).
 
-All four properties share the same Authentik identity (`auth.saebooks.com.au`) so a single
-sign-in covers the lot.
+## Tracked (managed → deployed) vs not
+- **Tracked:** `user/pages`, `user/config` (minus secrets), `user/data` (minus PII/runtime),
+  `user/themes/typhoon/templates`, this README.
+- **NOT tracked / NOT deployed:** `user/plugins` (GPM-managed on live), `user/accounts`,
+  secrets (`security*.yaml|php`, `plugins/email.yaml`, `plugins/login-oauth2.yaml`,
+  `data/licenses.yaml`), `cache/logs/tmp/backup`, form-submission/runtime data.
 
-## Layout
+## Pipeline pieces (bosun)
+| Piece | Role |
+|---|---|
+| `deploy.sh` | sync + ownership + clearcache + smoke-test (auto-rollback) + mirror-push. Origin smoke = `http://10.0.1.1:18008` (bypasses Cloudflare). |
+| `saebooks-marketing-deploy.path` (systemd) | watches `.git/refs/heads/main` → triggers the deploy service on every commit/pull. |
+| `saebooks-marketing-deploy.service` (systemd, root oneshot) | runs `deploy.sh`. |
+| live webroot | `/opt/appdata/grav-saebooks/www/user` (container PUID:PGID `99:100`). |
 
-```
-user/
-├── pages/
-│   ├── 01.home/homepage.md      # full landing page: hero, why, features, editions, self-host, FAQ, CTA
-│   ├── 02.cashbook/default.md   # the free Cashbook product page
-│   └── 02.blog/                 # build log / blog (item.md per post)
-├── data/
-│   ├── saebooks.css             # custom dark theme, no Tailwind compile required
-│   └── sae-books-logo.png       # wordmark
-└── config/
-    ├── site.yaml                # title, nav menu
-    ├── plugins/custom-css.yaml  # loads saebooks.css
-    └── themes/typhoon.yaml      # Typhoon dark mode + footer + copyright
-```
+Content-twig is DEAD on this Grav 2.0.3 — put `{% include %}` / `{{ }}` in **templates**, not page
+markdown bodies (the smoke test greps for raw `{%` leaks to catch regressions).
 
-The landing page is a single rich `homepage.md` with in-page sections (`#features`,
-`#editions`, `#self-host`, `#faq`) rather than separate pages — the nav anchors into it.
-
-## Deploy
-
-The live site runs the `grav-saebooks` container on **bosun**
-(`/opt/appdata/grav-saebooks` → docker volume). Files in `user/` map 1:1 to
-`/config/www/user/` inside the container. To re-deploy after edits in this repo:
-
-```bash
-ssh bosun "sudo docker cp /home/sauer/projects/saebooks-marketing/user/. \
-  grav-saebooks:/config/www/user/ && \
-  sudo docker exec grav-saebooks bin/grav clearcache"
-```
-
-## Theme
-
-Typhoon is a paid Tailwind-based Grav theme. Licence keys are stored separately at
-`user/data/licenses.yaml` (not in this repo — see the Grav premium-licences note on
-the ops host).
-
-The custom CSS forces a dark palette over Typhoon's light defaults; the `body_classes`
-in each page front-matter (`homepage`, etc.) namespace the overrides so they don't
-bleed into Typhoon's admin UI. A light/dark/auto theme switcher is wired in the header.
-
-## Auth
-
-Editor login is OAuth2 against the dedicated `auth.saebooks.com.au` Authentik instance
-(separate from `auth.sauer.com.au`, deliberately portable to a dedicated host later).
-Visitors don't need to authenticate to read the site.
-
-## Licence
-
-Site **content** © Sauer Pty Ltd ATF Saueesti Trust (ABN 87 744 586 592).
-SAE Books itself is [AGPL-licensed](https://github.com/saebooks/saebooks).
+Retired 2026-06-28: `saebooks-grav-sync` (old edit-live-then-mirror auto-commit; broke 2026-06-03).
