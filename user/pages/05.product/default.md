@@ -40,7 +40,7 @@ process:
       <h1>A complete accounting product. And it's yours.</h1>
       <p class="lead">Cashbook to payroll to BAS &mdash; the full double-entry stack in one app you run. Here's what's actually inside, shot from the live demo. Every screen is a thin client over the same public REST API, on a Postgres database you own.</p>
       <div class="hero-ctas">
-        <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg">Try the live demo
+        <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Try the live demo
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="/self-host" class="btn btn-secondary btn-lg">Self-host free</a>
@@ -61,7 +61,7 @@ process:
           <p>Log income and expenses in seconds, tag GST, watch the month total move. It's the sole-trader on-ramp to a full double-entry ledger &mdash; flip to accrual whenever you're ready, same data, same server.</p>
         </div>
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/cashbook"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="SAE Books cashbook — cash in / cash out with recent entries and this-month totals"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="SAE Books cashbook — cash in / cash out with recent entries and this-month totals"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         </figure>
       </div>
 
@@ -72,7 +72,7 @@ process:
           <p>Quotes, invoices, credit notes, recurring &mdash; draft to open to paid, with one-field ABR lookup on contacts and aged-receivables reporting. The whole AR side, not a bolt-on.</p>
         </div>
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/invoices"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="SAE Books invoices — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="SAE Books invoices — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         </figure>
       </div>
 
@@ -83,7 +83,7 @@ process:
           <p>Log billable hours by day and project on a weekly grid, then turn the billable ones into a draft invoice line &mdash; rate snapshotted at entry. No re-keying your week.</p>
         </div>
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/time-entries/week"><img class="shot-light" src="/user/data/screenshots/tour-timesheet-light.png?v={{ site.assets_version }}" alt="SAE Books weekly time grid — log billable hours by day and project"><img class="shot-dark" src="/user/data/screenshots/tour-timesheet-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/time-entries/week" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-timesheet-light.png?v={{ site.assets_version }}" alt="SAE Books weekly time grid — log billable hours by day and project"><img class="shot-dark" src="/user/data/screenshots/tour-timesheet-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         </figure>
       </div>
 
@@ -109,7 +109,7 @@ process:
           <p>G1 through G11, 1A/1B net GST &mdash; the worksheet computes from your books, ready to review and lodge via the ATO portal. Australian tax isn't an add-on here; it's baked into the chart of accounts and tax codes from the Odoo AU localisation.</p>
         </div>
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="SAE Books BAS worksheet — G1 to G11, 1A/1B net GST"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="SAE Books BAS worksheet — G1 to G11, 1A/1B net GST"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         </figure>
       </div>
     </div>
@@ -126,11 +126,11 @@ process:
     <div class="tour">
       <div class="tour-shots-2" style="grid-template-columns:1fr 1fr;gap:18px;">
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/accounts"><img class="shot-light" src="/user/data/screenshots/tour-accounts-light.png?v={{ site.assets_version }}" alt="SAE Books chart of accounts — the AU standard, 134 accounts"><img class="shot-dark" src="/user/data/screenshots/tour-accounts-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/accounts" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-accounts-light.png?v={{ site.assets_version }}" alt="SAE Books chart of accounts — the AU standard, 134 accounts"><img class="shot-dark" src="/user/data/screenshots/tour-accounts-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
           <figcaption style="font-size:var(--fs-small);color:var(--muted);padding:10px 14px;border-top:1px solid var(--border);margin:0;">Chart of accounts &mdash; the AU standard, 134 of them, by type.</figcaption>
         </figure>
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/reports"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="SAE Books reports library — P&L, balance sheet, BAS, aged receivables, FX revaluation"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+          <a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="SAE Books reports library — P&L, balance sheet, BAS, aged receivables, FX revaluation"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
           <figcaption style="font-size:var(--fs-small);color:var(--muted);padding:10px 14px;border-top:1px solid var(--border);margin:0;">Reports &mdash; P&amp;L, Balance Sheet, Aged AR/AP, Budget vs Actual, FX.</figcaption>
         </figure>
       </div>
@@ -172,7 +172,7 @@ process:
         <ul>
           <li><a href="/product">Inside SAE Books</a></li>
           <li><a href="/cashbook">Cashbook bundle</a></li>
-          <li><a href="https://cashbook-demo.saebooks.com.au">Live demo</a></li>
+          <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Live demo</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
         </ul>
       </div>

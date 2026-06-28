@@ -19,7 +19,7 @@ body_classes: homepage
           <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the demo</a>
+          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try the demo</a>
           <a href="https://dev.saebooks.com.au" class="btn btn-secondary btn-lg">Read the API docs</a>
         </div>
         <div class="hero-meta">
@@ -179,16 +179,16 @@ body_classes: homepage
       <p>The full double-entry product &mdash; cashbook, invoicing, time tracking, GST/BAS and a real reports library &mdash; in one app you run. Real screens from the live demo &mdash; shown in your own theme, light or dark:</p>
     </div>
     <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;">
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="BAS worksheet"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>GST/BAS, built in</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="BAS worksheet"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>GST/BAS, built in</figcaption></figure>
     </div>
     <div style="text-align:center;margin-top:36px;">
       <a href="/product" class="btn btn-primary btn-lg">Take the full tour
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the live demo</a>
+      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try the live demo</a>
     </div>
   </div>
 </section>
@@ -207,7 +207,7 @@ body_classes: homepage
           <div class="tier-name">Cashbook <span class="badge" style="font-size:10px;background:rgba(0,0,0,0.08);color:var(--brand-navy);">Community bundle</span></div>
           <div class="tier-price"><span class="free">Free</span></div>
           <div class="tier-tagline">The Community edition pre-configured for sole traders: cash-basis mode, single-user lock, sole-trader chart of accounts. Not a different binary &mdash; same Community codebase, opinionated defaults. Switch to full accrual any time with one config flag.</div>
-          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
+          <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary" target="_blank" rel="noopener">Try the demo</a>
           <ul class="tier-feats">
             <li class="group">Bookkeeping (cash-basis defaults)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cash in / cash out (single-entry view)</li>
@@ -487,7 +487,7 @@ $ docker compose up -d
         <ul>
           <li><a href="/cashbook">Cashbook bundle</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
-          <li><a href="https://cashbook-demo.saebooks.com.au">Try the demo</a></li>
+          <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Try the demo</a></li>
           <li><a href="#editions">Pricing &amp; plans</a></li>
           <li><a href="/preview-access?interest=enterprise">Talk to us (Enterprise)</a></li>
         </ul>
@@ -520,7 +520,7 @@ $ docker compose up -d
 
 <div class="mobile-cta">
   <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
-  <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
+  <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary" target="_blank" rel="noopener">Try the demo</a>
 </div>
 
 <!-- Theme controls (floating bubble + segmented switch wiring) are injected by

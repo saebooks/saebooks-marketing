@@ -15,7 +15,7 @@ process:
     <h1>Free bookkeeping, payroll, and time tracking for sole traders.</h1>
     <p class="lead">Free for life. On your server. The Community edition pre-configured for sole traders: cash-basis invoicing, STP Phase 2 payroll, weekly time tracking, employees, and super &mdash; all included. No SaaS lock-in, no trial that expires, no credit card required. Switch to full accrual any time without migrating data.</p>
     <div class="hero-ctas">
-      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg">Try the demo
+      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Try the demo
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
       <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary btn-lg">Self-host in 5 minutes</a>
@@ -180,7 +180,7 @@ process:
         <h5>Product</h5>
         <ul>
           <li><a href="/cashbook">Cashbook bundle (free)</a></li>
-          <li><a href="https://cashbook-demo.saebooks.com.au">Try Cashbook demo</a></li>
+          <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Try Cashbook demo</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
           <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
@@ -213,7 +213,7 @@ process:
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary">Try the demo</a>
+  <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary" target="_blank" rel="noopener">Try the demo</a>
   <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary">Self-host free</a>
 </div>
 

@@ -59,7 +59,7 @@ process:
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary btn-lg">Read the quickstart</a>
-        <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the live demo</a>
+        <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try the live demo</a>
       </div>
       <div class="hero-meta">
         <span class="pill"><span class="dot"></span>Free &middot; AGPLv3</span>
@@ -76,15 +76,15 @@ process:
     <div class="sh">
       <span class="eyebrow brand">Not a mockup</span>
       <h2>This is what you'll be running.</h2>
-      <p>Live screenshots from <a href="https://cashbook-demo.saebooks.com.au">cashbook-demo.saebooks.com.au</a> &mdash; the same build you self-host, seeded with sample data. No login required, click anything.</p>
+      <p>Live screenshots from <a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">cashbook-demo.saebooks.com.au</a> &mdash; the same build you self-host, seeded with sample data. No login required, click anything.</p>
     </div>
     <div class="shots-grid">
       <figure class="shot-frame">
-        <a href="https://cashbook-demo.saebooks.com.au/cashbook"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="SAE Books cashbook overview — cash in / cash out, recent entries, this-month summary"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+        <a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="SAE Books cashbook overview — cash in / cash out, recent entries, this-month summary"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         <figcaption>Cashbook overview &mdash; cash in / out, live entries, this-month totals.</figcaption>
       </figure>
       <figure class="shot-frame">
-        <a href="https://cashbook-demo.saebooks.com.au/invoices"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="SAE Books invoices list — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+        <a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="SAE Books invoices list — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
         <figcaption>Invoices &mdash; draft / open / due-soon, the full AR ledger.</figcaption>
       </figure>
     </div>
@@ -292,7 +292,7 @@ docker compose exec app python -m saebooks.scripts.bootstrap
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub repo</a></li>
           <li><a href="https://dev.saebooks.com.au/getting-started/quickstart/">Quickstart</a></li>
           <li><a href="https://dev.saebooks.com.au/install">Install guide</a></li>
-          <li><a href="https://cashbook-demo.saebooks.com.au">Live demo</a></li>
+          <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Live demo</a></li>
         </ul>
       </div>
       <div class="foot-col">
