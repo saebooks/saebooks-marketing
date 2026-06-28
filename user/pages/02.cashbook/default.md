@@ -1,4 +1,6 @@
 ---
+metadata:
+    description: 'The SAE Books cashbook — cash in, cash out, recent entries and month totals at a glance. Part of a self-hosted, GST and BAS-ready ledger for Australian small business.'
 header_active: cashbook
 title: 'Cashbook — Free bookkeeping, payroll, and time tracking for sole traders'
 menu: Cashbook
@@ -200,7 +202,6 @@ process:
         <ul>
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
           <li><a href="https://app.saebooks.com.au/contact">Contact</a></li>
-          <li><a href="https://sauer.com.au/privacy">Privacy</a></li>
           <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">Licence (AGPLv3)</a></li>
         </ul>
       </div>

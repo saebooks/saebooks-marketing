@@ -1,0 +1,30 @@
+{# Social/share + structured-data meta — shared by every standalone marketing
+   template. Added 2026-06-28 (bug-hunt): previously NO page emitted Open Graph
+   or Twitter Card tags, so shares on LinkedIn/Slack/iMessage/etc. unfurled with
+   no title, description or image. Driven off page frontmatter with site
+   fallbacks. Include right after the canonical <link> in each <head>. #}
+{% set _url   = page.url(true, true)|replace({'http://': 'https://'}) %}
+{% set _title = header.title ? (header.title ~ ' | ' ~ site.title) : site.title %}
+{% set _desc  = header.metadata.description|default(header.dek|default(site.metadata.description)) %}
+{% set _img   = 'https://saebooks.com.au/user/data/sae-books-logo.png' %}
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="{{ site.title|e('html_attr') }}"/>
+<meta property="og:title" content="{{ _title|e('html_attr') }}"/>
+{% if _desc %}<meta property="og:description" content="{{ _desc|e('html_attr') }}"/>{% endif %}
+<meta property="og:url" content="{{ _url|e('html_attr') }}"/>
+<meta property="og:image" content="{{ _img }}"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="{{ _title|e('html_attr') }}"/>
+{% if _desc %}<meta name="twitter:description" content="{{ _desc|e('html_attr') }}"/>{% endif %}
+<meta name="twitter:image" content="{{ _img }}"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "name": "SAE Books", "url": "https://saebooks.com.au",
+      "logo": "https://saebooks.com.au/user/data/sae-books-logo.png",
+      "sameAs": ["https://github.com/saebooks/saebooks"] },
+    { "@type": "WebSite", "name": "SAE Books", "url": "https://saebooks.com.au" }
+  ]
+}
+</script>

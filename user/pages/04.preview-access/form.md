@@ -1,4 +1,6 @@
 ---
+metadata:
+    description: 'Request early access to hosted SAE Books, or self-host the free Community edition now. GST and BAS-ready double-entry accounting for Australian small business.'
 title: 'Request preview access'
 menu: 'Preview access'
 body_classes: 'page form-page'
@@ -10,22 +12,26 @@ form:
     fields:
         -
             name: name
+            id: pa-name
             label: 'Your name'
             type: text
             validate:
                 required: true
         -
             name: email
+            id: pa-email
             label: 'Email'
             type: email
             validate:
                 required: true
         -
             name: company
+            id: pa-company
             label: 'Business / company (optional)'
             type: text
         -
             name: interest
+            id: pa-interest
             label: "What are you after?"
             type: select
             default: business
@@ -36,6 +42,7 @@ form:
                 keeping-in-touch: 'Just keeping in touch'
         -
             name: message
+            id: pa-message
             label: 'Anything else? (optional)'
             type: textarea
     buttons:

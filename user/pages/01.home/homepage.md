@@ -179,10 +179,10 @@ body_classes: homepage
       <p>The full double-entry product &mdash; cashbook, invoicing, time tracking, GST/BAS and a real reports library &mdash; in one app you run. Real screens from the live demo &mdash; shown in your own theme, light or dark:</p>
     </div>
     <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;">
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png?v={{ site.assets_version }}" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>
-      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png?v={{ site.assets_version }}" alt="BAS worksheet"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a><figcaption>GST/BAS, built in</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>
+      <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png" alt="BAS worksheet"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png" alt="" aria-hidden="true"></a><figcaption>GST/BAS, built in</figcaption></figure>
     </div>
     <div style="text-align:center;margin-top:36px;">
       <a href="/product" class="btn btn-primary btn-lg">Take the full tour
@@ -506,7 +506,6 @@ $ docker compose up -d
         <ul>
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
           <li><a href="/preview-access">Contact</a></li>
-          <li><a href="https://sauer.com.au/privacy">Privacy</a></li>
           <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">Licence (AGPLv3)</a></li>
         </ul>
       </div>

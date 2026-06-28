@@ -10,6 +10,7 @@ summary:
   size: 300
   delimiter: '==='
 redirects:
+  '/favicon.ico': '/user/data/sae-books-logo.png'
   '/features': '/#features'
   '/pricing': '/#editions'
   '/plans': '/#editions'

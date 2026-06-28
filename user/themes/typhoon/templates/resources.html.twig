@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="{{ header.metadata.description|default('Plain-English guides to Australian small-business accounting, compliance and owning your own ledger — from the team building SAE Books.')|e('html') }}"/>
   <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
-  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  <link rel="canonical" href="{{ page.url(true, true)|replace({'http://': 'https://'}) }}"/>
+  {% include 'partials/social-meta.html.twig' %}
   {% set v = page.modified|default('1') %}
   <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ v }}"/>
   <link rel="stylesheet" href="/user/data/saebooks.css?v={{ v }}"/>

@@ -9,7 +9,8 @@
   {% set description = page.summary(160, true)|striptags %}
   {% if description %}<meta name="description" content="{{ description|e('html') }}"/>{% endif %}
   <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
-  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  <link rel="canonical" href="{{ page.url(true, true)|replace({'http://': 'https://'}) }}"/>
+  {% include 'partials/social-meta.html.twig' %}
   {% set v = page.modified|default('1') %}
   <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ v }}"/>
   <link rel="stylesheet" href="/user/data/saebooks.css?v={{ v }}"/>
@@ -129,7 +130,6 @@
           <li><a href="https://app.saebooks.com.au">Try the demo</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
           <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/ROADMAP.md">Roadmap</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -138,7 +138,7 @@
           <li><a href="https://dev.saebooks.com.au">Docs</a></li>
           <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
           <li><a href="https://github.com/saebooks/saebooks">GitHub</a></li>
-          <li><a href="https://github.com/saebooks/saebooks/blob/main/CHANGELOG.md">Changelog</a></li>
+          <li><a href="https://github.com/saebooks/saebooks/releases">Changelog</a></li>
           <li><a href="/blog">Build log</a></li>
         </ul>
       </div>
@@ -147,7 +147,6 @@
         <ul>
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
           <li><a href="https://app.saebooks.com.au/contact">Contact</a></li>
-          <li><a href="https://sauer.com.au/privacy">Privacy</a></li>
           <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Licence (AGPLv3)</a></li>
         </ul>
       </div>

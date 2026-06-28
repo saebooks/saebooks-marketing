@@ -1,4 +1,6 @@
 ---
+metadata:
+    description: 'Self-host SAE Books with Docker and your own Postgres. AGPLv3 source, GST and BAS-ready double-entry accounting you fully own — for Australian small business.'
 header_active: self-host
 title: 'Self-host SAE Books — your books, your database, your control'
 menu: 'Self-host'
@@ -80,11 +82,11 @@ process:
     </div>
     <div class="shots-grid">
       <figure class="shot-frame">
-        <a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png?v={{ site.assets_version }}" alt="SAE Books cashbook overview — cash in / cash out, recent entries, this-month summary"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+        <a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png" alt="SAE Books cashbook overview — cash in / cash out, recent entries, this-month summary"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png" alt="" aria-hidden="true"></a>
         <figcaption>Cashbook overview &mdash; cash in / out, live entries, this-month totals.</figcaption>
       </figure>
       <figure class="shot-frame">
-        <a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png?v={{ site.assets_version }}" alt="SAE Books invoices list — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png?v={{ site.assets_version }}" alt="" aria-hidden="true"></a>
+        <a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png" alt="SAE Books invoices list — draft, open and due-soon invoices with AUD totals"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png" alt="" aria-hidden="true"></a>
         <figcaption>Invoices &mdash; draft / open / due-soon, the full AR ledger.</figcaption>
       </figure>
     </div>

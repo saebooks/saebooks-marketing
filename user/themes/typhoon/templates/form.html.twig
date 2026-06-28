@@ -8,9 +8,10 @@
   <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  {% if site.metadata.description %}<meta name="description" content="{{ site.metadata.description|e('html') }}"/>{% endif %}
+  {% set _pd = header.metadata.description|default(site.metadata.description) %}{% if _pd %}<meta name="description" content="{{ _pd|e('html') }}"/>{% endif %}
   <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
-  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  <link rel="canonical" href="{{ page.url(true, true)|replace({'http://': 'https://'}) }}"/>
+  {% include 'partials/social-meta.html.twig' %}
   {% set v = page.modified|default('1') %}
   <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ site.assets_version|default(v) }}"/>
   <link rel="stylesheet" href="/user/data/saebooks.css?v={{ site.assets_version|default(v) }}"/>
