@@ -13,6 +13,8 @@ CTN=grav-saebooks
 ORIGIN=http://10.0.1.1:18008                       # grav-saebooks origin (bypasses Cloudflare)
 HOSTHDR='saebooks.com.au'
 PW_CACHE=/home/sauer/.cache/ms-playwright          # chromium for the headless layout check
+PURGE_ENV=/home/sauer/.config/saebooks-deploy/cf-purge.env   # scoped (cache-purge-only) CF token, chmod 600
+PAGES_PUBLIC="'' product self-host cashbook resources blog"  # pages to purge at the CF edge after deploy
 
 dock() { if command -v sudo >/dev/null 2>&1; then sudo docker "$@"; else docker "$@"; fi; }
 rs()   { if command -v sudo >/dev/null 2>&1; then sudo rsync "$@"; else rsync "$@"; fi; }
@@ -34,6 +36,23 @@ bump_assets_version() {
   echo "    assets_version -> $ver"
 }
 
+# Purge Cloudflare's cached HTML for the changed pages so visitors fetch markup
+# carrying the freshly-hashed ?v= asset URLs. Best-effort: a missing/expired token
+# warns but never fails an already-successful deploy. The CSS files themselves are a
+# new cache key after bump_assets_version, so only the HTML needs purging.
+cf_purge_html() {
+  [ -f "$PURGE_ENV" ] || { echo 'WARN: CF purge token absent ('"$PURGE_ENV"') — skipping edge purge (visitors get new CSS within cache TTL)' >&2; return 0; }
+  # shellcheck disable=SC1090
+  . "$PURGE_ENV"
+  [ -n "${CF_PURGE_TOKEN:-}" ] && [ -n "${CF_ZONE_ID:-}" ] || { echo 'WARN: CF purge creds incomplete — skipping edge purge' >&2; return 0; }
+  local p urls=()
+  for p in $PAGES_PUBLIC; do [ "$p" = "''" ] && p=''; urls+=("\"https://$HOSTHDR/$p\""); done
+  local files; files=$(IFS=,; echo "${urls[*]}")
+  local resp; resp=$(curl -s -m 20 -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+    -H "Authorization: Bearer $CF_PURGE_TOKEN" -H 'Content-Type: application/json' --data "{\"files\":[$files]}")
+  if printf '%s' "$resp" | grep -q '"success":true'; then echo '    CF edge cache purged (html pages)'; else echo "WARN: CF purge failed: $resp" >&2; fi
+}
+
 echo '=== 0/4  snapshot current render-critical live state (pages + templates + data) ==='
 $SUDO mkdir -p "$SNAP/pages" "$SNAP/templates" "$SNAP/data"
 rs -a --delete "$LIVE/pages/"                     "$SNAP/pages/"
@@ -53,7 +72,7 @@ $SUDO chown -R 99:100 "$LIVE/pages" "$LIVE/themes/typhoon/templates" "$LIVE/conf
 bump_assets_version
 cc
 
-if [ "${1:-}" = '--no-verify' ]; then echo '=== 3/4  smoke + layout test skipped (--no-verify) ==='; echo 'deployed (unverified)'; exit 0; fi
+if [ "${1:-}" = '--no-verify' ]; then echo '=== 3/4  smoke + layout test skipped (--no-verify) ==='; cf_purge_html; echo 'deployed (unverified)'; exit 0; fi
 
 echo '=== 3/4  smoke test @ origin (header renders, no raw twig, HTTP 200) ==='
 fail=0; tmp="$(mktemp)"
@@ -95,6 +114,7 @@ if [ "$fail" = 1 ]; then
   echo 'ROLLED BACK. Live restored to previous-good; the bad source change was NOT published.' >&2
   exit 1
 fi
-echo '=== 4/4  ok; mirror to GitHub ==='
+echo '=== 4/4  ok; purge CF edge + mirror to GitHub ==='
+cf_purge_html
 sudo -u sauer GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=10' git -C /home/sauer/projects/saebooks-marketing push -q origin HEAD:main 2>&1 | tail -1 || echo 'WARN: mirror push failed (deploy still OK)'
 echo 'deployed + verified -> https://saebooks.com.au/'
