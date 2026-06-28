@@ -185,7 +185,7 @@ process:
           <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Try Cashbook demo</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
-          <li><a href="https://app.saebooks.com.au/contact?topic=enterprise">Talk to us (Enterprise)</a></li>
+          <li><a href="/preview-access">Talk to us (Enterprise)</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -201,7 +201,7 @@ process:
         <h5>Company</h5>
         <ul>
           <li><a href="https://sauer.com.au">SAE Engineering</a></li>
-          <li><a href="https://app.saebooks.com.au/contact">Contact</a></li>
+          <li><a href="/preview-access">Contact</a></li>
           <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">Licence (AGPLv3)</a></li>
         </ul>
       </div>
