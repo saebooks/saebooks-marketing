@@ -1,15 +1,15 @@
 ---
 title: 'Open Banking Under the Consumer Data Right (CDR)'
-date: '2026-06-28 23:29'
+date: '2026-06-28 23:34'
 template: resource
 category: 'Guide'
 read_time: '~2 min read'
-dek: 'Learn how Australia''s Consumer Data Right enables Open Banking, what accreditation means, and how API-based data sharing benefits small business accounting.'
+dek: 'Learn how Australia''s Consumer Data Right enables open banking, what accreditation means, and how CDR bank feeds work with small business accounting tools.'
 metadata:
-    description: 'Learn how Australia''s Consumer Data Right enables Open Banking, what accreditation means, and how API-based data sharing benefits small business accounting.'
+    description: 'Learn how Australia''s Consumer Data Right enables open banking, what accreditation means, and how CDR bank feeds work with small business accounting tools.'
 taxonomy:
     category: [resources]
-    tag: ['open banking', 'consumer data right', 'cdr', 'small business', 'api', 'accounting']
+    tag: ['open banking', 'consumer data right', 'cdr', 'bank feeds', 'small business', 'accc']
 sources:
     - { label: 'Australian Competition and Consumer Commission (ACCC)', url: 'https://accc.gov.au/cdr' }
     - { label: 'Consumer Data Right — Australian Government', url: 'https://cdr.gov.au/open-banking' }
@@ -17,28 +17,30 @@ autoseo:
     enabled: false
 ---
 
-## What Is Open Banking Under CDR?
+## What Is Open Banking Under the CDR?
 
-Open Banking is the first sector to be designated under Australia's Consumer Data Right (CDR), a framework administered by the Australian Competition and Consumer Commission (ACCC). It gives consumers and businesses the ability to share their banking data with accredited third parties securely and with explicit consent. The scheme applies to data held by banks and other authorised deposit-taking institutions, and it is governed by rules designed to protect privacy while enabling data portability.
+Open banking in Australia operates under the Consumer Data Right (CDR), a government framework that gives consumers and businesses the right to safely share their banking data with accredited third parties. Data is exchanged through secure APIs, and sharing only occurs with the account holder's explicit consent. The CDR is administered by the Australian Competition and Consumer Commission (ACCC).
 
-## How the CDR Framework Works
+## How the CDR Works
 
-Under CDR, data holders — primarily banks — are required to share consumer data with accredited data recipients (ADRs) when a customer instructs them to do so. Organisations seeking ADR status must meet strict security, privacy, and compliance standards set by the ACCC before they can request or receive CDR data. This accreditation model ensures that only vetted parties can participate in the ecosystem, reducing the risk of unauthorised access.
+Before the CDR, moving financial data between institutions typically required manual exports or bespoke integrations. Under the CDR framework, accredited data recipients — fintechs, accounting platforms, and other approved providers — can request access to a customer's banking data directly through standardised APIs. The customer controls what is shared, with whom, and for how long.
 
-Data is exchanged through standardised APIs, which means the process is consistent, machine-readable, and auditable. Consumers retain control: consent can be granted, managed, and withdrawn at any time through their data holder's CDR-compliant interface.
+Accredited data recipients are vetted by the ACCC before they can participate in the system. Accreditation requires meeting defined security, privacy, and operational standards.
 
-## Benefits for Small Businesses
+## Relevance to Small Business Accounting
 
-For small businesses, CDR-enabled Open Banking reduces the friction involved in sharing financial data with accountants, lenders, and software platforms. Rather than manually exporting statements or granting broad credential access, a business owner can grant scoped, time-limited consent for a specific purpose. This supports more accurate bookkeeping, faster loan assessments, and tighter cash-flow visibility — all without handing over login credentials.
+For small businesses, CDR-enabled open banking has practical implications for day-to-day financial management:
 
-Because the data shared through CDR is sourced directly from the bank, it is structured and reliable, which reduces reconciliation errors when it flows into accounting tools.
+- **Transaction data access.** Accounting tools that are accredited data recipients, or that connect through them, can retrieve bank transaction data directly rather than relying on manual CSV imports or screen-scraping.
+- **Cash flow visibility.** Real-time access to transaction feeds gives a more current picture of account balances, incoming payments, and outgoing expenses.
+- **Reduced manual entry.** Automated data feeds lower the risk of transcription errors and reduce the time spent on data entry.
 
-## Data Security and Consumer Protections
+SAE Books connects to CDR-compliant bank feeds, allowing transaction data to flow into the ledger without manual intervention.
 
-The CDR rules impose baseline security requirements on all participants. Data holders and ADRs must implement controls aligned with the CDR's privacy safeguards, which sit alongside the Australian Privacy Act. Consumers have the right to see what data has been shared, with whom, and for how long. ADRs are prohibited from using CDR data for purposes beyond those consented to, and they must delete data when consent lapses or is withdrawn.
+## Security and Privacy Under the CDR
 
-These protections mean that businesses sharing financial data through CDR-compliant channels have a defined, enforceable set of rights — a stronger position than informal data-sharing arrangements.
+The CDR framework imposes obligations on both data holders (banks) and accredited data recipients. Both parties must comply with the CDR Privacy Safeguards, which sit alongside the Australian Privacy Act. Data can only be used for the purposes the consumer has consented to, and consent can be withdrawn at any time. The ACCC maintains a public register of accredited data recipients, so businesses can verify who they are sharing data with.
 
-## SAE Books and Open Banking
+## Scope of the CDR
 
-SAE Books is an API-first, self-hosted accounting ledger. Its architecture is designed to receive and process structured financial data, making it well-suited to ingest transaction feeds delivered via CDR-compliant connections. Businesses running SAE Books can use Open Banking data flows to keep their ledger current without manual imports, and because SAE Books is self-hosted, the data remains within the operator's own infrastructure once it has been received.
+The CDR began in the banking sector and is being extended to other industries, including energy and telecommunications. Within banking, the rollout has progressed from the major banks to a broader set of authorised deposit-taking institutions. The ACCC and the Data Standards Body publish current participation and timeline information at the sources listed below.
