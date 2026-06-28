@@ -1,0 +1,116 @@
+{# Single resource ARTICLE template — collection item.
+   Reading layout + the differentiator: an explicit Sources block from
+   header.sources. Canonical site-header (active: resources). #}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ header.title|e('html') }} | {{ site.title|e('html') }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% set description = header.dek|default(page.summary(160, true)|striptags) %}
+  {% if description %}<meta name="description" content="{{ description|e('html') }}"/>{% endif %}
+  <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
+  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  {% set v = page.modified|default('1') %}
+  <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ v }}"/>
+  <link rel="stylesheet" href="/user/data/saebooks.css?v={{ v }}"/>
+  <style>
+    .article-wrap { padding-bottom: 96px; }
+    .article-head { max-width: 760px; margin: 0 auto; padding: 56px 0 0; }
+    .article-head .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; font-weight: 700; }
+    .article-head .eyebrow a { color: var(--brand-navy); }
+    .article-head h1 { font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.12; margin: 14px 0 16px; letter-spacing: -0.02em; }
+    .article-head .dek { font-size: 1.2rem; line-height: 1.6; color: var(--body); margin: 0 0 18px; }
+    .article-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 12px 0; margin: 0 0 8px; }
+    .article-body { max-width: 760px; margin: 0 auto; font-size: 1.075rem; line-height: 1.75; color: var(--body); padding-top: 28px; }
+    .article-body h2 { font-size: 1.5rem; line-height: 1.25; margin: 38px 0 12px; letter-spacing: -0.01em; color: var(--ink); }
+    .article-body h3 { margin-top: 28px; }
+    .article-body p { margin: 0 0 18px; }
+    .article-body strong { color: var(--ink); }
+    .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
+    .article-body li { margin: 0 0 8px; }
+    .article-body a { color: var(--brand-navy); text-decoration: underline; text-underline-offset: 2px; }
+    .article-body blockquote { border-left: 3px solid var(--brand-navy); margin: 24px 0; padding: 4px 0 4px 20px; color: var(--muted); font-size: 1.2rem; }
+    .article-body code { background: var(--subtle); padding: 2px 6px; border-radius: var(--radius-sm); font-size: 0.9em; }
+    html.dark .article-body code { background: var(--surface); }
+    .sources { max-width: 760px; margin: 44px auto 0; padding: 22px 24px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius-lg); }
+    .sources h2 { font-size: 1.05rem; margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    .sources ul { margin: 0; padding-left: 20px; }
+    .sources li { margin: 0 0 7px; font-size: 0.95rem; word-break: break-word; }
+    .sources a { color: var(--brand-navy); }
+    .article-foot { max-width: 760px; margin: 40px auto 0; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .back-link { font-size: var(--fs-small); font-weight: 600; color: var(--brand-navy); }
+    .back-link:hover { text-decoration: underline; }
+    html.dark .back-link { color: #93a5d6; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
+    .tag-chip { display: inline-block; padding: 2px 10px; border: 1px solid var(--border-strong);
+      border-radius: var(--radius-pill); font-size: var(--fs-meta); color: var(--muted); background: var(--subtle); }
+    html.dark .tag-chip { background: var(--surface); border-color: var(--border); }
+  </style>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sae-books-theme');
+        var theme = saved || 'auto';
+        var resolved = theme;
+        if (theme === 'auto') { resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(resolved);
+        document.documentElement.setAttribute('data-theme', resolved);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page article-page">
+
+{% include 'partials/site-header.html.twig' with {active: 'resources'} %}
+
+<main class="article-wrap">
+  <div class="container">
+    <div class="article-head">
+      <p class="eyebrow"><a href="/resources">&larr; Resources</a></p>
+      <h1>{{ header.title|e }}</h1>
+      {% if header.dek %}<p class="dek">{{ header.dek|e }}</p>{% endif %}
+      <div class="article-meta">
+        {% if header.category %}<span>{{ header.category|e }}</span><span>&middot;</span>{% endif %}
+        {% if header.read_time %}<span>{{ header.read_time|e }}</span><span>&middot;</span>{% endif %}
+        <span>{{ page.date|date('j F Y') }}</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+      {{ page.content|raw }}
+    </div>
+
+    {% if header.sources %}
+    <aside class="sources">
+      <h2>Sources</h2>
+      <ul>
+        {% for s in header.sources %}
+          {% if s.url is defined %}
+            <li>{% if s.label %}{{ s.label|e }} &mdash; {% endif %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.url }}</a></li>
+          {% else %}
+            <li><a href="{{ s }}" target="_blank" rel="noopener">{{ s }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+
+    <div class="article-foot">
+      <a class="back-link" href="/resources">&larr; All resources</a>
+      {% if header.taxonomy.tag is defined %}
+        <div class="article-tags">
+          {% for tag in header.taxonomy.tag %}<span class="tag-chip">{{ tag|e }}</span>{% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</main>
+
+{% include 'partials/site-footer.html.twig' ignore missing %}
+</body>
+</html>

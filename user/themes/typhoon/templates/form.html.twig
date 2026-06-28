@@ -1,0 +1,76 @@
+{# Preview-access / contact form page. Same minimal head + CSS as
+   default.html.twig, with the site header/footer and a centred form card.
+   Renders the page's frontmatter-defined form via {{ forms() }}. #}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+  <meta charset="utf-8"/>
+  <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% if site.metadata.description %}<meta name="description" content="{{ site.metadata.description|e('html') }}"/>{% endif %}
+  <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
+  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  {% set v = page.modified|default('1') %}
+  <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ site.assets_version|default(v) }}"/>
+  <link rel="stylesheet" href="/user/data/saebooks.css?v={{ site.assets_version|default(v) }}"/>
+  <script>
+    (function () {
+      try {
+        var K = 'saebooks-theme', OLD = 'sae-books-theme';
+        if (!localStorage.getItem(K)) {           /* one-time migration from old key */
+          var o = localStorage.getItem(OLD);
+          if (o === 'light' || o === 'dark') localStorage.setItem(K, o);
+        }
+        var saved = localStorage.getItem(K);
+        var choice = (saved === 'light' || saved === 'dark') ? saved : 'auto';
+        var resolved = choice === 'auto'
+          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : choice;
+        var e = document.documentElement;
+        e.classList.remove('light', 'dark');
+        e.classList.add(resolved);
+        if (choice === 'auto') e.removeAttribute('data-theme');
+        else e.setAttribute('data-theme', choice);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="{{ header.body_classes|default('page') }}">
+
+<header class="site-header">
+  <div class="container row">
+    <a href="/" class="wordmark" aria-label="SAE Books home">
+      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
+    </a>
+    <nav class="primary">
+      <a href="/cashbook">Cashbook</a>
+      <a href="/product">Product</a>
+      <a href="/#features">Features</a>
+      <a href="/#editions">Editions</a>
+      <a href="/self-host">Self-host</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://dev.saebooks.com.au">Docs</a>
+      <a href="https://discourse.saebooks.com.au">Forum</a>
+      <a href="/blog">Build log</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="header-actions">
+      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
+    </div>
+  </div>
+</header>
+
+<main class="form-wrap">
+  <div class="form-card">
+    <h1>{{ header.title }}</h1>
+    {% if header.form_lead %}<p class="lead">{{ header.form_lead }}</p>{% endif %}
+    {{ content }}
+    {% include "forms/form.html.twig" %}
+  </div>
+  <p class="form-foot-note">Prefer email? Write to <a href="mailto:hello@saebooks.com.au">hello@saebooks.com.au</a>. Self-hosting? The Community edition is free on <a href="https://github.com/saebooks/saebooks">GitHub</a>.</p>
+</main>
+
+{% include 'partials/theme-controls.html.twig' %}
+</body>
+</html>

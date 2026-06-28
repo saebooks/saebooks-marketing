@@ -1,0 +1,28 @@
+{# Canonical site header — single source of truth for all marketing pages.
+   Include with:  {% include 'partials/site-header.html.twig' with {active: 'product'} %}
+   active ∈ '' | cashbook | product | self-host | resources | blog
+   Off-site links (Docs, Forum) open in a new tab so visitors don't lose the site. #}
+{% set active = active|default('') %}
+<header class="site-header">
+  <div class="container row">
+    <a href="/" class="wordmark" aria-label="SAE Books home">
+      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
+    </a>
+    <nav class="primary">
+      <a href="/cashbook"{% if active == 'cashbook' %} style="color:var(--brand-navy);"{% endif %}>Cashbook</a>
+      <a href="/product"{% if active == 'product' %} style="color:var(--brand-navy);"{% endif %}>Product</a>
+      <a href="/#features">Features</a>
+      <a href="/#editions">Editions</a>
+      <a href="/self-host"{% if active == 'self-host' %} style="color:var(--brand-navy);"{% endif %}>Self-host</a>
+      <a href="/resources"{% if active == 'resources' %} style="color:var(--brand-navy);"{% endif %}>Resources</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a>
+      <a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a>
+      <a href="/blog"{% if active == 'blog' %} style="color:var(--brand-navy);"{% endif %}>Build log</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="header-actions">
+      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary">Try the demo</a>
+    </div>
+  </div>
+</header>

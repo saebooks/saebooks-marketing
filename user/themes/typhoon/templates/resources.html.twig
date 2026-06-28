@@ -1,0 +1,77 @@
+{# Resources listing template — drives cards from page.collection() so new
+   articles (06.resources/NN.slug/resource.md) auto-appear. Canonical chrome. #}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ header.title|e('html') }} | {{ site.title|e('html') }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{ header.metadata.description|default('Plain-English guides to Australian small-business accounting, compliance and owning your own ledger — from the team building SAE Books.')|e('html') }}"/>
+  <link rel="icon" type="image/png" href="/user/data/sae-books-logo.png"/>
+  <link rel="canonical" href="{{ page.url(true, true) }}"/>
+  {% set v = page.modified|default('1') %}
+  <link rel="stylesheet" href="/user/data/colors_and_type.css?v={{ v }}"/>
+  <link rel="stylesheet" href="/user/data/saebooks.css?v={{ v }}"/>
+  <style>
+    .res-hero { max-width: 820px; margin: 0 auto; padding: 64px 22px 8px; text-align: center; }
+    .res-hero .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; font-weight: 700; color: var(--brand-navy); }
+    .res-hero h1 { font-size: clamp(2.1rem, 4.5vw, 3rem); line-height: 1.12; margin: 14px 0 16px; letter-spacing: -0.02em; }
+    .res-hero p { font-size: 1.2rem; line-height: 1.6; color: var(--body); margin: 0 auto; max-width: 640px; }
+    .res-list { max-width: 880px; margin: 40px auto 16px; padding: 0 22px; display: grid; gap: 18px; }
+    .res-card { display: block; border: 1px solid var(--border); border-radius: var(--radius-lg);
+      background: var(--surface); padding: 26px 28px; box-shadow: var(--shadow-card); transition: border-color var(--t-fast), transform var(--t-fast); }
+    .res-card:hover { border-color: var(--brand-navy); transform: translateY(-2px); }
+    .res-card .tag { text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; font-weight: 700; color: var(--muted); }
+    .res-card h2 { font-size: 1.45rem; line-height: 1.2; margin: 8px 0 10px; letter-spacing: -0.01em; color: var(--ink); }
+    .res-card p { margin: 0 0 12px; color: var(--body); line-height: 1.6; }
+    .res-card .more { color: var(--brand-navy); font-weight: 600; font-size: 0.95rem; }
+    .res-empty { max-width: 880px; margin: 0 auto; padding: 32px 22px; color: var(--muted); text-align: center; }
+    .res-note { max-width: 880px; margin: 8px auto 0; padding: 0 22px 80px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+  </style>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sae-books-theme');
+        var theme = saved || 'auto';
+        var resolved = theme;
+        if (theme === 'auto') { resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(resolved);
+        document.documentElement.setAttribute('data-theme', resolved);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page resources-page">
+
+{% include 'partials/site-header.html.twig' with {active: 'resources'} %}
+
+<main>
+  <section class="res-hero">
+    <p class="eyebrow">Resources</p>
+    <h1>{{ header.hero_title|default('Plain-English guides to owning your books') }}</h1>
+    <p>{{ header.hero_dek|default('Straight explanations of Australian small-business accounting, compliance and the ideas behind SAE Books — written to be useful first, and to show their sources.')|raw }}</p>
+  </section>
+
+  {% set collection = page.collection() %}
+  <div class="res-list">
+    {% for item in collection %}
+      <a class="res-card" href="{{ item.url }}">
+        <span class="tag">{{ item.header.category|default('Guide') }}</span>
+        <h2>{{ item.header.title|e }}</h2>
+        {% set excerpt = item.header.dek|default(item.summary(180, true)|striptags) %}
+        {% if excerpt %}<p>{{ excerpt|e }}</p>{% endif %}
+        <span class="more">Read the guide &rarr;</span>
+      </a>
+    {% else %}
+      <p class="res-empty">No guides published yet — the first ones are on the way.</p>
+    {% endfor %}
+  </div>
+
+  {% if header.note %}<p class="res-note">{{ header.note|raw }}</p>{% endif %}
+</main>
+
+{% include 'partials/site-footer.html.twig' ignore missing %}
+</body>
+</html>

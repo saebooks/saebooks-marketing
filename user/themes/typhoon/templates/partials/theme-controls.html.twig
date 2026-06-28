@@ -1,0 +1,76 @@
+{# Shared theme controls for the marketing site — floating bubble (matches the
+   web app) + a single controller that ALSO drives the header segmented
+   .theme-switch (light/auto/dark) when present. Unified localStorage key
+   'saebooks-theme' so the choice persists across marketing AND the web app.
+   Include just before </body> in every marketing template. #}
+<button id="theme-fab" class="theme-fab" type="button"
+        aria-label="Toggle dark mode" title="Toggle theme (⌘⇧L)">
+  {# moon = "click to go dark" (shown in light mode); sun = shown in dark mode #}
+  <svg data-fab-icon="light" class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg data-fab-icon="dark" class="lucide is-hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+</button>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var KEY = 'saebooks-theme';
+    var mql = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function storedChoice() {
+      var v = localStorage.getItem(KEY);
+      return (v === 'light' || v === 'dark') ? v : 'auto';
+    }
+    function resolve(choice) {
+      return choice === 'auto' ? (mql.matches ? 'dark' : 'light') : choice;
+    }
+    function apply(choice) {
+      var resolved = resolve(choice);
+      if (choice === 'auto') { root.removeAttribute('data-theme'); }
+      else { root.setAttribute('data-theme', choice); }
+      root.classList.remove('light', 'dark');
+      root.classList.add(resolved);
+      // header segmented switch (if present on this page)
+      document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.themeValue === choice));
+      });
+      // floating bubble icon: moon when light (→ go dark), sun when dark
+      document.querySelectorAll('[data-fab-icon]').forEach(function (el) {
+        el.classList.toggle('is-hidden', el.getAttribute('data-fab-icon') !== resolved);
+      });
+    }
+
+    apply(storedChoice());
+
+    // header segmented switch → explicit light / auto / dark
+    document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var choice = btn.dataset.themeValue;
+        if (choice === 'auto') { localStorage.removeItem(KEY); }
+        else { localStorage.setItem(KEY, choice); }
+        apply(choice);
+      });
+    });
+
+    // floating bubble → binary flip (always sets an explicit choice, like the web app)
+    function flip() {
+      var next = resolve(storedChoice()) === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(KEY, next);
+      apply(next);
+    }
+    var fab = document.getElementById('theme-fab');
+    if (fab) { fab.addEventListener('click', flip); }
+
+    // ⌘⇧L / Ctrl+Shift+L — same shortcut as the web app
+    document.addEventListener('keydown', function (e) {
+      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === 'l') {
+        e.preventDefault(); flip();
+      }
+    });
+
+    // follow the system only while the choice is auto
+    if (mql.addEventListener) {
+      mql.addEventListener('change', function () {
+        if (storedChoice() === 'auto') apply('auto');
+      });
+    }
+  })();
+</script>
