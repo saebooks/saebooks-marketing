@@ -58,7 +58,7 @@ process:
         <a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Download from GitHub
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Read the quickstart</a>
+        <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary btn-lg">Read the quickstart</a>
         <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the live demo</a>
       </div>
       <div class="hero-meta">
@@ -170,7 +170,7 @@ docker compose exec app python -m saebooks.scripts.bootstrap
         </li>
       </ol>
       <div style="text-align:center;">
-        <a href="https://dev.saebooks.com.au/install" target="_blank" rel="noopener" class="btn btn-primary">Full install guide &mdash; TLS, backups, hardening
+        <a href="https://dev.saebooks.com.au/install" class="btn btn-primary">Full install guide &mdash; TLS, backups, hardening
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -214,7 +214,7 @@ docker compose exec app python -m saebooks.scripts.bootstrap
 &#10003; saebooks-web   started on :8043
 &#10003; postgres       healthy
 &#10003; migrations     applied (head)</pre>
-        <a href="https://dev.saebooks.com.au/install" target="_blank" rel="noopener" class="btn btn-secondary">Read the install guide
+        <a href="https://dev.saebooks.com.au/install" class="btn btn-secondary">Read the install guide
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -257,7 +257,7 @@ docker compose exec app python -m saebooks.scripts.bootstrap
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Community support is GitHub issues plus the forum at <a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">discourse.saebooks.com.au</a> &mdash; mostly self-supported. And because your books are a Postgres database, any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <p>Community support is GitHub issues plus the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a> &mdash; mostly self-supported. And because your books are a Postgres database, any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
       <details class="faq">
         <summary>Is the Cashbook bundle a different product?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -290,16 +290,16 @@ docker compose exec app python -m saebooks.scripts.bootstrap
         <h5>Self-host</h5>
         <ul>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub repo</a></li>
-          <li><a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener">Quickstart</a></li>
-          <li><a href="https://dev.saebooks.com.au/install" target="_blank" rel="noopener">Install guide</a></li>
+          <li><a href="https://dev.saebooks.com.au/getting-started/quickstart/">Quickstart</a></li>
+          <li><a href="https://dev.saebooks.com.au/install">Install guide</a></li>
           <li><a href="https://cashbook-demo.saebooks.com.au">Live demo</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
           <li><a href="/blog">Build log</a></li>
           <li><a href="/#editions">Pricing &amp; plans</a></li>
         </ul>

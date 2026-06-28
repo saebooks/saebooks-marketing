@@ -1,7 +1,7 @@
 {# Canonical site header — single source of truth for all marketing pages.
    Include with:  {% include 'partials/site-header.html.twig' with {active: 'product'} %}
    active ∈ '' | cashbook | product | self-host | resources | blog
-   Off-site links (Docs, Forum) open in a new tab so visitors don't lose the site. #}
+   Docs + Forum (our own sub-sites) open in the SAME tab — keep low-resource clients on one tab. #}
 {% set active = active|default('') %}
 <header class="site-header">
   <div class="container row">
@@ -16,8 +16,8 @@
       <a href="/self-host"{% if active == 'self-host' %} style="color:var(--brand-navy);"{% endif %}>Self-host</a>
       <a href="/resources"{% if active == 'resources' %} style="color:var(--brand-navy);"{% endif %}>Resources</a>
       <a href="/#faq">FAQ</a>
-      <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a>
-      <a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a>
+      <a href="https://dev.saebooks.com.au">Docs</a>
+      <a href="https://discourse.saebooks.com.au">Forum</a>
       <a href="/blog"{% if active == 'blog' %} style="color:var(--brand-navy);"{% endif %}>Build log</a>
     </nav>
     <div class="header-spacer"></div>

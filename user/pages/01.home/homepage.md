@@ -16,11 +16,11 @@ body_classes: homepage
         <h1>Your data, your API, your server. Built for the next 20 years, not the last 20.</h1>
         <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Invoicing, payroll, time tracking, STP Phase 2 &mdash; all in the same binary, runtime-flagged by tier. Every screen is a thin client over a public REST API, the same one your scripts and automations hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage.</p>
         <div class="hero-ctas">
-          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get started &mdash; self-host free
+          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
           <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg">Try the demo</a>
-          <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Read the API docs</a>
+          <a href="https://dev.saebooks.com.au" class="btn btn-secondary btn-lg">Read the API docs</a>
         </div>
         <div class="hero-meta">
           <span class="pill"><span class="dot"></span>Free Community &mdash; self-host</span>
@@ -341,7 +341,7 @@ body_classes: homepage
           <div class="sm-row"><span class="sm-method post">POST</span><span class="sm-path">/api/v1/invoices</span></div>
           <div class="sm-row"><span class="sm-method del">DEL</span><span class="sm-path">/api/v1/invoices/{id}</span></div>
         </div>
-        <div class="shot-cap"><h4>OpenAPI explorer</h4><p>Browse, try, and copy every endpoint at <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">dev.saebooks.com.au</a>. Bearer-token auth, idempotency keys, page cursors.</p></div>
+        <div class="shot-cap"><h4>OpenAPI explorer</h4><p>Browse, try, and copy every endpoint at <a href="https://dev.saebooks.com.au">dev.saebooks.com.au</a>. Bearer-token auth, idempotency keys, page cursors.</p></div>
       </div>
       <div class="shot">
         <div class="shot-mock shot-mock-webhooks">
@@ -433,7 +433,7 @@ $ docker compose up -d
     <div class="faq-wrap">
       <details class="faq" open>
         <summary>What does &ldquo;API-first&rdquo; actually buy me?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Every action in the UI is a documented REST call. Want to push 200 invoices from your job-management system? Hit <code>POST /api/v1/invoices</code>. Want a webhook when a bill is approved? Subscribe. Want to retire the UI entirely and drive it from a script? You can. The accounting ledger is the product; the screens are one of many possible clients. OpenAPI schema lives at <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">dev.saebooks.com.au</a>.</p>
+        <p>Every action in the UI is a documented REST call. Want to push 200 invoices from your job-management system? Hit <code>POST /api/v1/invoices</code>. Want a webhook when a bill is approved? Subscribe. Want to retire the UI entirely and drive it from a script? You can. The accounting ledger is the product; the screens are one of many possible clients. OpenAPI schema lives at <a href="https://dev.saebooks.com.au">dev.saebooks.com.au</a>.</p>
       </details>
       <details class="faq">
         <summary>What does AGPLv3 mean for my business?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -457,7 +457,7 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
       <details class="faq">
         <summary>Can I run payroll on the free Cashbook bundle?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -495,8 +495,8 @@ $ docker compose up -d
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="/blog">Build log</a></li>
         </ul>
@@ -519,7 +519,7 @@ $ docker compose up -d
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-primary">Get started</a>
+  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
   <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
 </div>
 

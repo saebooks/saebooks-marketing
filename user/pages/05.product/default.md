@@ -155,7 +155,7 @@ process:
     <div class="hero-ctas" style="justify-content:center;margin-top:28px;">
       <a href="/self-host" class="btn btn-primary btn-lg">Self-host free</a>
       <a href="/preview-access" class="btn btn-secondary btn-lg">Request preview access</a>
-      <a href="https://dev.saebooks.com.au" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Read the API docs</a>
+      <a href="https://dev.saebooks.com.au" class="btn btn-secondary btn-lg">Read the API docs</a>
     </div>
   </div>
 </section>
@@ -179,8 +179,8 @@ process:
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="/self-host">Self-host</a></li>
         </ul>

@@ -18,7 +18,7 @@ process:
       <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg">Try the demo
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Self-host in 5 minutes</a>
+      <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary btn-lg">Self-host in 5 minutes</a>
     </div>
     <div class="hero-meta">
       <span class="pill"><span class="dot" style="background:rgba(255,255,255,0.5);"></span>Free for life</span>
@@ -189,8 +189,8 @@ process:
       <div class="foot-col">
         <h5>Build</h5>
         <ul>
-          <li><a href="https://dev.saebooks.com.au" target="_blank" rel="noopener">Docs</a></li>
-          <li><a href="https://discourse.saebooks.com.au" target="_blank" rel="noopener">Forum</a></li>
+          <li><a href="https://dev.saebooks.com.au">Docs</a></li>
+          <li><a href="https://discourse.saebooks.com.au">Forum</a></li>
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="/blog">Build log</a></li>
         </ul>
@@ -214,7 +214,7 @@ process:
 
 <div class="mobile-cta">
   <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary">Try the demo</a>
-  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" target="_blank" rel="noopener" class="btn btn-secondary">Self-host free</a>
+  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-secondary">Self-host free</a>
 </div>
 
 <!-- Theme controls (floating bubble + segmented switch wiring) are injected by
