@@ -104,8 +104,8 @@ process:
     <div class="tour">
       <div class="tour-shots-2" style="grid-template-columns:1fr 1fr;gap:18px;">
         <figure class="tour-shot shot-frame">
-          <a href="https://cashbook-demo.saebooks.com.au/accounts" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-accounts-light.png" alt="SAE Books chart of accounts — the AU standard, 134 accounts"><img class="shot-dark" src="/user/data/screenshots/tour-accounts-dark.png" alt="" aria-hidden="true"></a>
-          <figcaption style="font-size:var(--fs-small);color:var(--muted);padding:10px 14px;border-top:1px solid var(--border);margin:0;">Chart of accounts &mdash; the AU standard, 134 of them, by type.</figcaption>
+          <a href="https://cashbook-demo.saebooks.com.au/accounts" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-accounts-light.png" alt="SAE Books chart of accounts — the AU standard, by account type"><img class="shot-dark" src="/user/data/screenshots/tour-accounts-dark.png" alt="" aria-hidden="true"></a>
+          <figcaption style="font-size:var(--fs-small);color:var(--muted);padding:10px 14px;border-top:1px solid var(--border);margin:0;">Chart of accounts &mdash; the AU standard, by type.</figcaption>
         </figure>
         <figure class="tour-shot shot-frame">
           <a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png" alt="SAE Books reports library — P&L, balance sheet, BAS, aged receivables, FX revaluation"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png" alt="" aria-hidden="true"></a>
@@ -129,6 +129,7 @@ process:
       <span class="pill">Full export (CSV/JSON/OFX/dump)</span>
       <span class="pill">AGPLv3</span>
       <span class="pill">Australian data residency</span>
+      <span class="pill">Flat pricing</span>
     </div>
     <div class="hero-ctas" style="justify-content:center;margin-top:28px;">
       <a href="/self-host" class="btn btn-primary btn-lg">Self-host free</a>

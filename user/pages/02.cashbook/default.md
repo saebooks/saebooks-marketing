@@ -161,7 +161,7 @@ process:
       </details>
       <details class="faq">
         <summary>Why on-prem? Why not just give me a free SaaS account?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Because a free SaaS account is a hostage situation. When the company changes direction, raises prices, or shuts down, your financial history goes with it. On-prem means you own the data unconditionally. A Docker container on a $5/month VPS is sufficient for a sole trader &mdash; it&rsquo;s not a big ask, and the upside is that nobody can take your books away from you. If you genuinely want us to host it, that&rsquo;s an option &mdash; but we&rsquo;d rather you own it outright.</p>
+        <p>Because a free SaaS account is a hostage situation. When the company changes direction, raises prices, or shuts down, your financial history goes with it. On-prem means you own the data unconditionally. A Docker container on a $5/month VPS is sufficient for a sole trader &mdash; it&rsquo;s not a big ask, and the upside is that nobody can take your books away from you. A free SaaS account is also free until it isn&rsquo;t &mdash; on your own server there&rsquo;s no plan to be moved off and no renewal price to climb. If you genuinely want us to host it, that&rsquo;s an option &mdash; but we&rsquo;d rather you own it outright.</p>
       </details>
       <details class="faq">
         <summary>When should I upgrade from Cashbook?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>

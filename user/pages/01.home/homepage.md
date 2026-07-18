@@ -30,6 +30,7 @@ body_classes: homepage
           </span>
           <span class="pill">REST &middot; OpenAPI &middot; Webhooks</span>
           <span class="pill">Australian data residency</span>
+          <span class="pill">Flat pricing &mdash; no annual surprise</span>
         </div>
       </div>
       <div class="hero-screenshot" aria-label="API request preview">
@@ -83,10 +84,10 @@ body_classes: homepage
       </div>
       <div class="point">
         <div class="icon">
-          <svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <h3>Service-oriented by default</h3>
-        <p>The accounting ledger does one thing well: keeps the books. Document vault, bank-feed relay, lodgement, payroll &mdash; all separate services that talk to it over the API. Swap any of them; the books stay yours.</p>
+        <h3>Flat pricing, no annual surprise</h3>
+        <p>Self-host free for life &mdash; and our paid tiers are priced to the work we take off your hands, not to how much we can raise them each July. No forced upgrades, no discount quietly withdrawn at renewal. When you can leave with a full database dump any time, we have to keep earning the subscription.</p>
       </div>
       <div class="point">
         <div class="icon">
@@ -110,7 +111,7 @@ body_classes: homepage
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <h4>Public REST API</h4>
-        <p>Every screen is a thin client over the same OpenAPI-documented endpoints your scripts call. Bearer tokens, webhooks, idempotency keys.</p>
+        <p>Every screen is a thin client over the same OpenAPI-documented endpoints your scripts call &mdash; bearer tokens, webhooks, idempotency keys. API access is included on every paid tier and free when you self-host. It&rsquo;s a right, not a metered add-on.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/></svg></div>
@@ -199,6 +200,7 @@ body_classes: homepage
       <span class="eyebrow brand">Pricing</span>
       <h2>One codebase. Pick the licence that fits.</h2>
       <p>Start free with the self-hosted Community edition &mdash; the full double-entry stack, no licence key, no nag screens. Same codebase as the paid tiers, runtime-flagged for what you need. Paid tiers are self-hosted by default.</p>
+      <p style="margin-top:10px;">Paid tiers exist where we take on the risk, the uptime, and the accredited plumbing &mdash; hosting, bank-feed relays, direct lodgement. Anything you can run yourself stays open and free. You&rsquo;re paying for work we absorb, not for access to your own books.</p>
     </div>
     <div class="tiers-wrap">
       <div class="tiers-grid free-row">
@@ -453,7 +455,11 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Why not just use a major cloud accounting product?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a Postgres database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; the <code>saebooks-xero</code> adapter ships as a separate service. Nothing is held hostage to keep you subscribed.</p>
+        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a Postgres database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; the <code>saebooks-xero</code> adapter ships as a separate service. Nothing is held hostage to keep you subscribed &mdash; and your bill doesn&rsquo;t climb on a schedule you don&rsquo;t control.</p>
+      </details>
+      <details class="faq">
+        <summary>Will the price go up every year?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>The self-hosted Community edition is free and stays free &mdash; there&rsquo;s no price to raise. For the paid tiers our model is deliberately boring: you pay for the work we take on &mdash; hosting, bank feeds, lodgement &mdash; and because you can export a full Postgres dump and walk at any time, we have every incentive to keep the price stable rather than treat renewal as a rate rise. No forced tier upgrades, no discount withdrawn at the quiet end of a renewal notice.</p>
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>

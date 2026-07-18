@@ -89,7 +89,7 @@ process:
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h4>Nothing held hostage</h4>
-        <p>The core app works fully offline. Internet features &mdash; bank feeds, FX rates, ABN lookup, BAS e-lodgement &mdash; are additive, never required. No vendor can revoke access to your own ledger.</p>
+        <p>The core app works fully offline. Internet features &mdash; bank feeds, FX rates, ABN lookup, BAS e-lodgement &mdash; are additive, never required. No vendor can revoke access to your own ledger &mdash; and no renewal notice can change what self-hosting costs: nothing.</p>
       </div>
     </div>
   </div>
@@ -124,7 +124,7 @@ docker compose up -d
         <li><strong>Migrate and seed the AU chart of accounts.</strong>
 <pre>docker compose exec app alembic upgrade head
 docker compose exec app python -m saebooks.scripts.bootstrap
-<span class="c"># 135 accounts + standard AU tax codes, idempotent</span></pre>
+<span class="c"># AU chart of accounts + standard tax codes, idempotent</span></pre>
         </li>
         <li><strong>Create your admin user, then log in.</strong>
 <pre>docker compose exec app python -m saebooks.scripts.create_admin \

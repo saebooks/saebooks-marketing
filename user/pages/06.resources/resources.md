@@ -3,7 +3,7 @@ title: 'Resources — plain-English guides to running the books'
 menu: 'Resources'
 hero_title: 'Plain-English guides to owning your books'
 hero_dek: 'Straight explanations of Australian small-business accounting, compliance and the ideas behind SAE Books — written to be useful first, and to show their sources.'
-note: 'More guides on GST, BAS, STP Phase 2, open banking and self-hosting are on the way.'
+note: 'Plain-English guides on GST, BAS, STP Phase 2, e-invoicing, open banking and self-hosting — new ones added regularly.'
 body_classes: 'page resources-page'
 template: resources
 content:
