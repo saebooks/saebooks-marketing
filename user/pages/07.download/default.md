@@ -139,19 +139,19 @@ process:
     </div>
     <div class="faq-wrap">
       <details class="faq" open>
-        <summary>What do I need to run this?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>What do I need to run this?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>For the single-command install: Docker Engine 24 or newer, outbound HTTPS for the first-run bootstrap, and a spare gigabyte or two of disk for the bundled database. A cheap VPS or an old laptop is plenty for a single company&rsquo;s books.</p>
       </details>
       <details class="faq">
-        <summary>Is this the same thing as the self-host guide?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>Is this the same thing as the self-host guide?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Same Community codebase, different packaging. This page is the fastest way to get it running &mdash; one image, or a desktop app. The <a href="/self-host">self-host page</a> covers the full compose stack with TLS, backups, and hardening for a production server. Start here, move there when you&rsquo;re ready to run it for real.</p>
       </details>
       <details class="faq">
-        <summary>What's not turned on in the free edition?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>What's not turned on in the free edition?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Services that need us to run infrastructure on your behalf &mdash; hosted bank feeds, direct BAS e-lodgement, managed hosting &mdash; are gated behind a licence flag until those services are ready. They&rsquo;re not hidden from you, just switched off in the Community build; the ledger itself is not limited. You can still lodge BAS via the ATO portal using the numbers SAE Books generates.</p>
       </details>
       <details class="faq">
-        <summary>Is this pre-1.0 software?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>Is this pre-1.0 software?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Yes. SAE Books is approaching its first public beta; APIs may still shift before 1.0. It runs today and the demo is live, but kick the tyres before you trust it with anything that matters, and keep your own backups regardless of who hosts them.</p>
       </details>
     </div>

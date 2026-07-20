@@ -129,19 +129,19 @@ process:
     </div>
     <div class="faq-wrap">
       <details class="faq" open>
-        <summary>When do the hosted editions launch?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>When do the hosted editions launch?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>We don't have a date to give you, and we'd rather say that plainly than invent one. SAE Books is open-source software in active development, built in the open on the <a href="/blog">build log</a>. Pre-ordering means backing that development, not booking a start date.</p>
       </details>
       <details class="faq">
-        <summary>What happens to my money if it's delayed?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>What happens to my money if it's delayed?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Full terms will be published alongside the payment link. In the meantime, the free Community edition is unaffected either way &mdash; it's a separate, always-free codebase, not a trial that expires.</p>
       </details>
       <details class="faq">
-        <summary>Do I have to pre-order to use SAE Books?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>Do I have to pre-order to use SAE Books?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>No. <a href="/download">Download the free Community edition</a> and self-host today &mdash; full double-entry accounting, no cost, no licence key. Pre-ordering is only for businesses who want the hosted or supported editions once they're ready.</p>
       </details>
       <details class="faq">
-        <summary>Is this a subscription starting now?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <summary>Is this a subscription starting now?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>No &mdash; nothing is billed today. A pre-order buys priority access to the hosted editions when they open. The payment mechanism for that is still being finalised; see the note above.</p>
       </details>
     </div>
