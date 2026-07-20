@@ -16,7 +16,7 @@ body_classes: homepage
         <h1>Your data, your API, your server. Built for the next 20 years, not the last 20.</h1>
         <p class="lead">SAE Books is modern accounting infrastructure: an API-first ledger you own and control. Invoicing, payroll, time tracking, STP Phase 2 &mdash; all in the same binary, runtime-flagged by tier. Every screen is a thin client over a public REST API, the same one your scripts and automations hit. On-prem licensed. Self-hosted by default. No vendor lock-in, no data held hostage.</p>
         <div class="hero-ctas">
-          <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary btn-lg">Get started &mdash; self-host free
+          <a href="/download" class="btn btn-primary btn-lg">Free download &mdash; get started
             <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
           <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try the demo</a>
