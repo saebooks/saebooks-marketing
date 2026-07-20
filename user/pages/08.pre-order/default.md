@@ -109,7 +109,7 @@ process:
       <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
       <div>
         <h3>Card pre-order isn't wired up yet</h3>
-        <p>The payment link for pre-orders is being finalised once the licensing terms are confirmed. <em>TODO-COORD: Stripe pre-order link, once the licensing spec is posted.</em> Until it's live, register your interest below and we'll email you the payment link the moment it's ready &mdash; no charge happens until then.</p>
+        <p>The payment link for pre-orders is being finalised once the licensing terms are confirmed. Until it's live, register your interest below and we'll email you the payment link the moment it's ready &mdash; no charge happens until then.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:24px;">
