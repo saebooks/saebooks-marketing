@@ -86,7 +86,7 @@ process:
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div>
           <h3>Image name and tag &mdash; to be confirmed</h3>
-          <p>The single-image build is in final verification. The command below is the shape of what's shipping; the exact image name and tag will be confirmed here once it's published. <em>TODO-COORD: image name/tag.</em></p>
+          <p>The single-image build is in final verification and lands here within days. The command below is the shape of what's shipping; this page will carry the exact image name the moment it's published.</p>
         </div>
       </div>
       <ol>
@@ -95,7 +95,7 @@ process:
   -p 8042:8042 \
   -e SAEBOOKS_EDITION=community \
   -v saebooks-data:/var/lib/saebooks \
-  <span class="c"># TODO-COORD: image, e.g. ghcr.io/saebooks/saebooks-community:latest</span></pre>
+  <span class="c"># image name published here when verification completes</span></pre>
         </li>
         <li><strong>Open it and create your admin user.</strong>
 <pre>open http://localhost:8042
@@ -119,8 +119,9 @@ process:
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h4>Linux &mdash; AppImage</h4>
         <p>Download, mark executable, run. No installer, no root needed.</p>
-        <a href="#" class="btn btn-secondary" style="margin-top:12px;" aria-disabled="true">Download AppImage &mdash; <em>link pending</em></a>
-        <p class="note" style="margin-top:8px;"><em>TODO-COORD: AppImage download link, once published alongside the single-image release.</em></p>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SAEBooks-0.3.0-x86_64.AppImage" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; AppImage</a>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-0.3.0-x86_64.AppImage" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur (eesti/русский) &mdash; AppImage</a>
+        <p class="note" style="margin-top:8px;">Verify your download against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">published checksums</a>. All releases live on the <a href="https://github.com/saebooks/saebooks-desktop/releases">GitHub releases page</a>.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></div>
