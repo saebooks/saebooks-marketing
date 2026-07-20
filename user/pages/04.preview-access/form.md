@@ -39,6 +39,7 @@ form:
                 business: 'Business edition (hosted)'
                 pro: 'Pro edition (hosted)'
                 enterprise: 'Enterprise / custom'
+                pre-order-license: 'Pre-order a licence (no launch date yet)'
                 keeping-in-touch: 'Just keeping in touch'
         -
             name: message
