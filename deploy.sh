@@ -14,7 +14,7 @@ ORIGIN=http://10.0.1.1:18008                       # grav-saebooks origin (bypas
 HOSTHDR='saebooks.com.au'
 PW_CACHE=/home/sauer/.cache/ms-playwright          # chromium for the headless layout check
 PURGE_ENV=/home/sauer/.config/saebooks-deploy/cf-purge.env   # scoped (cache-purge-only) CF token, chmod 600
-PAGES_PUBLIC="'' product self-host cashbook resources blog"  # pages to purge at the CF edge after deploy
+PAGES_PUBLIC="'' product self-host cashbook resources blog download pre-order sitemap.xml"  # pages to purge at the CF edge after deploy
 
 dock() { if command -v sudo >/dev/null 2>&1; then sudo docker "$@"; else docker "$@"; fi; }
 rs()   { if command -v sudo >/dev/null 2>&1; then sudo rsync "$@"; else rsync "$@"; fi; }
@@ -76,14 +76,19 @@ if [ "${1:-}" = '--no-verify' ]; then echo '=== 3/4  smoke + layout test skipped
 
 echo '=== 3/4  smoke test @ origin (header renders, no raw twig, HTTP 200) ==='
 fail=0; tmp="$(mktemp)"
-for p in '' product self-host cashbook resources blog; do
+for p in '' product self-host cashbook resources blog download pre-order sitemap.xml; do
   code=$(curl -s -o "$tmp" -w '%{http_code}' -m 20 "$ORIGIN/$p" -H "Host: $HOSTHDR" || echo 000)
   leak=$(grep -c '{% ' "$tmp" 2>/dev/null || true)
-  hdr=$(grep -c 'header class="site-header"' "$tmp" 2>/dev/null || true)
   st='ok'
   [ "$code" != '200' ] && { st="HTTP $code"; fail=1; }
   [ "${leak:-0}" -gt 0 ] && { st='RAW-TWIG-LEAK'; fail=1; }
-  [ "${hdr:-0}" -lt 1 ] && { st='NO-HEADER'; fail=1; }
+  if [ "$p" = 'sitemap.xml' ]; then
+    xml=$(grep -c '<urlset' "$tmp" 2>/dev/null || true)
+    [ "${xml:-0}" -lt 1 ] && { st='NO-URLSET'; fail=1; }
+  else
+    hdr=$(grep -c 'header class="site-header"' "$tmp" 2>/dev/null || true)
+    [ "${hdr:-0}" -lt 1 ] && { st='NO-HEADER'; fail=1; }
+  fi
   printf '    %-12s %s\n' "/$p" "$st"
 done
 rm -f "$tmp"
@@ -129,6 +134,10 @@ if [ -f /home/sauer/.claude/secrets/cf-bridge.env ]; then
   wget -q -e robots=off --mirror --page-requisites --convert-links --adjust-extension \
       --no-host-directories --restrict-file-names=windows --timeout=15 --tries=2 \
       -P "$MIRROR" http://10.0.1.1:18008/ || true
+  # sitemap.xml is never link-crawled (no nav <a> to it) -- fetch it explicitly so the
+  # CF Pages static copy actually serves it (the static copy is the whole public site).
+  wget -q -e robots=off --timeout=15 --tries=2 -O "$MIRROR/sitemap.xml" \
+      http://10.0.1.1:18008/sitemap.xml || true
   if [ -s "$MIRROR/index.html" ]; then
     if CLOUDFLARE_API_TOKEN="$CF_BRIDGE_TOKEN" CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID" \
         npx --yes wrangler@latest pages deploy "$MIRROR" --project-name=saebooks-web \

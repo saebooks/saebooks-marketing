@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+{% for p in grav.pages.all() if p.routable and not p.modular and p.visible and p.route != '/sitemap' %}
+  <url>
+    <loc>{{ p.url(true, true)|replace({'http://': 'https://'}) }}</loc>
+    <lastmod>{{ p.modified|date('Y-m-d') }}</lastmod>
+  </url>
+{% endfor %}
+</urlset>
