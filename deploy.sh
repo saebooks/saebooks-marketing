@@ -118,3 +118,31 @@ echo '=== 4/4  ok; purge CF edge + mirror to GitHub ==='
 cf_purge_html
 sudo -u sauer GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=10' git -C /home/sauer/projects/saebooks-marketing push -q origin HEAD:main 2>&1 | tail -1 || echo 'WARN: mirror push failed (deploy still OK)'
 echo 'deployed + verified -> https://saebooks.com.au/'
+
+echo '=== 5/5  refresh CF Pages apex copy (saebooks-web project serves saebooks.com.au) ==='
+# The PUBLIC apex is a CF Pages static copy (DR: survives bosun down). It decoupled
+# silently once (2026-07-03..07-20) — this stage keeps it in lockstep with the origin.
+PAGES_OK=0
+if [ -f /home/sauer/.claude/secrets/cf-bridge.env ]; then
+  . /home/sauer/.claude/secrets/cf-bridge.env
+  MIRROR=$(mktemp -d /tmp/saebooks-apex-mirror.XXXXXX)
+  wget -q -e robots=off --mirror --page-requisites --convert-links --adjust-extension \
+      --no-host-directories --restrict-file-names=windows --timeout=15 --tries=2 \
+      -P "$MIRROR" http://10.0.1.1:18008/ || true
+  if [ -s "$MIRROR/index.html" ]; then
+    if CLOUDFLARE_API_TOKEN="$CF_BRIDGE_TOKEN" CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID" \
+        npx --yes wrangler@latest pages deploy "$MIRROR" --project-name=saebooks-web \
+        --branch=main --commit-dirty=true >/tmp/saebooks-pages-deploy.log 2>&1; then
+      MARK=$(grep -oE '<h1[^>]*>[^<]{10,80}' "$MIRROR/index.html" | head -1 | sed 's/<[^>]*>//')
+      [ -n "$MARK" ] || MARK=$(grep -oE '<title>[^<]{10,60}' "$MIRROR/index.html" | head -1 | cut -c8-)
+      for i in 1 2 3 4 5 6; do
+        sleep 15
+        if curl -s --max-time 20 https://saebooks.com.au/ | grep -qF "$MARK"; then
+          PAGES_OK=1; echo "apex Pages copy refreshed + verified (try $i)"; break
+        fi
+      done
+    fi
+  fi
+  rm -rf "$MIRROR"
+fi
+[ "$PAGES_OK" = 1 ] || echo 'WARN: CF Pages apex refresh FAILED — public apex may be serving a STALE copy (origin deploy itself is OK). See /tmp/saebooks-pages-deploy.log' >&2
