@@ -86,16 +86,14 @@ process:
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div>
           <h3>Image name and tag &mdash; to be confirmed</h3>
-          <p>The single-image build is in final verification and lands here within days. The command below is the shape of what's shipping; this page will carry the exact image name the moment it's published.</p>
+          <p>One command starts the free community edition: the engine, the web application and a local database. It opens on http://127.0.0.1:18960.</p>
         </div>
       </div>
       <ol>
         <li><strong>Run the image.</strong>
-<pre>docker run -d --name saebooks \
-  -p 8042:8042 \
-  -e SAEBOOKS_EDITION=community \
-  -v saebooks-data:/var/lib/saebooks \
-  <span class="c"># image name published here when verification completes</span></pre>
+<pre><span class="c"># downloads the compose file and starts the engine + web app</span>
+curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.community.yml
+docker compose -f docker-compose.community.yml up -d</pre>
         </li>
         <li><strong>Open it and create your admin user.</strong>
 <pre>open http://localhost:8042
