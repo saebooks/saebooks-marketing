@@ -1,6 +1,6 @@
 ---
 metadata:
-    description: 'Download the free SAE Books Community edition — full double-entry accounting, cashbook mode, self-hosted, AGPLv3. Single-command install or a desktop click-install. Australian small business.'
+    description: 'Download the free SAE Books Community edition — full double-entry accounting, cashbook mode, self-hosted, AGPLv3. One-click server, desktop app, or Docker. Australian small business.'
 header_active: download
 title: 'Download SAE Books free — Community edition'
 menu: 'Download'
@@ -16,18 +16,125 @@ process:
     <div>
       <span class="eyebrow brand">Community edition &middot; AGPLv3 &middot; free forever</span>
       <h1>Get started free. No licence key, no clock running.</h1>
-      <p class="lead">This is the same double-entry ledger the paid tiers run on &mdash; chart of accounts, invoicing, bills, bank reconciliation, GST/BAS reporting, payroll, time tracking &mdash; with the Community flag set. Run it on your own server or your own laptop, own the database underneath it, and never see a nag screen.</p>
+      <p class="lead">This is the same double-entry ledger the paid tiers run on &mdash; chart of accounts, invoicing, bills, bank reconciliation, GST/BAS reporting, payroll, time tracking &mdash; with the Community flag set. Download one file, run it, and the full server with its web interface is on your machine &mdash; no Docker, no command line. Own the database underneath it, and never see a nag screen.</p>
       <div class="hero-ctas">
-        <a href="#single-command" class="btn btn-primary btn-lg">Single-command install</a>
-        <a href="#desktop" class="btn btn-secondary btn-lg">Desktop click-install</a>
+        <a href="#one-click" class="btn btn-primary btn-lg">One-click server</a>
+        <a href="#desktop" class="btn btn-secondary btn-lg">Desktop app</a>
         <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try it in the browser first</a>
       </div>
       <div class="hero-meta">
         <span class="pill"><span class="dot"></span>Free &middot; AGPLv3</span>
         <span class="pill">Full double-entry included</span>
         <span class="pill">Cashbook mode for sole traders</span>
-        <span class="pill">Your data, your server</span>
+        <span class="pill">Your data, your machine</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="one-click">
+  <div class="container">
+    <div class="sh">
+      <span class="eyebrow brand">Install path one &mdash; recommended</span>
+      <h2>One-click server. Download one thing, run it.</h2>
+      <p>A single file that runs the complete SAE Books server &mdash; the accounting engine, the web interface, and a bundled SQLite database &mdash; on your own computer. No Docker, no installer, no command line on Windows. First run seeds a set of starter books and opens the web interface in your browser; your data stays on your machine and survives restarts.</p>
+    </div>
+    <div class="feature-grid install-grid">
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h4>Linux &mdash; x86_64</h4>
+        <p>One binary. Mark it executable and run it; your browser opens on the starter books.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SAEBooks-linux-x86_64" class="btn btn-primary" style="margin-top:12px;">Download SAE Books server &mdash; Linux (72&nbsp;MB)</a>
+        <p class="note" style="margin-top:8px;"><code>chmod +x SAEBooks-linux-x86_64 &amp;&amp; ./SAEBooks-linux-x86_64</code></p>
+        <p class="note" style="margin-top:8px;"><a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SHA256SUMS">SHA-256 checksums</a> for this file.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></div>
+        <h4>Windows &mdash; x64</h4>
+        <p>One .exe. Double-click it; your browser opens on the starter books.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SAEBooks-windows-x64.exe" class="btn btn-primary" style="margin-top:12px;">Download SAE Books server &mdash; Windows (56&nbsp;MB)</a>
+        <p class="note" style="margin-top:8px;">Not yet code-signed, so Windows SmartScreen shows a &ldquo;Windows protected your PC&rdquo; notice on first run &mdash; click <em>More info &rarr; Run anyway</em>. Verify against the <a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SHA256SUMS">SHA-256 checksums</a> first.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div>
+        <h4>macOS</h4>
+        <p>The macOS one-click build is coming. In the meantime, use the <a href="#single-command">Docker path</a> or the <a href="#desktop">desktop app</a> notes below.</p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:16px;">All server downloads live on the <a href="https://github.com/saebooks/saebooks/releases">SAE Books releases page</a>. This is beta software &mdash; keep your own backups.</p>
+  </div>
+</section>
+
+<section id="desktop">
+  <div class="container">
+    <div class="sh">
+      <span class="eyebrow brand">Install path two</span>
+      <h2>Desktop app <span style="white-space:nowrap;">(v0.4)</span> &mdash; connects to your server.</h2>
+      <p>A native desktop client for Windows and Linux. Run the one-click server above on the same machine and the desktop app&rsquo;s first-run wizard finds it and pairs with it automatically &mdash; or point it at a SAE Books server anywhere else on your network.</p>
+    </div>
+    <div class="feature-grid install-grid">
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h4>Linux &mdash; AppImage</h4>
+        <p>Download, mark executable, run. No installer, no root needed.</p>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SAEBooks-0.4.0-x86_64.AppImage" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.4.0 &mdash; AppImage (95&nbsp;MB)</a>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/tasur-0.4.0-x86_64.AppImage" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur (eesti/&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;) &mdash; AppImage</a>
+        <p class="note" style="margin-top:8px;">Verify your download against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SHA256SUMS">SHA-256 checksums</a>. All releases live on the <a href="https://github.com/saebooks/saebooks-desktop/releases">GitHub releases page</a>.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></div>
+        <h4>Windows &mdash; MSI</h4>
+        <p>v0.4 installs and runs on a clean machine &mdash; the runtime is now bundled, with Start-menu and desktop shortcuts.</p>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SAEBooks-0.4.0-x64.msi" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.4.0 &mdash; Windows (48&nbsp;MB)</a>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/tasur-0.4.0-x64.msi" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Windows</a>
+        <p class="note" style="margin-top:8px;">The installer is not yet code-signed, so Windows SmartScreen shows a &ldquo;Windows protected your PC&rdquo; notice on first run &mdash; click <em>More info &rarr; Run anyway</em>. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SHA256SUMS">SHA-256 checksums</a>.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div>
+        <h4>macOS &mdash; v0.4 coming</h4>
+        <p>The v0.4 macOS build is coming. The previous release (0.3.0, universal Intel + Apple Silicon) is still available.</p>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/saebooks-desktop-0.3.0-macOS-universal2.dmg" class="btn btn-secondary" style="margin-top:12px;">SAE Books 0.3.0 &mdash; macOS DMG</a>
+        <p class="note" style="margin-top:8px;">Ad-hoc signed, not notarized &mdash; Gatekeeper blocks the first open: right-click the app &rarr; <em>Open</em> &rarr; <em>Open</em>, once. Requires macOS 13 (Ventura) or later. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">0.3.0 checksums</a>.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h4>Android &mdash; APK</h4>
+        <p>The cashbook and ledger on your phone. Sideload the signed APK.</p>
+        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SAEBooks-0.3.0-release.apk" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Android</a>
+        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/tasur-0.3.0-release.apk" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Android</a>
+        <p class="note" style="margin-top:8px;">Not yet on Google Play &mdash; enable install from your browser when prompted. Verify against the <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SHA256SUMS">SHA-256 checksums</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="single-command">
+  <div class="container">
+    <div class="sh">
+      <span class="eyebrow brand">Install path three</span>
+      <h2>Docker compose.</h2>
+      <p>Prefer containers? One compose file, running locally in a couple of minutes. This is the path for a spare machine or small VPS; for TLS, backups and production hardening use the <a href="/self-host">full self-host guide</a> instead.</p>
+    </div>
+    <div class="install">
+      <div class="payroll-callout">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div>
+          <h3>One command, running in a couple of minutes.</h3>
+          <p>The published community images &mdash; <code>saebooks/saebooks-community-api</code> and <code>saebooks/saebooks-community-web</code> &mdash; start the engine, the web application, and a bundled SQLite database. It opens on <code>http://127.0.0.1:18960</code>.</p>
+        </div>
+      </div>
+      <ol>
+        <li><strong>Run the image.</strong>
+<pre><span class="c"># downloads the compose file and starts the engine + web app</span>
+curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.community.yml
+docker compose -f docker-compose.community.yml up -d</pre>
+        </li>
+        <li><strong>Open it in your browser.</strong>
+<pre>open http://127.0.0.1:18960
+<span class="c"># sign in with the starter books — see SAEBOOKS_DEMO_* in the compose file</span></pre>
+        </li>
+        <li><strong>That's it.</strong> The database (SQLite) is bundled inside the image for this path &mdash; no separate Postgres to install. Your data lives in a Docker volume; back that up like any other Docker volume.</li>
+      </ol>
     </div>
   </div>
 </section>
@@ -74,80 +181,6 @@ process:
   </div>
 </section>
 
-<section class="band" id="single-command">
-  <div class="container">
-    <div class="sh">
-      <span class="eyebrow brand">Install path one</span>
-      <h2>Single docker command.</h2>
-      <p>One image, one command, running locally in a couple of minutes. This is the fast path for trying it out on a spare machine; for TLS, backups and production hardening use the <a href="/self-host">full self-host guide</a> instead.</p>
-    </div>
-    <div class="install">
-      <div class="payroll-callout">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div>
-          <h3>One command, running in a couple of minutes.</h3>
-          <p>The published community images &mdash; <code>saebooks/saebooks-community-api</code> and <code>saebooks/saebooks-community-web</code> &mdash; start the engine, the web application, and a bundled SQLite database. It opens on <code>http://127.0.0.1:18960</code>.</p>
-        </div>
-      </div>
-      <ol>
-        <li><strong>Run the image.</strong>
-<pre><span class="c"># downloads the compose file and starts the engine + web app</span>
-curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.community.yml
-docker compose -f docker-compose.community.yml up -d</pre>
-        </li>
-        <li><strong>Open it in your browser.</strong>
-<pre>open http://127.0.0.1:18960
-<span class="c"># sign in with the starter books — see SAEBOOKS_DEMO_* in the compose file</span></pre>
-        </li>
-        <li><strong>That's it.</strong> The database (SQLite) is bundled inside the image for this path &mdash; no separate Postgres to install. Your data lives in a Docker volume; back that up like any other Docker volume.</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section id="desktop">
-  <div class="container">
-    <div class="sh">
-      <span class="eyebrow brand">Install path two</span>
-      <h2>Desktop click-install.</h2>
-      <p>Prefer a normal application over a terminal? Download and run &mdash; no Docker, no command line.</p>
-    </div>
-    <div class="feature-grid install-grid">
-      <div class="tile">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-        <h4>Linux &mdash; AppImage</h4>
-        <p>Download, mark executable, run. No installer, no root needed.</p>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SAEBooks-0.3.0-x86_64.AppImage" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; AppImage</a>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-0.3.0-x86_64.AppImage" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur (eesti/русский) &mdash; AppImage</a>
-        <p class="note" style="margin-top:8px;">Verify your download against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">published checksums</a>. All releases live on the <a href="https://github.com/saebooks/saebooks-desktop/releases">GitHub releases page</a>.</p>
-      </div>
-      <div class="tile">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></div>
-        <h4>Windows &mdash; MSI</h4>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SAEBooks-0.3.0-x64.msi" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Windows</a>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-0.3.0-x64.msi" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Windows</a>
-        <p class="note" style="margin-top:8px;">The installer is not yet code-signed, so Windows SmartScreen shows a &ldquo;Windows protected your PC&rdquo; notice on first run &mdash; click <em>More info &rarr; Run anyway</em>. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">checksums</a>.</p>
-      </div>
-      <div class="tile">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div>
-        <h4>macOS &mdash; DMG</h4>
-        <p>Universal binary (Intel + Apple Silicon). Drag to Applications.</p>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/saebooks-desktop-0.3.0-macOS-universal2.dmg" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; macOS</a>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-desktop-0.3.0-macOS-universal2.dmg" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; macOS</a>
-        <p class="note" style="margin-top:8px;">The .dmg is ad-hoc signed, not notarized, so Gatekeeper blocks the first open &mdash; right-click the app &rarr; <em>Open</em> &rarr; <em>Open</em>, once. Requires macOS 13 (Ventura) or later. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">checksums</a>.</p>
-      </div>
-      <div class="tile">
-        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
-        <h4>Android &mdash; APK</h4>
-        <p>The cashbook and ledger on your phone. Sideload the signed APK.</p>
-        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SAEBooks-0.3.0-release.apk" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Android</a>
-        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/tasur-0.3.0-release.apk" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Android</a>
-        <p class="note" style="margin-top:8px;">Not yet on Google Play &mdash; enable install from your browser when prompted. Verify against the <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SHA256SUMS">checksums</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="subtle" id="system-notes">
   <div class="container">
     <div class="sh">
@@ -157,11 +190,15 @@ docker compose -f docker-compose.community.yml up -d</pre>
     <div class="faq-wrap">
       <details class="faq" open>
         <summary>What do I need to run this?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>For the single-command install: Docker Engine 24 or newer, outbound HTTPS for the first-run bootstrap, and a spare gigabyte or two of disk for the bundled database. A cheap VPS or an old laptop is plenty for a single company&rsquo;s books.</p>
+        <p>For the one-click server: a 64-bit Linux or Windows machine and a spare gigabyte of disk &mdash; nothing else to install. For the Docker path: Docker Engine 24 or newer and outbound HTTPS for the first pull. A cheap VPS or an old laptop is plenty for a single company&rsquo;s books.</p>
       </details>
       <details class="faq">
         <summary>Is this the same thing as the self-host guide?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Same Community codebase, different packaging. This page is the fastest way to get it running &mdash; one image, or a desktop app. The <a href="/self-host">self-host page</a> covers the full compose stack with TLS, backups, and hardening for a production server. Start here, move there when you&rsquo;re ready to run it for real.</p>
+        <p>Same Community codebase, different packaging. This page is the fastest way to get it running &mdash; one file, a desktop app, or one compose command. The <a href="/self-host">self-host page</a> covers the full compose stack with TLS, backups, and hardening for a production server. Start here, move there when you&rsquo;re ready to run it for real.</p>
+      </details>
+      <details class="faq">
+        <summary>Why does my OS warn me about the download?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>The binaries are not yet code-signed (Windows) or notarized (macOS), so SmartScreen and Gatekeeper flag them on first run. That&rsquo;s a signing-certificate gap, not a verdict on the software &mdash; and you don&rsquo;t have to take our word for it: every artifact ships with a SHA-256 checksum linked beside its download button, published on the GitHub release built from the open source.</p>
       </details>
       <details class="faq">
         <summary>What's not turned on in the free edition?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -197,8 +234,9 @@ docker compose -f docker-compose.community.yml up -d</pre>
       <div class="foot-col">
         <h5>Get started</h5>
         <ul>
-          <li><a href="#single-command">Single-command install</a></li>
-          <li><a href="#desktop">Desktop click-install</a></li>
+          <li><a href="#one-click">One-click server</a></li>
+          <li><a href="#desktop">Desktop app</a></li>
+          <li><a href="#single-command">Docker compose</a></li>
           <li><a href="/self-host">Full self-host guide</a></li>
           <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Live demo</a></li>
         </ul>
