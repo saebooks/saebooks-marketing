@@ -125,7 +125,7 @@ process:
         <a href="https://buy.stripe.com/fZu28r4yndi470AbbXbV602" class="btn btn-primary" style="margin-top:12px;">Pre-order Enterprise</a>
       </div>
     </div>
-    <p class="note" style="margin-top:18px;text-align:center;color:var(--muted);font-size:14px;">Secure checkout by Stripe. Your card is charged for the first year now; your licence unlocks self-hosting of that edition immediately, and you get priority onboarding when the hosted service opens. <strong>Fully refundable</strong> any time before your hosted service starts &mdash; email admin@saee.com.au. No launch date committed yet.</p>
+    <p class="note" style="margin-top:18px;text-align:center;color:var(--muted);font-size:14px;">Secure checkout by Stripe. Your card is charged for the first year now (an annual plan that renews yearly), and you lock in priority onboarding the moment the hosted service opens. <strong>Fully refundable</strong> any time before your hosted service starts &mdash; email admin@saee.com.au. No launch date committed yet.</p>
   </div>
 </section>
 
