@@ -84,7 +84,7 @@ process:
         <div class="tour-text">
           <span class="eyebrow brand">GST &amp; BAS</span>
           <h2 class="big">A BAS that builds itself.</h2>
-          <p>G1 through G11, 1A/1B net GST &mdash; the worksheet computes from your books, ready to review and lodge via the ATO portal. Australian tax isn't an add-on here; it's baked into the chart of accounts and tax codes from the Odoo AU localisation.</p>
+          <p>G1 through G11, 1A/1B net GST &mdash; the worksheet computes from your books, ready to review and lodge via the ATO portal. Australian tax isn't an add-on here; an AU-standard chart of accounts and ATO tax codes are built in.</p>
         </div>
         <figure class="tour-shot shot-frame">
           <a href="https://cashbook-demo.saebooks.com.au/reports/bas-summary" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-bas-light.png" alt="SAE Books BAS worksheet — G1 to G11, 1A/1B net GST"><img class="shot-dark" src="/user/data/screenshots/tour-bas-dark.png" alt="" aria-hidden="true"></a>

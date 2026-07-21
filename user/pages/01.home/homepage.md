@@ -447,7 +447,7 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Is it actually compliant with AU tax?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Yes &mdash; the chart of accounts, tax codes, and BAS labels ship from the Odoo AU localisation. <strong>STP Phase 2 payroll</strong> is included from the Business tier and up. <strong>BAS e-lodgement</strong> and <strong>bank feeds</strong> are gated to Enterprise while we complete ATO DSP accreditation and the data-aggregator agreement; until then BAS is &ldquo;generate, review, lodge via the ATO portal&rdquo;. The accounting core itself is fully AU-compliant on every tier.</p>
+        <p>Yes &mdash; an AU-standard chart of accounts, ATO tax codes, and BAS labels are built in. <strong>STP Phase 2 payroll</strong> is included from the Business tier and up. <strong>BAS e-lodgement</strong> and <strong>bank feeds</strong> are gated to Enterprise while we complete ATO DSP accreditation and the data-aggregator agreement; until then BAS is &ldquo;generate, review, lodge via the ATO portal&rdquo;. The accounting core itself is fully AU-compliant on every tier.</p>
       </details>
       <details class="faq">
         <summary>How do upgrades work?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -524,7 +524,7 @@ $ docker compose up -d
 </footer>
 
 <div class="mobile-cta">
-  <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
+  <a href="/download" class="btn btn-primary">Get started</a>
   <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary" target="_blank" rel="noopener">Try the demo</a>
 </div>
 
