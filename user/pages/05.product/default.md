@@ -16,7 +16,7 @@ process:
     <div>
       <span class="eyebrow brand">The whole product</span>
       <h1>A complete accounting product. And it's yours.</h1>
-      <p class="lead">Cashbook to payroll to BAS &mdash; the full double-entry stack in one app you run. Here's what's actually inside, shot from the live demo. Every screen is a thin client over the same public REST API, on a Postgres database you own.</p>
+      <p class="lead">Cashbook to payroll to BAS &mdash; the full double-entry stack in one app you run. Here's what's actually inside, shot from the live demo. Every screen is a thin client over the same public REST API, on a database you own.</p>
       <div class="hero-ctas">
         <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Try the live demo
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -121,11 +121,11 @@ process:
     <div class="sh">
       <span class="eyebrow brand">And it's all yours</span>
       <h2>Every screen above is just one client.</h2>
-      <p>The web app is a thin client over a public REST API &mdash; the same endpoints your scripts hit. Your books live in a Postgres database you control, exportable in full at any time. No vendor can revoke access to your own ledger.</p>
+      <p>The web app is a thin client over a public REST API &mdash; the same endpoints your scripts hit. Your books live in a database you control, exportable in full at any time. No vendor can revoke access to your own ledger.</p>
     </div>
     <div style="text-align:center;margin:-24px auto 8px;max-width:720px;">
       <span class="pill">REST &middot; OpenAPI &middot; Webhooks</span>
-      <span class="pill">Your Postgres</span>
+      <span class="pill">Your database</span>
       <span class="pill">Full export (CSV/JSON/OFX/dump)</span>
       <span class="pill">AGPLv3</span>
       <span class="pill">Australian data residency</span>

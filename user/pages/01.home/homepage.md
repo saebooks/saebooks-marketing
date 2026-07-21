@@ -94,7 +94,7 @@ body_classes: homepage
           <svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
         </div>
         <h3>Your data. Permanently yours.</h3>
-        <p>Your books live in a Postgres database you control. AGPLv3 means the source is yours. Full export to CSV, JSON, OFX, or a complete DB dump &mdash; cancel any time and your data walks with you. No vendor can revoke access to your own ledger, ever.</p>
+        <p>Your books live in a database you control. AGPLv3 means the source is yours. Full export to CSV, JSON, OFX, or a complete DB dump &mdash; cancel any time and your data walks with you. No vendor can revoke access to your own ledger, ever.</p>
       </div>
     </div>
   </div>
@@ -244,7 +244,7 @@ body_classes: homepage
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST/BAS report generation</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full export (CSV, JSON, OFX, DB dump)</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Immutable audit ledger</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Postgres 14+</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SQLite or Postgres</li>
           </ul>
           <div class="tier-foot">AGPLv3. Forum support. Bring-your-own infra.</div>
         </div>
@@ -397,7 +397,7 @@ body_classes: homepage
       <div class="split-card">
         <div class="icon" style="width:32px;height:32px;"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h3>Run it yourself</h3>
-        <p><code>docker compose up</code>. Bring your own Postgres 14+ or use the bundled image for one-person setups. Authentik or any OIDC provider for SSO. Ships with a backup runbook.</p>
+        <p><code>docker compose up</code>. Bring your own Postgres, or use the bundled SQLite image for one-person setups. Authentik or any OIDC provider for SSO. Ships with a backup runbook.</p>
         <pre>$ docker compose pull
 $ docker compose up -d
 &#10003; saebooks-app started on :8042
@@ -443,7 +443,7 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Can I get my data out?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Always. Export to CSV, JSON, OFX, QIF, or a full Postgres dump from the Settings &rarr; Export screen. Importable into a fresh instance with one command. Data portability is a first-class feature, not a goodbye gift.</p>
+        <p>Always. Export to CSV, JSON, OFX, QIF, or a full database dump from the Settings &rarr; Export screen. Importable into a fresh instance with one command. Data portability is a first-class feature, not a goodbye gift.</p>
       </details>
       <details class="faq">
         <summary>Is it actually compliant with AU tax?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -455,15 +455,15 @@ $ docker compose up -d
       </details>
       <details class="faq">
         <summary>Why not just use a major cloud accounting product?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a Postgres database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; the <code>saebooks-xero</code> adapter ships as a separate service. Nothing is held hostage to keep you subscribed &mdash; and your bill doesn&rsquo;t climb on a schedule you don&rsquo;t control.</p>
+        <p>The major cloud vendors share three assumptions: your data lives on their servers, their UI is the only interface, and switching costs you everything. That&rsquo;s a reasonable trade-off until you need to automate, integrate, or leave. SAE Books makes different assumptions: the ledger is a database you own (AGPLv3), every action is an API call you can script, and your data exports completely at any time. Your accountant can stay in their preferred tool via two-way sync &mdash; the <code>saebooks-xero</code> adapter ships as a separate service. Nothing is held hostage to keep you subscribed &mdash; and your bill doesn&rsquo;t climb on a schedule you don&rsquo;t control.</p>
       </details>
       <details class="faq">
         <summary>Will the price go up every year?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>The self-hosted Community edition is free and stays free &mdash; there&rsquo;s no price to raise. For the paid tiers our model is deliberately boring: you pay for the work we take on &mdash; hosting, bank feeds, lodgement &mdash; and because you can export a full Postgres dump and walk at any time, we have every incentive to keep the price stable rather than treat renewal as a rate rise. No forced tier upgrades, no discount withdrawn at the quiet end of a renewal notice.</p>
+        <p>The self-hosted Community edition is free and stays free &mdash; there&rsquo;s no price to raise. For the paid tiers our model is deliberately boring: you pay for the work we take on &mdash; hosting, bank feeds, lodgement &mdash; and because you can export a full database dump and walk at any time, we have every incentive to keep the price stable rather than treat renewal as a rate rise. No forced tier upgrades, no discount withdrawn at the quiet end of a renewal notice.</p>
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a Postgres database, so any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <p>Community: GitHub issues + the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a>. Mostly self-supported. Business and Pro: priority email, signed LTS branches, named upgrade window. Enterprise: SLA-backed, named contacts, agreed response times. For all tiers: the data is a standard SQL database, so any developer on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
       <details class="faq">
         <summary>Can I run payroll on the free Cashbook bundle?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>

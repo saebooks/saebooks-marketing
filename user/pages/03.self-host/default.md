@@ -1,6 +1,6 @@
 ---
 metadata:
-    description: 'Self-host SAE Books with Docker and your own Postgres. AGPLv3 source, GST and BAS-ready double-entry accounting you fully own — for Australian small business.'
+    description: 'Self-host SAE Books with Docker — bundled SQLite or your own Postgres. AGPLv3 source, GST and BAS-ready double-entry accounting you fully own — for Australian small business.'
 header_active: self-host
 title: 'Self-host SAE Books — your books, your database, your control'
 menu: 'Self-host'
@@ -16,7 +16,7 @@ process:
     <div>
       <span class="eyebrow brand">Community edition &middot; AGPLv3</span>
       <h1>Your books. Your database. Your control.</h1>
-      <p class="lead">SAE Books is API-first double-entry accounting you run on your own server. The full ledger &mdash; invoicing, payroll, time tracking, GST/BAS &mdash; in one binary, on a Postgres database you own. Free to self-host for life. No licence key, no nag screens, nothing held hostage.</p>
+      <p class="lead">SAE Books is API-first double-entry accounting you run on your own server. The full ledger &mdash; invoicing, payroll, time tracking, GST/BAS &mdash; in one binary, on a database you own. Free to self-host for life. No licence key, no nag screens, nothing held hostage.</p>
       <div class="hero-ctas">
         <a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Download from GitHub
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -63,8 +63,8 @@ process:
     <div class="feature-grid">
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
-        <h4>It's your Postgres</h4>
-        <p>Your books live in a Postgres database you control &mdash; your laptop, your NAS, a VPS you rent. Any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <h4>It's your database</h4>
+        <p>Your books live in a database you control &mdash; your laptop, your NAS, a VPS you rent. Any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3-2-3-3-3-3 2-3 3-2-3-3-3-3 2-3 3 2 3 3 3-2 3-3 3 2 3 3 3 3-2 3-3 2 3 3 3 3-2 3-3z"/></svg></div>
@@ -74,7 +74,7 @@ process:
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         <h4>Full export, any time</h4>
-        <p>CSV, JSON, OFX, QIF, or a complete Postgres dump from Settings &rarr; Export &mdash; importable into a fresh instance with one command. Portability is a feature, not a goodbye gift.</p>
+        <p>CSV, JSON, OFX, QIF, or a complete database dump from Settings &rarr; Export &mdash; importable into a fresh instance with one command. Portability is a feature, not a goodbye gift.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
@@ -84,7 +84,7 @@ process:
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h4>One command to run</h4>
-        <p>Postgres ships in the compose stack &mdash; no separate database to install. <code>docker compose up -d</code>, migrate, and you're live in about ten minutes.</p>
+        <p>The database ships inside the stack &mdash; no separate database to install. <code>docker compose up -d</code>, migrate, and you're live in about ten minutes.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -139,7 +139,7 @@ curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-comp
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div><h4>Sales, purchases, contacts</h4><p>Invoices, quotes, bills and a contact ledger &mdash; the full AR/AP workflow.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div><h4>Bank reconciliation</h4><p>Reconcile against statement imports; OFX/CSV in, matched transactions out.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h4>GST / BAS report generation</h4><p>BAS labels from the Odoo AU localisation. Generate, review, lodge via the ATO portal.</p></div>
-      <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><h4>Full export</h4><p>CSV, JSON, OFX, QIF, or a complete Postgres dump &mdash; your data, on demand.</p></div>
+      <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><h4>Full export</h4><p>CSV, JSON, OFX, QIF, or a complete database dump &mdash; your data, on demand.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Immutable audit ledger</h4><p>Every posting is append-only and traceable. Period locks keep closed months closed.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/></svg></div><h4>SQLite or Postgres 16</h4><p>Bundled SQLite for a one-box setup, or bring your own Postgres 16 for the full multi-user stack.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div><h4>No licence key, no nag screens</h4><p>The Community binary just runs. Paid features are flag-gated in the same image.</p></div>
@@ -198,7 +198,7 @@ curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-comp
       </details>
       <details class="faq">
         <summary>Can I get my data out?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Always. Export to CSV, JSON, OFX, QIF, or a full Postgres dump from the Settings &rarr; Export screen &mdash; importable into a fresh instance with one command. Data portability is a first-class feature, not a goodbye gift.</p>
+        <p>Always. Export to CSV, JSON, OFX, QIF, or a full database dump from the Settings &rarr; Export screen &mdash; importable into a fresh instance with one command. Data portability is a first-class feature, not a goodbye gift.</p>
       </details>
       <details class="faq">
         <summary>How do upgrades work?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -206,7 +206,7 @@ curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-comp
       </details>
       <details class="faq">
         <summary>What if something goes wrong?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-        <p>Community support is GitHub issues plus the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a> &mdash; mostly self-supported. And because your books are a Postgres database, any DBA on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
+        <p>Community support is GitHub issues plus the forum at <a href="https://discourse.saebooks.com.au">discourse.saebooks.com.au</a> &mdash; mostly self-supported. And because your books are a standard SQL database, any developer on the planet can help you in a pinch. Nothing is locked in a vendor format.</p>
       </details>
       <details class="faq">
         <summary>Is the Cashbook bundle a different product?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>

@@ -63,7 +63,7 @@ process:
       <div class="point">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:22px;height:22px;"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
         <h3>No lock-in while you wait</h3>
-        <p>Nothing about pre-ordering stops you self-hosting the free Community edition today. Your books, your Postgres, your data &mdash; the pre-order is separate from and doesn't gate the free edition.</p>
+        <p>Nothing about pre-ordering stops you self-hosting the free Community edition today. Your books, your database, your data &mdash; the pre-order is separate from and doesn't gate the free edition.</p>
       </div>
     </div>
   </div>
