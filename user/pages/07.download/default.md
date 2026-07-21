@@ -14,21 +14,51 @@ process:
 <section class="hero">
   <div class="container">
     <div>
-      <span class="eyebrow brand">Community edition &middot; AGPLv3 &middot; free forever</span>
+      <span class="eyebrow brand">Community edition &middot; AGPLv3 &middot; free forever &middot; public beta</span>
       <h1>Get started free. No licence key, no clock running.</h1>
       <p class="lead">This is the same double-entry ledger the paid tiers run on &mdash; chart of accounts, invoicing, bills, bank reconciliation, GST/BAS reporting, payroll, time tracking &mdash; with the Community flag set. Run it on your own server or your own laptop, own the database underneath it, and never see a nag screen.</p>
       <div class="hero-ctas">
-        <a href="#single-command" class="btn btn-primary btn-lg">Single-command install</a>
-        <a href="#desktop" class="btn btn-secondary btn-lg">Desktop click-install</a>
+        <a href="#one-click" class="btn btn-primary btn-lg">One-click server &mdash; recommended</a>
+        <a href="#single-command" class="btn btn-secondary btn-lg">Docker install</a>
+        <a href="#desktop" class="btn btn-secondary btn-lg">Desktop &amp; mobile apps</a>
         <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Try it in the browser first</a>
       </div>
       <div class="hero-meta">
         <span class="pill"><span class="dot"></span>Free &middot; AGPLv3</span>
+        <span class="pill">Public beta &mdash; pre-1.0</span>
         <span class="pill">Full double-entry included</span>
         <span class="pill">Cashbook mode for sole traders</span>
         <span class="pill">Your data, your server</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="one-click">
+  <div class="container">
+    <div class="sh">
+      <span class="eyebrow brand">Recommended download &middot; beta</span>
+      <h2>One file. Your whole books server.</h2>
+      <p>SAE Books is a small <strong>server</strong> &mdash; a program that keeps your books in a database on your own machine and shows them to you in your web browser. The one-click build packs all of it into a single file: download it, run it, and your browser opens on your books. No Docker, no database to set up, no account with us.</p>
+    </div>
+    <div class="feature-grid tier-grid-3">
+      <div class="tile">
+        <h4>Windows</h4>
+        <p>Download and double-click. Windows shows a &ldquo;Windows protected your PC&rdquo; notice because the beta isn&rsquo;t code-signed yet &mdash; click <em>More info &rarr; Run anyway</em>.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/latest" class="btn btn-primary" style="margin-top:12px;">Latest Windows build</a>
+      </div>
+      <div class="tile">
+        <h4>macOS &mdash; Apple silicon</h4>
+        <p>For M1 and later Macs. The beta isn&rsquo;t notarised, so macOS blocks the first open &mdash; right-click the file &rarr; <em>Open</em> &rarr; <em>Open</em>, once.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/latest" class="btn btn-primary" style="margin-top:12px;">Latest macOS build</a>
+      </div>
+      <div class="tile">
+        <h4>Linux</h4>
+        <p>Download, mark it executable (<code>chmod +x</code>, or right-click &rarr; Properties), run. Opens in your browser.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/latest" class="btn btn-primary" style="margin-top:12px;">Latest Linux build</a>
+      </div>
+    </div>
+    <p class="note" style="margin-top:16px;">All one-click builds live on the <a href="https://github.com/saebooks/saebooks/releases/latest">latest GitHub release</a>, with a <code>SHA256SUMS</code> file published beside them &mdash; verify your download against it. This is beta software: it keeps real books today, but keep your own backups and expect the occasional rough edge.</p>
   </div>
 </section>
 
@@ -77,8 +107,8 @@ process:
 <section class="band" id="single-command">
   <div class="container">
     <div class="sh">
-      <span class="eyebrow brand">Install path one</span>
-      <h2>Single docker command.</h2>
+      <span class="eyebrow brand">Server install &middot; Docker</span>
+      <h2>Prefer Docker? One command.</h2>
       <p>One image, one command, running locally in a couple of minutes. This is the fast path for trying it out on a spare machine; for TLS, backups and production hardening use the <a href="/self-host">full self-host guide</a> instead.</p>
     </div>
     <div class="install">
@@ -108,9 +138,9 @@ docker compose -f docker-compose.community.yml up -d</pre>
 <section id="desktop">
   <div class="container">
     <div class="sh">
-      <span class="eyebrow brand">Install path two</span>
-      <h2>Desktop click-install.</h2>
-      <p>Prefer a normal application over a terminal? Download and run &mdash; no Docker, no command line.</p>
+      <span class="eyebrow brand">The apps &middot; desktop &amp; mobile</span>
+      <h2>Apps are windows. The server is the books.</h2>
+      <p>The desktop and Android apps are <strong>clients</strong> &mdash; windows onto a running SAE Books server. The server (the one-click build above, or the Docker install) is the part that actually keeps your books. Not sure which you want? Start with the one-click server &mdash; the browser screens it opens are the full product. Add an app later if you want a native window onto the same books.</p>
     </div>
     <div class="feature-grid install-grid">
       <div class="tile">
@@ -145,6 +175,7 @@ docker compose -f docker-compose.community.yml up -d</pre>
         <p class="note" style="margin-top:8px;">Not yet on Google Play &mdash; enable install from your browser when prompted. Verify against the <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SHA256SUMS">checksums</a>.</p>
       </div>
     </div>
+    <p class="note" style="margin-top:16px;"><strong>tasur</strong> (eesti/vene) is the Estonian edition of the same product. Parts of its Estonian and Russian interface are machine-translated and still under native-speaker review &mdash; the English interface is the authoritative one.</p>
   </div>
 </section>
 
@@ -166,6 +197,10 @@ docker compose -f docker-compose.community.yml up -d</pre>
       <details class="faq">
         <summary>What's not turned on in the free edition?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
         <p>Services that need us to run infrastructure on your behalf &mdash; hosted bank feeds, direct BAS e-lodgement, managed hosting &mdash; are gated behind a licence flag until those services are ready. They&rsquo;re not hidden from you, just switched off in the Community build; the ledger itself is not limited. You can still lodge BAS via the ATO portal using the numbers SAE Books generates.</p>
+      </details>
+      <details class="faq">
+        <summary>What does it <em>not</em> do yet?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+        <p>The honest list. There is <strong>no tax-lodgement service yet</strong> &mdash; SAE Books generates your BAS numbers and you lodge them yourself via the ATO portal. There is <strong>no hosted or managed edition yet</strong> &mdash; you run it on your own machine (hosted plans are pre-order only, no launch date committed). The beta installers are <strong>not code-signed</strong>, so Windows and macOS show their standard warnings on first run. Payroll is in beta &mdash; verify the ATO tax-table coefficients (NAT 1008) before you run a real pay.</p>
       </details>
       <details class="faq">
         <summary>Is this pre-1.0 software?<span class="chev"><svg class="lucide" viewBox="0 0 24 24" style="width:18px;height:18px;"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
@@ -197,7 +232,8 @@ docker compose -f docker-compose.community.yml up -d</pre>
       <div class="foot-col">
         <h5>Get started</h5>
         <ul>
-          <li><a href="#single-command">Single-command install</a></li>
+          <li><a href="#one-click">One-click server</a></li>
+          <li><a href="#single-command">Docker install</a></li>
           <li><a href="#desktop">Desktop click-install</a></li>
           <li><a href="/self-host">Full self-host guide</a></li>
           <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Live demo</a></li>

@@ -243,6 +243,7 @@ nav.primary a.is-active { color: var(--brand-navy); }
 /* 3-up tier grid (pre-order): stacked on phones, 3 equal cols from 640px. */
 .tier-grid-3 { grid-template-columns: 1fr; }
 @media (min-width: 640px) { .tier-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tier-grid-3 .btn { white-space: normal; }
 /* 2-up screenshot grid (homepage "Inside the app"): stacked on phones so the
    shots stay readable, 2 cols from 640px. Declared after .feature-grid so the
    640px rule also beats .feature-grid 4-col at >=1024px. */
