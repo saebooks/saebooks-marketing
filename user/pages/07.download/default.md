@@ -123,8 +123,10 @@ docker compose -f docker-compose.community.yml up -d</pre>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></div>
-        <h4>Windows &mdash; MSI <span class="badge" style="font-size:10px;background:rgba(0,0,0,0.08);color:var(--brand-navy);">In progress</span></h4>
-        <p>A signed MSI installer is being built. Not ready yet &mdash; check back, or self-host on Linux/Docker in the meantime.</p>
+        <h4>Windows &mdash; MSI</h4>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SAEBooks-0.3.0-x64.msi" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Windows</a>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-0.3.0-x64.msi" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Windows</a>
+        <p class="note" style="margin-top:8px;">The installer is not yet code-signed, so Windows SmartScreen shows a &ldquo;Windows protected your PC&rdquo; notice on first run &mdash; click <em>More info &rarr; Run anyway</em>. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">checksums</a>.</p>
       </div>
     </div>
   </div>
