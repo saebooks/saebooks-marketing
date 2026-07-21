@@ -112,7 +112,7 @@ docker compose -f docker-compose.community.yml up -d</pre>
       <h2>Desktop click-install.</h2>
       <p>Prefer a normal application over a terminal? Download and run &mdash; no Docker, no command line.</p>
     </div>
-    <div class="feature-grid">
+    <div class="feature-grid install-grid">
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h4>Linux &mdash; AppImage</h4>

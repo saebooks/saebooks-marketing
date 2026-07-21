@@ -221,6 +221,16 @@ nav.primary a.is-active { color: var(--brand-navy); }
 .feature-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .feature-grid { grid-template-columns: repeat(4, 1fr); } }
+/* Platform-download grid (download page, 4 desktop/mobile installers): plain
+   1fr is shorthand for minmax(auto, 1fr), so a tile with a long nowrap .btn
+   label (e.g. "Download SAE Books 0.3.0 -- macOS") can force its track wider
+   than its fair share -- the whole grid (and container, uncontained) then
+   overflows past the viewport at desktop widths ("grid blowout"). minmax(0,1fr)
+   clamps every track to its fair share; the buttons wrap onto their own line
+   instead of pushing the layout wide. */
+.install-grid { grid-template-columns: 1fr; }
+@media (min-width: 640px)  { .install-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .install-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .tile {
   background: var(--surface);
   border: 1px solid var(--border);
