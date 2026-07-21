@@ -138,6 +138,9 @@ if [ -f /home/sauer/.claude/secrets/cf-bridge.env ]; then
   # CF Pages static copy actually serves it (the static copy is the whole public site).
   wget -q -e robots=off --timeout=15 --tries=2 -O "$MIRROR/sitemap.xml" \
       http://10.0.1.1:18008/sitemap.xml || true
+  # /tmp is sticky + fs.protected_regular: a stale log owned by another user
+  # makes even root's O_TRUNC open fail ("Permission denied"). Clear it first.
+  rm -f /tmp/saebooks-pages-deploy.log 2>/dev/null || true
   if [ -s "$MIRROR/index.html" ]; then
     if CLOUDFLARE_API_TOKEN="$CF_BRIDGE_TOKEN" CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID" \
         npx --yes wrangler@latest pages deploy "$MIRROR" --project-name=saebooks-web \
