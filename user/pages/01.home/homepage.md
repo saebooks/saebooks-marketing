@@ -260,7 +260,7 @@ body_classes: homepage
             <span class="per">/ month, or $490 / year &mdash; AUD</span>
           </div>
           <div class="tier-tagline">For sole traders and small teams who lodge BAS themselves.</div>
-          <a href="/preview-access?interest=business" class="btn btn-primary">Request early access</a>
+          <a href="/preview-access" class="btn btn-primary">Request early access</a>
           <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Hosted editions are in private beta &mdash; access by request. Self-host free today.</p>
           <ul class="tier-feats">
             <li class="group">Everything in Community, plus</li>
@@ -281,7 +281,7 @@ body_classes: homepage
             <span class="per">/ month, or $990 / year &mdash; AUD</span>
           </div>
           <div class="tier-tagline">For bookkeepers, growing teams, and anyone running payroll.</div>
-          <a href="/preview-access?interest=pro" class="btn btn-primary">Request early access</a>
+          <a href="/preview-access" class="btn btn-primary">Request early access</a>
           <p class="tier-cta-note" style="margin-top:6px;font-size:0.8rem;opacity:0.75;">Hosted editions are in private beta &mdash; access by request. Self-host free today.</p>
           <ul class="tier-feats">
             <li class="group">Everything in Business, plus</li>
@@ -303,7 +303,7 @@ body_classes: homepage
             <span class="per">/ month</span>
           </div>
           <div class="tier-tagline">Custom-built solutions. We tailor SAE Books to your operation.</div>
-          <a href="/preview-access?interest=enterprise" class="btn btn-secondary">Talk to us</a>
+          <a href="/preview-access" class="btn btn-secondary">Talk to us</a>
           <ul class="tier-feats">
             <li class="group">Everything in Pro, plus</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>BAS e-lodgement (early access)</li>
@@ -401,7 +401,7 @@ body_classes: homepage
         <pre>$ docker compose pull
 $ docker compose up -d
 &#10003; saebooks-app started on :8042
-&#10003; saebooks-web started on :8043
+&#10003; saebooks-web started on :8080
 &#10003; postgres healthy
 &#10003; migrations applied (head)</pre>
         <a href="/self-host" class="btn btn-secondary">Read the install guide
@@ -495,7 +495,7 @@ $ docker compose up -d
           <li><a href="https://github.com/saebooks/saebooks" target="_blank" rel="noopener">Self-host (Community)</a></li>
           <li><a href="https://cashbook-demo.saebooks.com.au" target="_blank" rel="noopener">Try the demo</a></li>
           <li><a href="#editions">Pricing &amp; plans</a></li>
-          <li><a href="/preview-access?interest=enterprise">Talk to us (Enterprise)</a></li>
+          <li><a href="/preview-access">Talk to us (Enterprise)</a></li>
         </ul>
       </div>
       <div class="foot-col">

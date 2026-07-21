@@ -85,8 +85,8 @@ process:
       <div class="payroll-callout">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div>
-          <h3>Image name and tag &mdash; to be confirmed</h3>
-          <p>One command starts the free community edition: the engine, the web application and a local database. It opens on http://127.0.0.1:18960.</p>
+          <h3>One command, running in a couple of minutes.</h3>
+          <p>The published community images &mdash; <code>saebooks/saebooks-community-api</code> and <code>saebooks/saebooks-community-web</code> &mdash; start the engine, the web application, and a bundled SQLite database. It opens on <code>http://127.0.0.1:18960</code>.</p>
         </div>
       </div>
       <ol>
@@ -95,11 +95,11 @@ process:
 curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.community.yml
 docker compose -f docker-compose.community.yml up -d</pre>
         </li>
-        <li><strong>Open it and create your admin user.</strong>
-<pre>open http://localhost:8042
-<span class="c"># first-run wizard: admin user, company name, AU chart of accounts</span></pre>
+        <li><strong>Open it in your browser.</strong>
+<pre>open http://127.0.0.1:18960
+<span class="c"># sign in with the starter books — see SAEBOOKS_DEMO_* in the compose file</span></pre>
         </li>
-        <li><strong>That's it.</strong> Postgres is bundled inside the image for this path &mdash; nothing else to install. Your data lives in the <code>saebooks-data</code> volume; back that up like any other Docker volume.</li>
+        <li><strong>That's it.</strong> The database (SQLite) is bundled inside the image for this path &mdash; no separate Postgres to install. Your data lives in a Docker volume; back that up like any other Docker volume.</li>
       </ol>
     </div>
   </div>

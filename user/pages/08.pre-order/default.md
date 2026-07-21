@@ -113,7 +113,7 @@ process:
       </div>
     </div>
     <div style="text-align:center;margin-top:24px;">
-      <a href="/preview-access?interest=pre-order-license" class="btn btn-primary btn-lg">Register pre-order interest
+      <a href="/preview-access" class="btn btn-primary btn-lg">Register pre-order interest
         <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
       <p class="note" style="margin-top:10px;color:var(--muted);font-size:14px;">Takes a minute. No payment is collected on that form &mdash; it puts you on the list for the pre-order payment link and priority onboarding.</p>

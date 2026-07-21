@@ -35,17 +35,65 @@ html.dark section.band, [data-theme="dark"] section.band { background: var(--sur
 [data-theme="dark"] .wordmark img, html.dark .wordmark img {
   background: #fff; padding: 4px 8px; border-radius: 6px;
 }
-nav.primary { display: none; gap: 28px; margin-left: 12px; }
+nav.primary { display: none; gap: 24px; margin-left: 12px; }
 @media (min-width: 1024px) { nav.primary { display: flex; } }
 nav.primary a {
   font-size: 14px; font-weight: 700; color: #0b1220;
-  position: relative;
+  position: relative; white-space: nowrap;
 }
 nav.primary a:hover { color: var(--brand-navy); text-decoration: none; }
+nav.primary a.is-active { color: var(--brand-navy); }
 [data-theme="dark"] nav.primary a, html.dark nav.primary a { color: #ffffff; font-weight: 600; }
 [data-theme="dark"] nav.primary a:hover, html.dark nav.primary a:hover { color: #a8bbe8; }
+[data-theme="dark"] nav.primary a.is-active, html.dark nav.primary a.is-active { color: #a8bbe8; }
 .header-spacer { flex: 1; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
+.header-actions .btn.is-active { box-shadow: inset 0 0 0 2px var(--brand-navy); }
+
+/* ── Mobile disclosure menu (CSS-only <details>, shown below 1024px) ── */
+.nav-menu { display: none; margin-left: auto; position: relative; }
+.nav-menu > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 8px; color: var(--brand-navy);
+}
+.nav-menu > summary::-webkit-details-marker { display: none; }
+.nav-menu > summary svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; }
+.nav-menu > summary .menu-close { display: none; }
+.nav-menu[open] > summary .menu-open { display: none; }
+.nav-menu[open] > summary .menu-close { display: block; }
+[data-theme="dark"] .nav-menu > summary, html.dark .nav-menu > summary { color: #ffffff; }
+.nav-menu-panel {
+  position: absolute; right: 0; top: calc(100% + 10px);
+  min-width: 230px; max-width: calc(100vw - 32px);
+  background: #ffffff; border: 1px solid var(--border-strong); border-radius: 12px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.16);
+  padding: 8px; display: flex; flex-direction: column; gap: 2px; z-index: 40;
+}
+[data-theme="dark"] .nav-menu-panel, html.dark .nav-menu-panel {
+  background: #0b1220; border-color: #1f2937;
+}
+.nav-menu-panel a {
+  padding: 11px 14px; border-radius: 8px;
+  font-size: 15px; font-weight: 600; color: #0b1220; text-decoration: none;
+}
+.nav-menu-panel a:hover { background: rgba(11,18,32,0.05); }
+[data-theme="dark"] .nav-menu-panel a, html.dark .nav-menu-panel a { color: #ffffff; }
+[data-theme="dark"] .nav-menu-panel a:hover, html.dark .nav-menu-panel a:hover { background: rgba(255,255,255,0.08); }
+.nav-menu-cta {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 12px 6px 4px; margin-top: 6px; border-top: 1px solid var(--border);
+}
+.nav-menu-cta .btn { width: 100%; justify-content: center; }
+@media (max-width: 1023px) {
+  .header-actions { display: none; }
+  .nav-menu { display: block; }
+}
+/* Safety net: never let an over-long button force horizontal overflow on
+   narrow screens — wrap the label instead (fitting buttons are unchanged). */
+@media (max-width: 480px) {
+  .btn { white-space: normal; }
+}
 
 /* ── Buttons ── */
 .btn {

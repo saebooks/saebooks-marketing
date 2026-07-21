@@ -26,8 +26,8 @@ process:
       </div>
       <div class="hero-meta">
         <span class="pill"><span class="dot"></span>Free &middot; AGPLv3</span>
-        <span class="pill">Postgres 16 bundled</span>
-        <span class="pill">~10 min to running</span>
+        <span class="pill">SQLite or Postgres 16</span>
+        <span class="pill">Minutes to running</span>
         <span class="pill">Australian data residency</span>
       </div>
     </div>
@@ -99,41 +99,27 @@ process:
   <div class="container">
     <div class="sh">
       <span class="eyebrow brand">Quickstart</span>
-      <h2>From clone to running in ten minutes.</h2>
-      <p>Prerequisites: Docker Engine 24+ with <code>docker compose</code> v2, and outbound HTTPS. No Postgres install needed &mdash; the stack ships one.</p>
+      <h2>From zero to running in a couple of minutes.</h2>
+      <p>Prerequisites: Docker Engine 24+ with <code>docker compose</code> v2, and outbound HTTPS for the first pull. The quick path below needs no database to install &mdash; SQLite ships inside the image.</p>
     </div>
     <div class="install">
       <ol>
-        <li><strong>Grab the release compose file.</strong>
+        <li><strong>Grab the community compose file.</strong>
 <pre>mkdir saebooks &amp;&amp; cd saebooks
-curl -fsSL https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.release.yml -o docker-compose.yml</pre>
+curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-compose.community.yml</pre>
         </li>
-        <li><strong>Set the four env values that matter.</strong>
-<pre>cp .env.example .env
-<span class="c"># then edit .env:</span>
-POSTGRES_PASSWORD=change-me
-SAEBOOKS_SECRET_KEY=$(openssl rand -hex 32)
-SAEBOOKS_PUBLIC_URL=http://localhost:8042
-SAEBOOKS_EDITION=community   <span class="c"># free; no licence key</span></pre>
+        <li><strong>Start it.</strong>
+<pre>docker compose -f docker-compose.community.yml up -d
+<span class="c"># web UI on 127.0.0.1:18960 &middot; API on 127.0.0.1:18961 &middot; SQLite, bundled</span></pre>
         </li>
-        <li><strong>Pull and start.</strong>
-<pre>docker compose pull
-docker compose up -d
-<span class="c"># app :8042 (API) &middot; web :8043 (UI) &middot; db :5432 (internal)</span></pre>
-        </li>
-        <li><strong>Migrate and seed the AU chart of accounts.</strong>
-<pre>docker compose exec app alembic upgrade head
-docker compose exec app python -m saebooks.scripts.bootstrap
-<span class="c"># AU chart of accounts + standard tax codes, idempotent</span></pre>
-        </li>
-        <li><strong>Create your admin user, then log in.</strong>
-<pre>docker compose exec app python -m saebooks.scripts.create_admin \
-  --email you@example.com --name "Your Name"
-<span class="c"># open http://localhost:8042 — it walks you through your first company</span></pre>
+        <li><strong>Open it and sign in.</strong>
+<pre>open http://127.0.0.1:18960
+<span class="c"># sign in with the starter books — see SAEBOOKS_DEMO_* in the compose file</span></pre>
         </li>
       </ol>
-      <div style="text-align:center;">
-        <a href="https://dev.saebooks.com.au/install" class="btn btn-primary">Full install guide &mdash; TLS, backups, hardening
+      <p class="note" style="margin-top:16px;color:var(--muted);">Want the full production stack &mdash; your own Postgres 16, multiple users, TLS and off-site backups? That build-from-source path, with the AU chart of accounts and the Alembic migrations, is in the full install guide.</p>
+      <div style="text-align:center;margin-top:20px;">
+        <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Read the full install guide
           <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -155,7 +141,7 @@ docker compose exec app python -m saebooks.scripts.bootstrap
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h4>GST / BAS report generation</h4><p>BAS labels from the Odoo AU localisation. Generate, review, lodge via the ATO portal.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><h4>Full export</h4><p>CSV, JSON, OFX, QIF, or a complete Postgres dump &mdash; your data, on demand.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Immutable audit ledger</h4><p>Every posting is append-only and traceable. Period locks keep closed months closed.</p></div>
-      <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/></svg></div><h4>Runs on Postgres 14+</h4><p>Bring your own Postgres, or use the bundled image for a one-box setup.</p></div>
+      <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/></svg></div><h4>SQLite or Postgres 16</h4><p>Bundled SQLite for a one-box setup, or bring your own Postgres 16 for the full multi-user stack.</p></div>
       <div class="tile"><div class="icon"><svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div><h4>No licence key, no nag screens</h4><p>The Community binary just runs. Paid features are flag-gated in the same image.</p></div>
     </div>
   </div>
@@ -171,10 +157,10 @@ docker compose exec app python -m saebooks.scripts.bootstrap
       <div class="split-card">
         <div class="icon" style="width:32px;height:32px;"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h3>Run it yourself</h3>
-        <p><code>docker compose up</code>. Postgres bundled, or bring your own 14+. Any OIDC provider for SSO. Ships with a backup runbook. Free, forever, AGPLv3.</p>
+        <p><code>docker compose up</code>. Bundled SQLite for one box, or bring your own Postgres 16 for the full stack. Any OIDC provider for SSO. Ships with a backup runbook. Free, forever, AGPLv3.</p>
         <pre>$ docker compose up -d
 &#10003; saebooks-app   started on :8042
-&#10003; saebooks-web   started on :8043
+&#10003; saebooks-web   started on :8080
 &#10003; postgres       healthy
 &#10003; migrations     applied (head)</pre>
         <a href="https://dev.saebooks.com.au/install" class="btn btn-secondary">Read the install guide
