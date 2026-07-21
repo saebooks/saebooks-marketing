@@ -16,7 +16,7 @@ process:
     <div>
       <span class="eyebrow brand">Community edition &middot; AGPLv3 &middot; free forever</span>
       <h1>Get started free. No licence key, no clock running.</h1>
-      <p class="lead">This is the same double-entry ledger the paid tiers run on &mdash; chart of accounts, invoicing, bills, bank reconciliation, GST/BAS reporting, payroll, time tracking &mdash; with the Community flag set. Run it on your own server or your own laptop, own the Postgres database underneath it, and never see a nag screen.</p>
+      <p class="lead">This is the same double-entry ledger the paid tiers run on &mdash; chart of accounts, invoicing, bills, bank reconciliation, GST/BAS reporting, payroll, time tracking &mdash; with the Community flag set. Run it on your own server or your own laptop, own the database underneath it, and never see a nag screen.</p>
       <div class="hero-ctas">
         <a href="#single-command" class="btn btn-primary btn-lg">Single-command install</a>
         <a href="#desktop" class="btn btn-secondary btn-lg">Desktop click-install</a>
@@ -53,7 +53,7 @@ process:
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
         <h4>Self-hosted, by default</h4>
-        <p>Runs on your own server, your own laptop, or a small VPS &mdash; on a Postgres database you control. Nothing phones home that you haven&rsquo;t opted into.</p>
+        <p>Runs on your own server, your own laptop, or a small VPS &mdash; on a database you control. Nothing phones home that you haven&rsquo;t opted into.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 12c-1 0-3-1-3-3s2-3 3-3-2-3-3-3-3 2-3 3-2-3-3-3-3 2-3 3 2 3 3 3-2 3-3 3 2 3 3 3 3-2 3-3 2 3 3 3 3-2 3-3z"/></svg></div>
@@ -63,7 +63,7 @@ process:
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         <h4>Your data, your server</h4>
-        <p>Full export any time &mdash; CSV, JSON, OFX, QIF, or a complete Postgres dump. Nothing about the free edition is designed to make leaving hard.</p>
+        <p>Full export any time &mdash; CSV, JSON, OFX, QIF, or a complete database dump. Nothing about the free edition is designed to make leaving hard.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div>
