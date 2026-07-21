@@ -231,6 +231,10 @@ nav.primary a.is-active { color: var(--brand-navy); }
 .install-grid { grid-template-columns: 1fr; }
 @media (min-width: 640px)  { .install-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .install-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* Let the platform download buttons wrap inside their (minmax(0,1fr)) cell —
+   the nowrap "Download SAE Books 0.3.0 — macOS" label is wider than the 4-up
+   track at 1024px and would otherwise spill past the viewport (~56px). */
+.install-grid .btn { white-space: normal; }
 .tile {
   background: var(--surface);
   border: 1px solid var(--border);
