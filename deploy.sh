@@ -100,7 +100,7 @@ if [ "$fail" = 0 ]; then
   if command -v node >/dev/null 2>&1 && [ -f "$PWD/layout-check.mjs" ] && [ -d "$PW_CACHE" ]; then
     echo '=== 3b/4  layout check (headless chromium, desktop + mobile, light + dark) ==='
     if ! PLAYWRIGHT_BROWSERS_PATH="$PW_CACHE" ORIGIN="$ORIGIN" HOSTHDR="$HOSTHDR" \
-         PAGES='/,/product,/self-host,/resources' node "$PWD/layout-check.mjs"; then
+         PAGES='/,/product,/self-host,/resources,/cashbook,/download,/pre-order' node "$PWD/layout-check.mjs"; then
       fail=1
     fi
   else

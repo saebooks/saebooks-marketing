@@ -102,7 +102,7 @@ process:
       <p>Underneath the friendly screens is a real double-entry engine: the AU-standard chart of accounts, journals, period locks, an immutable audit trail, multi-company, and FX revaluation &mdash; with a reports library that goes well past the basics.</p>
     </div>
     <div class="tour">
-      <div class="tour-shots-2" style="grid-template-columns:1fr 1fr;gap:18px;">
+      <div class="tour-shots-2">
         <figure class="tour-shot shot-frame">
           <a href="https://cashbook-demo.saebooks.com.au/accounts" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-accounts-light.png" alt="SAE Books chart of accounts — the AU standard, by account type"><img class="shot-dark" src="/user/data/screenshots/tour-accounts-dark.png" alt="" aria-hidden="true"></a>
           <figcaption style="font-size:var(--fs-small);color:var(--muted);padding:10px 14px;border-top:1px solid var(--border);margin:0;">Chart of accounts &mdash; the AU standard, by type.</figcaption>

@@ -235,6 +235,19 @@ nav.primary a.is-active { color: var(--brand-navy); }
    the nowrap "Download SAE Books 0.3.0 — macOS" label is wider than the 4-up
    track at 1024px and would otherwise spill past the viewport (~56px). */
 .install-grid .btn { white-space: normal; }
+/* NEVER force a column count with an inline grid-template-columns: it overrides
+   every responsive rule at every width. On /pre-order an inline repeat(3,1fr)
+   forced 3 tier columns at 390px, blew the layout out to ~657px and made phones
+   render the whole page zoomed-out (the 2026-07-22 mobile bug). Use these
+   responsive classes instead. */
+/* 3-up tier grid (pre-order): stacked on phones, 3 equal cols from 640px. */
+.tier-grid-3 { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .tier-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* 2-up screenshot grid (homepage "Inside the app"): stacked on phones so the
+   shots stay readable, 2 cols from 640px. Declared after .feature-grid so the
+   640px rule also beats .feature-grid 4-col at >=1024px. */
+.shots-2up { gap: 18px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+@media (min-width: 640px) { .shots-2up { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tile {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -633,6 +646,7 @@ pre { max-width: 100%; overflow-x: auto; }
 .tour-text p { color: var(--body); font-size: 1.02rem; line-height: 1.6; margin: 0 0 10px; }
 .tour-text .note { font-size: var(--fs-small); color: var(--muted); }
 .tour-shots-2 { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .tour-shots-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .payroll-callout { max-width: 1080px; margin: 0 auto 64px; padding: 22px 26px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); background: var(--subtle); display: flex; gap: 16px; align-items: flex-start; }
 .payroll-callout .icon { color: var(--brand-navy); flex-shrink: 0; }
 [data-theme="dark"] .payroll-callout .icon, html.dark .payroll-callout .icon { color: #93a5d6; }

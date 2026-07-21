@@ -179,7 +179,7 @@ body_classes: homepage
       <h2>Not a mockup. The whole ledger.</h2>
       <p>The full double-entry product &mdash; cashbook, invoicing, time tracking, GST/BAS and a real reports library &mdash; in one app you run. Real screens from the live demo &mdash; shown in your own theme, light or dark:</p>
     </div>
-    <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;">
+    <div class="feature-grid shots-2up">
       <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/cashbook" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-cashbook-light.png" alt="Cashbook"><img class="shot-dark" src="/user/data/screenshots/tour-cashbook-dark.png" alt="" aria-hidden="true"></a><figcaption>Cashbook &mdash; money in / out</figcaption></figure>
       <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/invoices" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-invoices-light.png" alt="Invoices"><img class="shot-dark" src="/user/data/screenshots/tour-invoices-dark.png" alt="" aria-hidden="true"></a><figcaption>Invoicing &amp; receivables</figcaption></figure>
       <figure class="shot-frame"><a href="https://cashbook-demo.saebooks.com.au/reports" target="_blank" rel="noopener"><img class="shot-light" src="/user/data/screenshots/tour-reports-light.png" alt="Reports library"><img class="shot-dark" src="/user/data/screenshots/tour-reports-dark.png" alt="" aria-hidden="true"></a><figcaption>A real reports library</figcaption></figure>

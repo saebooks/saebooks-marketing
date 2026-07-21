@@ -105,7 +105,7 @@ process:
       <span class="eyebrow brand">Pay to pre-order</span>
       <h2>Pre-order your edition.</h2>
     </div>
-    <div class="feature-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="feature-grid tier-grid-3">
       <div class="tile">
         <h4>Business</h4>
         <div class="tier-price"><span class="amount">$490</span> <span class="per">/ year &mdash; AUD</span></div>
