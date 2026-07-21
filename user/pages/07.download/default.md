@@ -112,7 +112,7 @@ docker compose -f docker-compose.community.yml up -d</pre>
       <h2>Desktop click-install.</h2>
       <p>Prefer a normal application over a terminal? Download and run &mdash; no Docker, no command line.</p>
     </div>
-    <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);">
+    <div class="feature-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h4>Linux &mdash; AppImage</h4>
@@ -127,6 +127,14 @@ docker compose -f docker-compose.community.yml up -d</pre>
         <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SAEBooks-0.3.0-x64.msi" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Windows</a>
         <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/tasur-0.3.0-x64.msi" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Windows</a>
         <p class="note" style="margin-top:8px;">The installer is not yet code-signed, so Windows SmartScreen shows a &ldquo;Windows protected your PC&rdquo; notice on first run &mdash; click <em>More info &rarr; Run anyway</em>. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">checksums</a>.</p>
+      </div>
+      <div class="tile">
+        <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h4>Android &mdash; APK</h4>
+        <p>The cashbook and ledger on your phone. Sideload the signed APK.</p>
+        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SAEBooks-0.3.0-release.apk" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.3.0 &mdash; Android</a>
+        <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/tasur-0.3.0-release.apk" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; Android</a>
+        <p class="note" style="margin-top:8px;">Not yet on Google Play &mdash; enable install from your browser when prompted. Verify against the <a href="https://github.com/saebooks/saebooks-android-releases/releases/download/v0.3.0/SHA256SUMS">checksums</a>.</p>
       </div>
     </div>
   </div>
