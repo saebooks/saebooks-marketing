@@ -103,21 +103,29 @@ process:
   <div class="container" style="max-width:760px;">
     <div class="sh">
       <span class="eyebrow brand">Pay to pre-order</span>
-      <h2>Payment link &mdash; coming shortly.</h2>
+      <h2>Pre-order your edition.</h2>
     </div>
-    <div class="payroll-callout">
-      <div class="icon"><svg class="lucide" viewBox="0 0 24 24" style="width:26px;height:26px;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div>
-        <h3>Card pre-order isn't wired up yet</h3>
-        <p>The payment link for pre-orders is being finalised once the licensing terms are confirmed. Until it's live, register your interest below and we'll email you the payment link the moment it's ready &mdash; no charge happens until then.</p>
+    <div class="feature-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="tile">
+        <h4>Business</h4>
+        <div class="tier-price"><span class="amount">$490</span> <span class="per">/ year &mdash; AUD</span></div>
+        <p>Sole traders and small teams who lodge BAS themselves.</p>
+        <a href="https://buy.stripe.com/4gMfZh1mb6TG70A2FrbV600" class="btn btn-primary" style="margin-top:12px;">Pre-order Business</a>
+      </div>
+      <div class="tile">
+        <h4>Pro</h4>
+        <div class="tier-price"><span class="amount">$990</span> <span class="per">/ year &mdash; AUD</span></div>
+        <p>Everything in Business, plus the Pro feature set.</p>
+        <a href="https://buy.stripe.com/3cIeVd7Kzfqc5Ww7ZLbV601" class="btn btn-primary" style="margin-top:12px;">Pre-order Pro</a>
+      </div>
+      <div class="tile">
+        <h4>Enterprise</h4>
+        <div class="tier-price"><span class="amount">$2000</span> <span class="per">/ year &mdash; AUD</span></div>
+        <p>The full feature superset, every module switched on.</p>
+        <a href="https://buy.stripe.com/fZu28r4yndi470AbbXbV602" class="btn btn-primary" style="margin-top:12px;">Pre-order Enterprise</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:24px;">
-      <a href="/preview-access" class="btn btn-primary btn-lg">Register pre-order interest
-        <svg class="lucide" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <p class="note" style="margin-top:10px;color:var(--muted);font-size:14px;">Takes a minute. No payment is collected on that form &mdash; it puts you on the list for the pre-order payment link and priority onboarding.</p>
-    </div>
+    <p class="note" style="margin-top:18px;text-align:center;color:var(--muted);font-size:14px;">Secure checkout by Stripe. Your card is charged for the first year now; your licence unlocks self-hosting of that edition immediately, and you get priority onboarding when the hosted service opens. <strong>Fully refundable</strong> any time before your hosted service starts &mdash; email admin@saee.com.au. No launch date committed yet.</p>
   </div>
 </section>
 
