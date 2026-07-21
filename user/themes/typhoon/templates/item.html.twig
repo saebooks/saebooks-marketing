@@ -60,36 +60,7 @@
 </head>
 <body class="blog-page">
 
-<header class="site-header">
-  <div class="container row">
-    <a href="/" class="wordmark" aria-label="SAE Books home">
-      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
-    </a>
-    <nav class="primary">
-      <a href="/product">Product</a>
-      <a href="/cashbook">Cashbook</a>
-      <a href="/self-host">Self-host</a>
-      <a href="/#editions">Pricing</a>
-      <a href="/resources">Resources</a>
-      <a href="https://dev.saebooks.com.au">Docs</a>
-    </nav>
-    <div class="header-spacer"></div>
-    <div class="header-actions">
-      <div class="theme-switch" role="group" aria-label="Theme">
-        <button type="button" data-theme-value="light" aria-pressed="false" aria-label="Light theme" title="Light">
-          <svg class="lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <button type="button" data-theme-value="auto" aria-pressed="false" aria-label="Auto theme" title="Auto (matches system)">
-          <svg class="lucide" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
-        </button>
-        <button type="button" data-theme-value="dark" aria-pressed="false" aria-label="Dark theme" title="Dark">
-          <svg class="lucide" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
-      <a href="https://dev.saebooks.com.au/getting-started/quickstart/" class="btn btn-primary">Get started</a>
-    </div>
-  </div>
-</header>
+{% include 'partials/site-header.html.twig' with {active: 'blog'} %}
 
 <main class="post-wrap">
   <div class="container">
@@ -162,40 +133,6 @@
   <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary">Try the demo</a>
 </div>
 
-<script>
-  (function() {
-    var root = document.documentElement;
-    var STORAGE_KEY = 'saebooks-theme';
-    var mql = window.matchMedia('(prefers-color-scheme: dark)');
-    function applyTheme(choice) {
-      var resolved = (choice === 'auto') ? (mql.matches ? 'dark' : 'light') : choice;
-      if (choice === 'auto') { root.removeAttribute('data-theme'); }
-      else { root.setAttribute('data-theme', choice); }
-      root.classList.remove('light', 'dark');
-      root.classList.add(resolved);
-      document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(b) {
-        b.setAttribute('aria-pressed', String(b.dataset.themeValue === choice));
-      });
-    }
-    function getStoredChoice() {
-      var v = localStorage.getItem(STORAGE_KEY);
-      return (v === 'light' || v === 'dark') ? v : 'auto';
-    }
-    applyTheme(getStoredChoice());
-    document.querySelectorAll('.theme-switch button[data-theme-value]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var choice = btn.dataset.themeValue;
-        if (choice === 'auto') localStorage.removeItem(STORAGE_KEY);
-        else localStorage.setItem(STORAGE_KEY, choice);
-        applyTheme(choice);
-      });
-    });
-    if (mql.addEventListener) {
-      mql.addEventListener('change', function() {
-        if (getStoredChoice() === 'auto') applyTheme('auto');
-      });
-    }
-  })();
-</script>
+{% include 'partials/theme-controls.html.twig' %}
 </body>
 </html>

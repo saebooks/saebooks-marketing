@@ -39,25 +39,7 @@
 </head>
 <body class="{{ header.body_classes|default('page') }}">
 
-<header class="site-header">
-  <div class="container row">
-    <a href="/" class="wordmark" aria-label="SAE Books home">
-      <img src="/user/data/sae-books-logo.png" alt="SAE Books">
-    </a>
-    <nav class="primary">
-      <a href="/product">Product</a>
-      <a href="/cashbook">Cashbook</a>
-      <a href="/self-host">Self-host</a>
-      <a href="/#editions">Pricing</a>
-      <a href="/resources">Resources</a>
-      <a href="https://dev.saebooks.com.au">Docs</a>
-    </nav>
-    <div class="header-spacer"></div>
-    <div class="header-actions">
-      <a href="https://cashbook-demo.saebooks.com.au" class="btn btn-secondary" target="_blank" rel="noopener">Try the demo</a>
-    </div>
-  </div>
-</header>
+{% include 'partials/site-header.html.twig' with {active: ''} %}
 
 <main class="form-wrap">
   <div class="form-card">

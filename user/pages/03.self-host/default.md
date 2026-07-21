@@ -233,7 +233,7 @@ curl -fsSLO https://raw.githubusercontent.com/saebooks/saebooks/main/docker-comp
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="/" class="wordmark"><img src="/user/data/sae-books-logo.png" alt="SAE Books" style="height:40px;"></a>
-        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host &mdash; your books, your Postgres, your control. AGPLv3, owned by you.</p>
+        <p class="blurb">An API-first accounting ledger for Australian small business. Free Community edition for self-host &mdash; your books, your database, your control. AGPLv3, owned by you.</p>
       </div>
       <div class="foot-col">
         <h5>Self-host</h5>
