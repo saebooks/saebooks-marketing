@@ -57,8 +57,11 @@ process:
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div>
-        <h4>macOS</h4>
-        <p>The macOS one-click build is coming. In the meantime, use the <a href="#single-command">Docker path</a> or the <a href="#desktop">desktop app</a> notes below.</p>
+        <h4>macOS &mdash; Apple Silicon</h4>
+        <p>One binary for Apple Silicon (arm64) Macs. Mark it executable and run it; your browser opens on the starter books.</p>
+        <a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SAEBooks-macos-arm64" class="btn btn-primary" style="margin-top:12px;">Download SAE Books server &mdash; macOS (56&nbsp;MB)</a>
+        <p class="note" style="margin-top:8px;"><code>chmod +x SAEBooks-macos-arm64 &amp;&amp; ./SAEBooks-macos-arm64</code></p>
+        <p class="note" style="margin-top:8px;">Ad-hoc signed, not notarized &mdash; on first run clear the download flag (<code>xattr -d com.apple.quarantine SAEBooks-macos-arm64</code>) or right-click &rarr; <em>Open</em>. Verify against the <a href="https://github.com/saebooks/saebooks/releases/download/v0.6/SHA256SUMS">SHA-256 checksums</a> first.</p>
       </div>
     </div>
     <p class="note" style="margin-top:16px;">All server downloads live on the <a href="https://github.com/saebooks/saebooks/releases">SAE Books releases page</a>. This is beta software &mdash; keep your own backups.</p>
@@ -91,10 +94,11 @@ process:
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div>
-        <h4>macOS &mdash; v0.4 coming</h4>
-        <p>The v0.4 macOS build is coming. The previous release (0.3.0, universal Intel + Apple Silicon) is still available.</p>
-        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/saebooks-desktop-0.3.0-macOS-universal2.dmg" class="btn btn-secondary" style="margin-top:12px;">SAE Books 0.3.0 &mdash; macOS DMG</a>
-        <p class="note" style="margin-top:8px;">Ad-hoc signed, not notarized &mdash; Gatekeeper blocks the first open: right-click the app &rarr; <em>Open</em> &rarr; <em>Open</em>, once. Requires macOS 13 (Ventura) or later. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.3.0/SHA256SUMS-0.3.0.txt">0.3.0 checksums</a>.</p>
+        <h4>macOS &mdash; universal2</h4>
+        <p>v0.4 universal2 DMG (Apple Silicon + Intel). Open the disk image and drag the app into Applications.</p>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SAEBooks-0.4.0-universal2.dmg" class="btn btn-primary" style="margin-top:12px;">Download SAE Books 0.4.0 &mdash; macOS (135&nbsp;MB)</a>
+        <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/tasur-0.4.0-universal2.dmg" class="btn btn-secondary" style="margin-top:12px;margin-left:8px;">tasur &mdash; macOS</a>
+        <p class="note" style="margin-top:8px;">Ad-hoc signed, not notarized &mdash; Gatekeeper blocks the first open: right-click the app &rarr; <em>Open</em> &rarr; <em>Open</em>, once. Requires macOS 13 (Ventura) or later. Verify against the <a href="https://github.com/saebooks/saebooks-desktop/releases/download/v0.4/SHA256SUMS">SHA-256 checksums</a>.</p>
       </div>
       <div class="tile">
         <div class="icon"><svg class="lucide" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
